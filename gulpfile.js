@@ -97,7 +97,7 @@ gulp.task('vendor:styles', function(event) {
 
 gulp.task('vendor:publish', ['vendor:scripts', 'vendor:styles']);
 
-gulp.task('build', ['vendor:publish', 'assets:publish', 'less:compile', 'jade:compile']);
+gulp.task('build', ['vendor:publish', 'less:compile', 'jade:compile']);
 
 gulp.task('deploy', ['build'], function () {
   return gulp.src("out/**/*.*")
