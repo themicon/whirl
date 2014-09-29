@@ -32,8 +32,6 @@ var gulp = require('gulp'),
     out: env,
     css: env + 'css/',
     js: env + 'js/',
-    img: env + 'img/',
-    fonts: env + 'fonts/',
     assets: env
   };
 

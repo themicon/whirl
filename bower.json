@@ -36,9 +36,7 @@
     "jquery": "~2.1.1",
     "modernizr": "~2.8.3",
     "normalize.css": "~3.0.1",
-    "flat-ui": "~2.2.0",
     "bootstrap": "~3.2.0",
-    "fontawesome": "~4.2.0",
-    "csspinner": "~1.0.1"
+    "whirl": "~1.0.0"
   }
 }

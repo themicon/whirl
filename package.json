@@ -1,14 +1,13 @@
 {
-  "name": "siteRedesign",
+  "name": "whirl",
   "version": "0.0.0",
-  "description": "Start of site redesign",
-  "main": "index.js",
+  "description": "whirl",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jh3y"
+    "url": "http://jh3y.github.io/whirl"
   },
   "author": "",
   "license": "MIT",
