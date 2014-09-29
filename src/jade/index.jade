@@ -42,19 +42,6 @@ block content
             helicopter
           option(value = "whirl no-overlay").
             no overlay
-    .row-btn-holder
-      .col-md-10.col-md-offset-1.text-center
-        button.btn.btn-info.
-          Show me
-        script.
-          $('button').on('click', function (event) {
-            $('#demo')[0].className = $('select').val();
-            $('code').text($('select').val());
-          });
-          $('select').on('change', function (event) {
-            $('#demo')[0].className = $('select').val();
-            $('code').text($('select').val());
-          })
     .row
       .col-md-6.col-md-offset-3
         .whirl(id = "demo").
@@ -68,14 +55,10 @@ block content
     .row
       .col-md-10.col-md-offset-1.text-center
         ul.text-center
-          li.
-            include the <a href="https://github.com/jh3y/-cs-spinner">stylesheet</a> (<a href="https://github.com/jh3y/-cs-spinner/blob/master/README.md" target="_blank">tweaking</a> where necessary, now uses <strong>gulp.js</strong> enabling custom builds!).
-          li.
-            add and remove appropriate classes to your elements when necessary to show loading (using js).
-        h3.text-center.
-          That's it!
-
-  //- include layout-blocks/sections/about
-  //- include layout-blocks/sections/thoughts
-  //- include layout-blocks/sections/projects
-  //- include layout-blocks/sections/contact
+          li Include the <a href="https://github.com/jh3y/-cs-spinner">stylesheet</a> (<a href="https://github.com/jh3y/-cs-spinner/blob/master/README.md" target="_blank">tweaking</a> where necessary, see the docs).
+          li Add and remove appropriate classes to your elements when necessary  (using js).
+  script.
+    $('select').on('change', function (event) {
+      $('#demo')[0].className = $('select').val();
+      $('code').text($('select').val());
+    })
