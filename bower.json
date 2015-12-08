@@ -1,11 +1,11 @@
 {
   "name": "whirl",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "http://jh3y.github.io/whirl",
   "authors": [
-    "jh3y <jhey.tompkins@gmail.com>"
+    "jh3y <jh3yyy@gmail.com>"
   ],
-  "description": "Pure CSS loading animations with minimal effort!",
+  "description": "CSS loading animations with minimal effort!",
   "main": "whirl.css",
   "keywords": [
     "css",
@@ -15,5 +15,13 @@
     "animation",
     "loading"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

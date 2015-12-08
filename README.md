@@ -1,16 +1,22 @@
-#whirl
-
-
-###Pure CSS loading animations with minimal effort!
-
+Whirl
+===
 ![alt tag](https://raw.github.com/jh3y/pics/master/whirl/whirl.gif)
 
-#### Basic usage
-1. Include the [stylesheet](https://raw2.github.com/jh3y/whirl/master/whirl.css) (tweaking where necessary).
-2. Add and remove appropriate classes to your elements when necessary to show loading (using js).
+CSS loading animations with minimal effort.
 
+## Usage
+
+1. Include [`whirl.css`](LINK) tweaking where necessary.
+2. Add and remove appropriate CSS classes to your elements when necessary to show animations.
+
+
+__NOTE::__ Some animations require an extra placeholder element to be in the DOM where creating them with just two pseudo elements is not possible. This will need to be placed within the container that is showing a loading animation and have the class `TBC` (TODO: Define placeholder class).
+
+__NOTE::__ There is also a JavaScript helper available. If showing an animation that requires a placeholder element then do not worry about placing this in your markup as the helper will do this for you.
 
 That's it!
+
+## Examples
 
 ```html
   <div class="whirl duo">
@@ -18,36 +24,28 @@ That's it!
   </div>
 ```
 
-####Options
-From using the demo you can work out which classes you need to add to your elements in order to show the loading animation you want.
+```html
+  <div class="whirl roller">
+    <div class="while__placeholder"></div>
+    This content is taking even longer to load...
+  </div>
+```
+
+```js
+  var myWhirl = new Whirl('.container', 'roller');
+  myWhirl.show();
+  myWhirl.hide();
+```
+
+## Options
+<< INCLUDE THE RELEVANT CLASSES AS SEEN IN THE DEMO >>
 
 By default, you will always need `whirl`.
 
-Then there are;
+## Tweaking/Developing
+I am fully aware that my styling of these animations aren't to everyones tastes and also that sometimes positioning won't be suitable etc. therefore it is likely you'll have to tweak the stylesheet to get the colors you want etc.
 
-* `traditional`
-* `duo`
-* `double-up`
-* `sphere`
-* `sphere-vertical`
-* `bar`
-* `bar-follow`
-* `line`
-* `line grow`
-* `line back-and-forth`
-* `shadow`
-* `shadow oval`/`shadow oval left`
-* `shadow oval right`
-* `ringed`
-* `blade`
-* `helicopter`
-
-There is also `no-overlay` which will hide the overlay which is added by default.
-
-#### Tweaking/Developing
-I am fully aware that my styling of these animations aren't to everyones tastes and also that sometimes positioning won't be suitable etc. therefore it is likely you'll have to tweak the stylesheet to get the colors you want etc. I have provided both LESS and SCSS versions. There is also an older style SASS syntax file available but it does not benefit from modularity and will need to be built using ruby.
-
-##### Modularity, custom builds and gulp.js
+### Modularity, custom builds and gulp.js
 I have recently re-implemented whirl to make use of __gulp.js__.
 
 In order to use the tasks I've put in place it is presumed you will already have `npm` and `gulp` installed.
