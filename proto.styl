@@ -1,0 +1,1416 @@
+* {
+  box-sizing: border-box;
+}
+.is--loading {
+  position: relative;
+  height: 200px;
+}
+.duo:before {
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  background: linear-gradient(to bottom, red 20px, blue 20px);
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  left: 50%;
+  margin-left: -20px;
+  box-shadow: 0px 4px 10px black;
+}
+.duo:after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  border: 5px solid black;
+  border-top-color: red;
+  border-right-color: red;
+  border-bottom-color: blue;
+  border-left-color: blue;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  left: 50%;
+  transform: rotate(-45deg);
+  margin-left: -15px;
+  animation-duration: .75s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(315deg);
+  }
+}
+.whirl:after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: red;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  animation-duration: 2s;
+  animation-name: whirl;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes whirl {
+  0% {
+    transform: scale(0) rotate(-45deg) translateY(0px);
+    background-color: green;
+  }
+  50% {
+    transform: scale(1.25) rotate(960deg) translateY(30px);
+    background-color: blue;
+  }
+  100% {
+    transform: scale(0) rotate(2000deg) translateY(0px);
+    background-color: green;
+  }
+}
+.travel:after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  transform-origin: left;
+  animation-duration: 1.5s;
+  animation-name: travel;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: linear; */
+}
+@keyframes travel {
+  0% {
+    transform: translateY(-20px) translateX(-20px);
+    background-color: red;
+  }
+  25% {
+    transform: translateX(-20px) translateY(20px);
+    background-color: green;
+  }
+  50% {
+    transform: translateY(20px) translateX(20px);
+    background-color: yellow;
+  }
+  75% {
+    transform: translateX(20px) translateY(-20px);
+    background-color: blue;
+  }
+  100% {
+    transform: translateY(-20px) translateX(-20px);
+    background-color: red;
+  }
+}
+.bloom:before {
+  content: '';
+  display: inline-block;
+  height: 40px;
+  width : 40px;
+  background-color: blue;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.bloom:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 60px;
+  width : 60px;
+  border: 10px solid white;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -30px;
+  animation-name: bloom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes bloom {
+  0%{
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce:before {
+  content: '';
+  display: inline-block;
+  height: 40px;
+  width : 40px;
+  background-color: blue;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  animation-delay: .75s;
+  opacity: .5;
+}
+.bounce:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  width : 40px;
+  background-color: red;
+  opacity: .5;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+  animation-name: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.flyby:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: green;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  transform: scale(0);
+  animation-name: flyby;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes flyby {
+  0% {
+    opacity: 0;
+    background-color: red;
+    transform: scale(0) translateX(-50px);
+  }
+  50% {
+    opacity: 1;
+    background-color: green;
+    transform: scale(1.5) translateX(0px);
+  }
+  100% {
+    background-color:red;
+    opacity: 0;
+    transform: scale(0) translateX(50px);
+  }
+}
+.fadeby:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: green;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: fadeby;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes fadeby {
+  0% {
+    background: green;
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  30% {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(0px);
+
+  }
+  50% {
+    background: purple;
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
+  60% {
+    opacity: 0;
+    transform: translateX(0px);
+
+  }
+  70% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  80% {
+    background: blue;
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  90% {
+    opacity: 0;
+    transform: translateX(20px);
+
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+}
+.wheel:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  border: solid 15px black;
+  border-right-color: red;
+  border-left-color: red;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: wheel;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pendulum:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: red;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: pendulum;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes pendulum {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+.swing:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: purple;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: swing;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes swing {
+  0% {
+    transform: rotate(65deg) translateY(45px);
+  }
+  20% {
+    transform: rotate(0deg) translateY(45px);
+  }
+  50% {
+    transform: rotate(-65deg) translateY(45px);
+  }
+  70% {
+    transform: rotate(0deg) translateY(45px);
+  }
+  100% {
+    transform: rotate(65deg) translateY(45px);
+  }
+}
+.eclipse:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  background-color: yellow;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: eclipse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes eclipse {
+  0% {
+    box-shadow: inset 30px 0 0 black;
+  }
+  100% {
+    box-shadow: inset -30px 0 0 black;
+  }
+}
+.rotary:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: red;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: rotary;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotary {
+  0% {
+    background-color: blue;
+    transform: rotate(0deg) translateY(20px);
+  }
+  25% {
+    background-color: green;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: red;
+    transform: rotate(360deg) translateY(20px);
+  }
+}
+.pulse:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: red;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(.75) translateX(-50px);
+  }
+  25% {
+    transform: scale(1.5) translateX(0px);
+  }
+  50% {
+    transform: scale(.75) translateX(50px);
+  }
+  75% {
+    transform: scale(1.5) translateX(0px);
+  }
+  100% {
+    transform: scale(.75) translateX(-50px);
+  }
+}
+.skew:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: red;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: skew;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes skew {
+  0% {
+    background-color: red;
+    transform: skewX(0deg);
+  }
+  10% {
+    transform: skewX(60deg);
+  }
+  20% {
+    transform: skewX(-60deg);
+  }
+  30% {
+    background-color:red;
+    transform: skewX(0deg);
+  }
+  40% {
+    transform: skewY(60deg);
+  }
+  50% {
+    transform: skewY(-60deg);
+  }
+  60% {
+    transform: skewY(0deg);
+  }
+  100% {
+    background-color: green;
+  }
+}
+.square:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: red;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: square;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+@keyframes square {
+  0% {
+    background-color: red;
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: red;
+    transform: rotate(90deg);
+  }
+  50% {
+    background-color: blue;
+    transform: rotate(90deg) rotateX(180deg)
+  }
+  75% {
+    transform: rotate(90deg) rotateX(180deg);
+  }
+  100% {
+    transform: rotate(0deg) rotateX(0deg);
+  }
+}
+.tumble:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  border-radius: 100%;
+  border: 2px solid red;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.tumble:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  background-color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -2.5px;
+  margin-top: -2.5px;
+  animation-name: tumble;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes tumble {
+  0% {
+    transform: rotate(0deg) translateY(5px);
+  }
+  25% {
+
+  }
+  50% {
+
+  }
+  75% {
+
+  }
+  100% {
+    transform: rotate(360deg) translateY(5px);
+  }
+}
+.fill:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  border: 4px solid green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: fill;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotate(45deg);
+}
+@keyframes fill {
+  0% {
+    box-shadow: inset 20px 0px 0px white;
+  }
+  25% {
+    box-shadow: inset -20px 0 0 white;
+  }
+  75% {
+    box-shadow: inset 0 20px 0 white;
+  }
+  100% {
+    box-shadow: inset 0 -20px 0 white;
+  }
+}
+.stopgo:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 10px solid black;
+  border-left-color: red;
+  border-right-color: green;
+  border-top-color: yellow;
+  border-bottom-color: blue;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: stopgo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes stopgo {
+  0% {
+    transform: rotate(0deg);
+  }
+  65% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+.borders:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 10px solid transparent;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: borders;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes borders {
+  0% {
+
+  }
+  20% {
+    border-color: transparent;
+  }
+  40% {
+    border-left-color: green;
+    border-top-color: transparent;
+  }
+  60% {
+    border-top-color: red;
+    border-right-color: transparent;
+  }
+  80% {
+    border-right-color: blue;
+    border-bottom-color: transparent;
+  }
+  100% {
+    /*CAN DO A FADING VERSION HERE TOO WHERE DONT DEFINE ENDING COLORS*/
+    border-right-color: blue;
+    border-top-color: red;
+    border-left-color: green;
+    border-bottom-color: orange;
+  }
+}
+.morph:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: morph;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes morph {
+  0% {
+
+  }
+  10% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0);
+    border-radius: 0px;
+  }
+  30% {
+    transform: scale(1);
+    border-radius: 0px;
+  }
+  40% {
+    transform: scale(0);
+    border-radius: 0px;
+  }
+  50% {
+    transform: scale(0);
+    border-radius: 100%;
+  }
+  60% {
+    transform: scale(1);
+    border-radius: 100%;
+  }
+  70% {
+    transform: scale(0);
+    border-radius: 100%;
+  }
+  80% {
+    transform: scale(0);
+    border-radius: 0px;
+  }
+  90% {
+    transform: scale(1);
+    border-radius: 0px;
+  }
+  100% {
+
+  }
+}
+
+.rays:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: blue;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.rays:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 60px;
+  width : 60px;
+  border: 10px solid blue;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -30px;
+  animation-name: rays;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+@keyframes rays {
+  0%{
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.cyclical,
+.merge {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+.cyclical:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width : 20px;
+  background-color: blue;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform-origin: -60% -80%;
+  margin-left: -10px;
+  margin-top: -10px;
+  animation-name: cyclical;
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+.cyclical:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  background-color: red;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  transform-origin: 10% 80%;
+  animation-name: cyclical;
+  animation-direction: alternate;
+  animation-delay: .5s;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes cyclical {
+  0%, 100%{
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+.squares:before {
+  content: '';
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  background-color: red;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform-origin: 40px 40px;
+  margin-left: -15px;
+  margin-top: -15px;
+  /* animation-name: travel; */
+  opacity: .25;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+.squares:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  background-color: blue;
+  opacity: .25;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  transform-origin: 40px 40px;
+  animation-name: travel;
+  animation-direction: reverse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.scan:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
+  width : 40px;
+  border: 4px solid red;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.scan:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  border-style: solid;
+  border-color: black;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: scan;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes scan {
+  0% {
+    border-width: 30px 0 0 0;
+  }
+  50% {
+    border-width: 0 0 30px 0
+  }
+  100% {
+    border-width: 30px 0 0 0;
+  }
+}
+
+.merge:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 100%;
+  height: 30px;
+  width : 30px;
+  background-color: red;
+  left: 50%;
+  top: 50%;
+  opacity: .5;
+  transform-origin: -200% -80%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: merge;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.merge:after {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  background-color: blue;
+  opacity: .5;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: merge;
+  animation-duration: 2s;
+  transform-origin: 200% 80%;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes merge {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.foldup:after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  border: 4px solid red;
+}
+.foldup:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  border-style: solid;
+  border-color: black;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  animation-name: foldup;
+  animation-duration: .75s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes foldup {
+  0% {
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 15px solid black;
+    border-bottom: 15px solid black;
+  }
+  50% {
+    /* border-width: 0 30px 0 0; */
+  }
+  100% {
+    /* border-width: 0 0 30px 0; */
+  }
+}
+
+.wide:after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  transform-origin: 0px 0px;
+  background-color: blue;
+  border-radius: 100%;
+  animation-delay: .5s;
+  animation-name: wide;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.wide:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  background-color: red;
+  transform-origin: 0px 0px;
+  border-radius: 100%;
+  animation-name: wide;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes wide {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.wider:after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  transform-origin: 20px 20px;
+  background-color: blue;
+  border-radius: 100%;
+  animation-delay: .5s;
+  animation-name: wider;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.wider:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  background-color: red;
+  transform-origin: 20px 20px;
+  border-radius: 100%;
+  animation-name: wider;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes wider {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 100px;
+    height: 20px;
+    border-radius: 0px;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.blur:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  background-color: red;
+  animation-name: blur;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes blur {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    margin-left: -12.5px;
+    margin-top: -12.5px;
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+.colorrun:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 30px;
+  width : 30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-style: solid;
+  border-width: 15px;
+  border-top-color: red;
+  border-left-color: green;
+  border-right-color: yellow;
+  border-bottom-color: blue;
+  transform: rotate(45deg);
+  animation-name: colorrun;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes colorrun {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    border-radius: 100%;
+  }
+  100% {
+    transform: rotate(8820deg);
+  }
+}
+
+.split:after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 20px;
+  width : 20px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  background-color: blue;
+  border-radius: 100%;
+}
+.split:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  width : 40px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+  border: 5px solid transparent;
+  border-right-color: red;
+  border-left-color: red;
+  border-radius: 100%;
+  animation-name: split;
+  animation-duration: .5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes split {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bounce-pulse:after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
+  width : 40px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+  border: 5px solid blue;
+  border-radius: 100%;
+}
+.bounce-pulse:before {
+  content: '';
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  width : 40px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+  border: 5px solid red;
+  border-radius: 100%;
+  animation-name: bounce-pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes bounce-pulse {
+  0% {
+
+  }
+  40% {
+    border-width: 20px;
+  }
+  80% {
+    border-width: 5px;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+.color-fly {
+  height: 20px;
+  width: 20px;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.color-fly:after {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
+  width : 40px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 100%;
+}
+.color-fly:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
+  width : 40px;
+  overflow: hidden;
+  left: 0%;
+  top: 0%;
+  position: absolute;
+  margin-left: 0px;
+  margin-top: 0px;
+  border: 5px solid;
+  border-top-color: red;
+  border-left-color: blue;
+  border-right-color: green;
+  border-bottom-color: purple;
+  border-radius: 100%;
+  animation-name: color-fly;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes color-fly {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.discus:before {
+  content: '';
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -20px;
+  border-top: 10px solid #e9e9e9;
+  border-bottom: 10px solid #e9e9e9;
+  border-radius: 100%;
+  animation: rotate 1s infinite linear;
+}
