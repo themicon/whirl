@@ -14,7 +14,7 @@ const config = {
     port: 1987
   },
   entry: {
-    demo: './src/entries/demo/script/'
+    demo: './src/entries/demo/script/index.js'
   },
   output: {
     path: `${__dirname}/public`,
@@ -25,7 +25,7 @@ const config = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: /(src\/script)/,
+        include: /(src)/,
         query: {
           presets: [
             'es2015'
@@ -34,12 +34,12 @@ const config = {
       },
       {
         test: /\.scss$/,
-        include: /(src\/)/,
+        include: /(src)/,
         loader: STYLE_LOADER
       },
       {
         test: /\.pug$/,
-        include: /(src\/markup)/,
+        include: /(src)/,
         loader: 'pug'
       }
     ]
@@ -48,13 +48,15 @@ const config = {
     root: [
       path.resolve('./src/entries')
     ],
-    extensions: [ '', '.js', '.styl' ]
+    extensions: [ '', '.js' ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/entries/demo/markup/index.pug',
       filename: 'index.html',
+      title: 'Whirl',
       chunks: [ 'demo' ],
+      whirls: 'yep',
       minify: {
         collapseWhitespace: true
       }
