@@ -4,17 +4,17 @@ SERVER   = $(MODULES)/webpack-dev-server
 MOCHA    = $(MODULES)/mocha
 BABEL    = $(MODULES)/babel
 UGLIFY   = $(MODULES)/uglifyjs
-SASS     = $(MODULES)/node-sass
+STYLUS   = $(MODULES)/stylus
 POSTCSS  = $(MODULES)/postcss
 CLEANCSS = $(MODULES)/cleancss
 ESLINT   = $(MODULES)/eslint
-SASSLINT = $(MODULES)/sass-lint
+STYLINT  = $(MODULES)/stylint
 GHPAGES  = $(MODULES)/gh-pages
 
 DEST = dist
 FILE_NAME = whirl
 SCRIPT_SRC = src/script/entries/ep/index.js
-STYLE_SRC = src/script/entries/ep/ep.scss
+STYLE_SRC = src/entries/whirl/style/whirl.styl
 
 UGLIFY_OPTS = --compress --comments --mangle -o $(DEST)/$(FILE_NAME).min.js $(DEST)/$(FILE_NAME).js
 CLEANCSS_OPTS = --s1 -o $(DEST)/$(FILE_NAME).min.css $(DEST)/$(FILE_NAME).css
@@ -42,7 +42,7 @@ setup: ## sets up project
 	npm install
 
 dist-style: ## compiles styles for dist
-	mkdir -pv $(DEST) && $(SASS) $(STYLE_SRC) $(DEST)/$(FILE_NAME).css && $(POSTCSS) $(POSTCSS_OPTS) && $(CLEANCSS) $(CLEANCSS_OPTS)
+	mkdir -pv $(DEST) && $(STYLUS) $(STYLE_SRC) -o $(DEST) && $(POSTCSS) $(POSTCSS_OPTS) && $(CLEANCSS) $(CLEANCSS_OPTS)
 
 dist-script: ## compiles script for dist
 	mkdir -pv $(DEST) && $(BABEL) $(SCRIPT_SRC) -o $(DEST)/$(FILE_NAME).js && $(UGLIFY) $(UGLIFY_OPTS)
@@ -57,7 +57,7 @@ lint-scripts: ## lints ep script
 	$(ESLINT) $(SCRIPT_SRC)
 
 lint-styles: ## lints ep stylesheet
-	$(SASSLINT) --verbose
+	$(STYLINT) src/
 
 lint: ## lints source
 	make lint-styles && make lint-scripts

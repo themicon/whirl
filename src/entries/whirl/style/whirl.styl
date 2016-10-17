@@ -1,0 +1,31 @@
+/*!!
+  * whirl - pure CSS loading animations with minimal effort
+  *
+  * https://jh3y.github.io/whirl
+  * @license MIT
+  * @author jh3y
+  * @version 2.0.0
+  * (c) 2016
+*/
+
+$whirls = '../whirls/pseudo/whirl.styl' '../whirls/pseudo/ring.styl';
+
+for $whirl in $whirls
+  @import $whirl
+
+// $whirls: '../whirls/pseudo/whirl', '../whirls/pseudo/ring';
+
+// @import "#{$whirls}";
+
+// @each $whirl in $whirls {
+//   @import $whirl;
+// }
+
+// @import $whirls;
+
+// @import 'core';
+// @import './features/mock';
+// @import './features/staggered';
+// @import './features/timer';
+// @import './features/simulate';
+// @import './features/helpers';

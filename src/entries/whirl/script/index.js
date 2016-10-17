@@ -1,17 +1,17 @@
 /**
-  * ep - enhance your progress bars with minimal effort
+  * whirl - pure CSS loading animations with minimal effort
   *
-  * https://jh3y.github.io/ep
+  * https://jh3y.github.io/whirl
   * @license MIT
   * @author jh3y
-  * @version 2.0.3
+  * @version 2.0.0
   * (c) 2016
 */
 (function() {
   /**
   * Class that acts as a wrapper for interacting with HTML5 <progress> element
   */
-  class Ep {
+  class Whirl {
     /**
     * Create interface with <progress> element
     * @param {HTMLProgressElement} el - the <progress> element.
@@ -239,5 +239,5 @@
       this._EL.addEventListener('transitionend', onComplete);
     }
   }
-  window.Ep = Ep;
+  window.Whirl = Whirl;
 })();
