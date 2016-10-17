@@ -1,27 +1,25 @@
 {
   "name": "whirl",
+  "main": "dist/whirl.css",
   "version": "2.0.0",
-  "homepage": "http://jh3y.github.io/whirl",
+  "homwhirlage": "http://jh3y.github.io/whirl",
   "authors": [
-    "jh3y <jh3yyy@gmail.com>"
+    "jh3y <jh3y@users.noreply.github.com>"
   ],
-  "description": "CSS loading animations with minimal effort!",
-  "main": "whirl.css",
+  "description": "pure CSS loading animations with minimal effort!",
   "keywords": [
-    "css",
     "whirl",
-    "spinners",
+    "loader",
     "spinner",
-    "animation",
-    "loading"
+    "css",
+    "css3",
+    "es6"
   ],
   "license": "MIT",
-  "moduleType": [],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ]
 }

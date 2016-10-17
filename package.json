@@ -1,54 +1,57 @@
 {
-  "name": "whirl",
+  "name": "@jh3y/whirl",
   "version": "2.0.0",
-  "description": "CSS loading animations with minimal effort!",
-  "main": "whirl.css",
-  "dependencies": {},
-  "devDependencies": {
-    "browser-sync": "^2.5.3",
-    "gulp": "^3.8.10",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-coffee": "^2.2.0",
-    "gulp-coffeelint": "^0.5.0",
-    "gulp-concat": "^2.4.1",
-    "gulp-gh-pages": "^0.5.0",
-    "gulp-header": "^1.7.1",
-    "gulp-jade": "^0.9.0",
-    "gulp-jadelint": "^0.1.0",
-    "gulp-load-plugins": "^0.9.0",
-    "gulp-minify-css": "^0.3.11",
-    "gulp-plumber": "^0.6.6",
-    "gulp-rename": "^1.2.0",
-    "gulp-size": "^1.2.1",
-    "gulp-sourcemaps": "^1.5.1",
-    "gulp-stylint": "^3.0.0",
-    "gulp-stylus": "^2.0.1",
-    "gulp-uglify": "^1.0.1",
-    "gulp-util": "^3.0.4",
-    "gulp-wrap": "^0.11.0",
-    "stylint": "^1.3.2",
-    "stylint-stylish": "^1.2.0"
-  },
+  "description": "pure CSS loading animations with minimal effort!",
+  "main": "dist/whirl.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean::full": "rm -rf node_modules && rm -rf build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jh3y/whirl.git"
   },
   "keywords": [
-    "css",
+    "loader",
     "whirl",
-    "spinners",
     "spinner",
-    "animation",
-    "loading"
+    "css",
+    "ui",
+    "ux",
+    "loader"
   ],
-  "author": "jh3y <jh3yyy@gmail.com>",
+  "author": "jh3y <jh3y@users.noreply.github.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jh3y/whirl/issues"
   },
-  "homepage": "https://github.com/jh3y/whirl#readme"
+  "homepage": "https://jh3y.github.io/whirl",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-register": "^6.14.0",
+    "clean-css": "^3.4.20",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.6.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "gh-pages": "^0.11.0",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.22.0",
+    "node-sass": "^3.10.0",
+    "normalize.css": "^4.2.0",
+    "postcss-cli": "^2.6.0",
+    "postcss-loader": "^0.11.1",
+    "prismjs": "^1.5.1",
+    "pug": "^2.0.0-beta6",
+    "pug-loader": "^2.3.0",
+    "sass-lint": "^1.9.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "uglify-js": "^2.7.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
 }

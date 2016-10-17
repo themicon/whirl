@@ -1,0 +1,39 @@
+@import 'configuration';
+@import 'mixins';
+
+@mixin create-core {
+  @for $percent from 1 through 100 {
+    &[value='#{$percent}'] {
+      width: $percent * 1%;
+    }
+  }
+}
+
+@keyframes ep-indeterminate {
+  0%   { opacity: 0; }
+  50%  { opacity: $ep-opacity; }
+  100% { opacity: 0; }
+}
+
+progress {
+  appearance: none;
+  border: 0;
+  height: $ep-height;
+  opacity: $ep-opacity;
+  position: relative;
+  transition: width $ep-transition ease 0s, visibility ($ep-transition * 2) ease 0s;
+  width: 0;
+
+  // Remove annoying marker border in IE
+  &::-ms-fill {
+    border: 0;
+  }
+
+  @include color-bar($ep-fg);
+
+  &:indeterminate {
+    @include indeterminate;
+  }
+
+  @include create-core;
+}
