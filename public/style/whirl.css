@@ -7,8 +7,43 @@
   * @version 2.0.0
   * (c) 2016
 */
-.whirl {
-  border: 1px;
+/**
+  * Basic ringed whirl
+*/
+[data-whirl='basic']:after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  -webkit-animation: rotate 0.5s infinite linear;
+          animation: rotate 0.5s infinite linear;
+  border: 4px #f00 solid;
+  border-left-color: #008000;
+  border-radius: 100%;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /**
   * Standard whirl

@@ -1,5 +1,9 @@
 {
   "whirls": {
+    "basic": {
+      "active": true,
+      "requiredElements": 0
+    },
     "whirl": {
       "active": true,
       "requiredElements": 0
