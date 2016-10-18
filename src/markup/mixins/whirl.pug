@@ -1,0 +1,22 @@
+//- Generates DOM element for a whirl
+mixin whirl(name, requiredElements, labelled)
+  if requiredElements == 0
+    .whirl-container(data-whirl= name)
+      if labelled
+        label= name
+  else if requiredElements == 1
+    .whirl-container
+      if labelled
+        label= name
+      .whirl(data-whirl= name)
+  else
+    .whirl-container
+      if labelled
+        label= name
+      //- A multi element whirl say using 4 elements will use the first
+      //- as the container for that whirl.
+      - var n = 1
+      .whirl(data-whirl= name)
+        while n < requiredElements
+          div
+          - n++

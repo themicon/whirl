@@ -8,24 +8,18 @@
   * (c) 2016
 */
 
-$whirls = 'whirls/pseudo/whirl.styl' 'whirls/pseudo/ring.styl';
+// $whirls = 'whirls/pseudo/whirl.styl' 'whirls/pseudo/ring.styl';
 
-for $whirl in $whirls
-  @import $whirl
+$config = json('../../whirl.config.json', {
+  hash: true,
+  leave-strings: true
+})
 
-// $whirls: '../whirls/pseudo/whirl', '../whirls/pseudo/ring';
+@import 'core.styl'
 
-// @import "#{$whirls}";
-
-// @each $whirl in $whirls {
-//   @import $whirl;
-// }
-
-// @import $whirls;
-
-// @import 'core';
-// @import './features/mock';
-// @import './features/staggered';
-// @import './features/timer';
-// @import './features/simulate';
-// @import './features/helpers';
+// Nothing happens in whirl root, we just import the things we need
+// and dynamically pull in the whirls we are compiling
+for $whirl, $value in $config.whirls
+  $path = 'whirls/' + $whirl + '.styl'
+  if $value.active
+    @import $path

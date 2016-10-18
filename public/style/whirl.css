@@ -7,13 +7,19 @@
   * @version 2.0.0
   * (c) 2016
 */
+.whirl {
+  border: 1px;
+}
+/**
+  * Standard whirl
+*/
 [data-whirl='whirl']:before {
   content: '';
   display: block;
 }
-body {
-  background: #f00 !important;
-}
-body {
-  color: #008000 !important;
+/**
+  * Ringed whirl
+*/
+.ringed {
+  border-left: #f00;
 }

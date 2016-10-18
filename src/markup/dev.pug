@@ -1,9 +1,16 @@
+include mixins/whirl.pug
+
 html(lang="en-us")
   head
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE-edge")
     title whirl | dev
     meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1.0")
+    link(rel='stylesheet', href='style/whirl.css')
+    link(rel='stylesheet', href='style/dev.css')
   body
     h1 whirl dev
-    div(data-whirl='true')
+    .whirls
+      each val, index in whirls
+        +whirl(index, val.requiredElements, true)
+    script(src="script/whirl.js")

@@ -1,5 +1,7 @@
 var publicPath = 'public/',
   pkg   = require('./package.json');
+  // Have to set this as the @scope is in place for npm
+  pkg.name = 'whirl';
 module.exports = {
   pkg: {
     name: pkg.name
@@ -21,7 +23,8 @@ module.exports = {
       pretty: true,
       data  : {
         name       : pkg.name,
-        description: pkg.description
+        description: pkg.description,
+        whirls     : require('./whirl.config.json').whirls
       }
     },
     load: {
@@ -41,6 +44,9 @@ module.exports = {
     rename: {
       suffix: '.min'
     },
+    stylus: {
+      'include css': true
+    },
     stylint: {
       reporter: 'stylint-stylish'
     },
@@ -49,7 +55,7 @@ module.exports = {
   paths: {
     base: publicPath,
     sources: {
-      markup   : 'src/markup/**/*.pug',
+      markup   : 'src/markup/*.pug',
       overwatch: publicPath + '**/*.{html,js,css}',
       scripts  : 'src/**/*.js',
       styles   : {

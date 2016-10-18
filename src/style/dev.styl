@@ -1,0 +1,33 @@
+/**
+  * NOTE: Font imports etc. always need to go before included CSS in order
+  * to work
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import '../../node_modules/normalize.css/normalize.css';
+/**
+  * Simple styles to aid with development
+*/
+*
+  box-sizing border-box
+
+h1
+  text-align center
+  font-family 'Lato', sans-serif
+
+.whirls
+  justify-content center
+  display        flex
+  flex-direction row
+  flex-wrap      wrap
+
+.whirl-container
+  display flex
+  height  200px
+  width   20%
+  border  1px solid rgba(0, 0, 0, .5)
+  margin  10px
+  border-radius 10px
+  position relative
+
+  @media(max-width: 600px)
+    width 100%

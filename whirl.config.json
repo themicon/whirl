@@ -1,0 +1,16 @@
+{
+  "whirls": {
+    "whirl": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ring": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "multi": {
+      "active": true,
+      "requiredElements": 3
+    }
+  }
+}

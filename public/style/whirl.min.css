@@ -6,4 +6,4 @@
   * @author jh3y
   * @version 2.0.0
   * (c) 2016
-*/[data-whirl=whirl]:before{content:'';display:block}body{background:red!important;color:green!important}
+*/.whirl{border:1px}[data-whirl=whirl]:before{content:'';display:block}.ringed{border-left:red}
