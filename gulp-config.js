@@ -51,14 +51,26 @@ module.exports = {
     sources: {
       markup   : 'src/markup/**/*.pug',
       overwatch: publicPath + '**/*.{html,js,css}',
-      scripts  : 'src/script/**/*.js',
-      styles   : 'src/style/**/*.styl'
+      scripts  : 'src/**/*.js',
+      styles   : {
+        watch  : 'src/**/*.styl',
+        compile: [
+          'src/style/**/*.styl',
+          'src/' + pkg.name + '/' + pkg.name + '.styl'
+        ]
+      },
+      deployment: [
+        publicPath + 'index.html',
+        publicPath + 'style/demo.min.css',
+        publicPath + 'style/whirl.min.css',
+        publicPath + 'script/demo.min.js'
+      ]
     },
     destinations: {
       dist: './dist',
-      css : publicPath + 'css/',
+      css : publicPath + 'style/',
       html: publicPath,
-      js  : publicPath + 'js/'
+      js  : publicPath + 'script/'
     }
   }
 };

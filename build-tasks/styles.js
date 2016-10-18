@@ -8,15 +8,14 @@ var gulp      = require('gulp'),
   plugins     = require('gulp-load-plugins')(opts.load),
   /* styles:lint */
   lint = function() {
-    return gulp.src(src.styles)
+    return gulp.src(src.styles.watch)
       .pipe(plugins.stylint(opts.stylint))
       .pipe(plugins.stylint.reporter());
   },
   /* styles:compile */
   compile = function() {
-    return gulp.src(src.styles)
+    return gulp.src(src.styles.compile)
       .pipe(plugins.plumber())
-      .pipe(plugins.concat(gConfig.pkg.name + '.stylus'))
       .pipe(plugins.stylus())
       .pipe(plugins.prefix(opts.prefix))
       .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
@@ -28,7 +27,7 @@ var gulp      = require('gulp'),
   },
   /* styles:watch */
   watch = function() {
-    gulp.watch(src.styles, ['styles:compile']);
+    gulp.watch(src.styles.watch, ['styles:compile']);
   };
 
 module.exports = {

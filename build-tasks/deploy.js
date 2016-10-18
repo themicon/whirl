@@ -5,7 +5,11 @@ var gulp      = require('gulp'),
   plugins     = require('gulp-load-plugins')(opts.load),
   /* deploy */
   run = function() {
-    return gulp.src(src.overwatch)
+    /**
+      * Just sends a stream of files for deployment.
+      * Cherry pick what we want here within config.
+    */
+    return gulp.src(src.deployment)
       .pipe(plugins.deploy());
   };
 

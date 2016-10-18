@@ -16,16 +16,17 @@ var gulp      = require('gulp'),
   compile = function() {
     return gulp.src(src.scripts)
       .pipe(plugins.plumber())
+      /*
+        * You can use gulp-rename for a quick-win to remove dir structure of
+        * input src by setting dirname to ''
+      */
+      .pipe(plugins.rename({dirname: ''}))
       .pipe(plugins.babel(opts.babel))
-      .pipe(env.mapped ? gulp.dest(dest.js): plugins.gUtil.noop())
-      .pipe(env.mapped ? plugins.sourcemaps.init(): plugins.gUtil.noop())
-      .pipe(plugins.concat(gConfig.pkg.name + '.js'))
       .pipe(plugins.wrap(opts.wrap))
       .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
       .pipe(env.deploy ? plugins.gUtil.noop(): gulp.dest(env.dist ? dest.dist: dest.js))
       .pipe(plugins.uglify())
       .pipe(plugins.rename(opts.rename))
-      .pipe(env.mapped ? plugins.sourcemaps.write('./'): plugins.gUtil.noop())
       .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
       .pipe(gulp.dest(env.dist ? dest.dist: dest.js));
   },
