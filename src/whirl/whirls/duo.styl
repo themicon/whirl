@@ -1,0 +1,22 @@
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+[data-whirl='duo']
+  &:before
+    content ''
+    box-sizing border-box
+    height 50px
+    width  50px
+    margin-left -25px
+    margin-top -25px
+    position absolute
+    top 50%
+    left 50%
+    border 6px solid black
+    border-radius 100%
+    border-right-color yellow
+    border-left-color yellow
+    animation whirl-rotate .5s infinite linear

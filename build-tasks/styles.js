@@ -1,11 +1,13 @@
-var gulp      = require('gulp'),
-  gConfig     = require('../gulp-config'),
-  utils       = require('./utils'),
-  opts        = gConfig.pluginOpts,
-  env         = utils.getEnv(),
-  src         = gConfig.paths.sources,
-  dest        = gConfig.paths.destinations,
-  plugins     = require('gulp-load-plugins')(opts.load),
+var gulp       = require('gulp'),
+  gConfig      = require('../gulp-config'),
+  utils        = require('./utils'),
+  opts         = gConfig.pluginOpts,
+  env          = utils.getEnv(),
+  src          = gConfig.paths.sources,
+  dest         = gConfig.paths.destinations,
+  plugins      = require('gulp-load-plugins')(opts.load),
+  autoprefixer = require('autoprefixer'),
+  cssnano      = require('cssnano'),
   /* styles:lint */
   lint = function() {
     return gulp.src(src.styles.watch)
@@ -14,13 +16,23 @@ var gulp      = require('gulp'),
   },
   /* styles:compile */
   compile = function() {
+    const processsors = [
+      autoprefixer({
+        browsers: opts.prefix
+      }),
+      cssnano({
+        core: false
+      })
+    ];
     return gulp.src(src.styles.compile)
       .pipe(plugins.plumber())
       .pipe(plugins.stylus(opts.stylus))
-      .pipe(plugins.prefix(opts.prefix))
+      .pipe(plugins.postcss(processsors))
       .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
       .pipe(env.deploy ? plugins.gUtil.noop(): gulp.dest(env.dist ? dest.dist: dest.css))
-      .pipe(plugins.minify())
+      .pipe(plugins.postcss([
+        cssnano()
+      ]))
       .pipe(plugins.rename(opts.rename))
       .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
       .pipe(gulp.dest(env.dist ? dest.dist: dest.css));

@@ -15,6 +15,30 @@
     "multi": {
       "active": true,
       "requiredElements": 3
+    },
+    "duo": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "arc": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "double-up": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "traditional": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "bar": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "invert": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

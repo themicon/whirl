@@ -7,7 +7,7 @@
   to
     transform rotate(360deg)
 
-[data-whirl='basic']
+[data-whirl='traditional']
   &:before
     box-sizing        border-box
     content           ''
@@ -19,6 +19,8 @@
     margin-left       -25px
     margin-top        -25px
     animation         whirl-rotate .5s infinite linear
-    border            6px silver solid
-    border-left-color blue
+    border            6px #777 solid
+    border-right-color lighten(#777, 20%)
+    border-bottom-color lighten(#777, 40%)
+    border-left-color lighten(#777, 60%)
     border-radius     100%

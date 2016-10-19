@@ -23,8 +23,7 @@ module.exports = {
       pretty: true,
       data  : {
         name       : pkg.name,
-        description: pkg.description,
-        whirls     : require('./whirl.config.json').whirls
+        description: pkg.description
       }
     },
     load: {

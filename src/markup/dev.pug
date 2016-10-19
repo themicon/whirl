@@ -12,5 +12,6 @@ html(lang="en-us")
     h1 whirl dev
     .whirls
       each val, index in whirls
-        +whirl(index, val.requiredElements, true)
+        if val.active
+          +whirl(index, val.requiredElements, true)
     script(src="script/whirl.js")

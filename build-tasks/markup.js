@@ -6,6 +6,7 @@ var gulp      = require('gulp'),
   src         = gConfig.paths.sources,
   dest        = gConfig.paths.destinations,
   plugins     = require('gulp-load-plugins')(opts.load),
+  fs          = require('fs'),
   /* markup:lint */
   lint = function() {
     return gulp.src(src.markup)
@@ -15,6 +16,8 @@ var gulp      = require('gulp'),
   compile = function() {
     if (env.deploy && opts.pug.pretty) opts.pug.pretty = false;
     if (env.deploy) opts.pug.data.deploy = true;
+    const whirls = JSON.parse(fs.readFileSync(`${process.cwd()}/whirl.config.json`, 'utf-8')).whirls;
+    opts.pug.data.whirls = whirls;
     return gulp.src(src.markup)
       .pipe(plugins.plumber())
       .pipe(plugins.pug(opts.pug))

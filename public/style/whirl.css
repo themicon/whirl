@@ -7,54 +7,126 @@
   * @version 2.0.0
   * (c) 2016
 */
-/**
-  * Basic ringed whirl
-*/
-[data-whirl='basic']:after {
-  content: '';
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -25px;
-  margin-top: -25px;
-  -webkit-animation: rotate 0.5s infinite linear;
-          animation: rotate 0.5s infinite linear;
-  border: 4px #f00 solid;
-  border-left-color: #008000;
-  border-radius: 100%;
+[data-whirl=basic]:before{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  content:'';
+  height:50px;
+  width:50px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-25px;
+  margin-top:-25px;
+  -webkit-animation:a .5s infinite linear;
+          animation:a .5s infinite linear;
+  border:6px solid silver;
+  border-left-color:#00f;
+  border-radius:100%;
 }
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+[data-whirl=whirl]:before{
+  content:'';
+  display:block;
+}
+.ringed{
+  border-left:red;
+}
+[data-whirl=duo]:before{
+  border:6px solid #000;
+  border-radius:100%;
+  border-right-color:#ff0;
+  border-left-color:#ff0;
+}
+[data-whirl=arc]:before,[data-whirl=duo]:before{
+  content:'';
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  height:50px;
+  width:50px;
+  margin-left:-25px;
+  margin-top:-25px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-animation:a .5s infinite linear;
+          animation:a .5s infinite linear;
+}
+[data-whirl=arc]:before{
+  z-index:1;
+  border-top:6px solid red;
+  border-radius:100%;
+}
+[data-whirl=double-up]:before{
+  border:6px double green;
+  border-left-style:solid;
+  border-radius:100%;
+}
+[data-whirl=double-up]:before,[data-whirl=traditional]:before{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  content:'';
+  height:50px;
+  width:50px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-25px;
+  margin-top:-25px;
+  -webkit-animation:a .5s infinite linear;
+          animation:a .5s infinite linear;
+}
+[data-whirl=traditional]:before{
+  border:6px solid #777;
+  border-right-color:#929292;
+  border-bottom-color:#adadad;
+  border-left-color:#c9c9c9;
+  border-radius:100%;
+}
+[data-whirl=bar]:before{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  content:'';
+  height:10px;
+  width:50px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-25px;
+  margin-top:-5px;
+  -webkit-animation:a .5s infinite linear;
+          animation:a .5s infinite linear;
+  background:purple;
+}
+@-webkit-keyframes a{
+  0%{
+    -webkit-transform:rotate(0deg);
+            transform:rotate(0deg);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to{
+    -webkit-transform:rotate(1turn);
+            transform:rotate(1turn);
   }
 }
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+@keyframes a{
+  0%{
+    -webkit-transform:rotate(0deg);
+            transform:rotate(0deg);
   }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+  to{
+    -webkit-transform:rotate(1turn);
+            transform:rotate(1turn);
   }
 }
-/**
-  * Standard whirl
-*/
-[data-whirl='whirl']:before {
-  content: '';
-  display: block;
-}
-/**
-  * Ringed whirl
-*/
-.ringed {
-  border-left: #f00;
+[data-whirl=invert]:after,[data-whirl=invert]:before{
+  content:'';
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  z-index:1;
+  height:50px;
+  width:50px;
+  margin-top:-25px;
+  margin-left:-25px;
+  position:absolute;
+  top:50%;
+  left:50%;
 }
