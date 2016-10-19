@@ -1,0 +1,19 @@
+@keyframes whirl-fly-by
+  0%
+    opacity 0
+    background-color red
+    transform translateX(-105px) scale(0)
+  50%
+    opacity 1
+    background-color green
+    transform translateX(0) scale(1.25)
+  100%
+    opacity 0
+    background-color red
+    transform translateX(105px) scale(0)
+
+[data-whirl='fly-by']
+  &:before
+    $create-pseudo()
+    border-radius 100%
+    animation whirl-fly-by 1s infinite

@@ -17,6 +17,9 @@ $config = json('../../whirl.config.json', {
 
 @import 'utils.styl'
 
+[data-whirl]
+  position relative
+
 // Nothing happens in whirl root, we just import the things we need
 // and dynamically pull in the whirls we are compiling
 for $whirl, $value in $config.whirls

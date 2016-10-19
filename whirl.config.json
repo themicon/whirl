@@ -35,6 +35,30 @@
     "eight": {
       "active": true,
       "requiredElements": 0
+    },
+    "journey-square": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "bloom": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "swap": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "orbit": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "fly-by": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "scale-dots": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

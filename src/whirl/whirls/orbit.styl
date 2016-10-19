@@ -1,0 +1,19 @@
+@keyframes whirl-orbit
+  0%
+    opacity 0
+    background-color red
+    transform scale(0) translateX(-105px)
+  50%
+    opacity 1
+    background-color green
+    transform scale(1.25) translateX(0)
+  100%
+    opacity 0
+    background-color red
+    transform scale(0) translateX(105px)
+
+[data-whirl='orbit']
+  &:before
+    $create-pseudo()
+    border-radius 100%
+    animation whirl-orbit 1s infinite

@@ -1,0 +1,30 @@
+@keyframes whirl-scale-dots
+  0%
+    transform scale(0) translateX(-20px)
+    background green
+  10%
+    transform scale(1) translateX(-20px)
+  20%
+    transform scale(0) translateX(-20px)
+    background green
+  30%
+    transform scale(0) translateX(0)
+  50%
+    transform scale(1) translateX(0)
+  60%
+    background blue
+    transform scale(0) translateX(0)
+  70%
+    transform scale(0) translateX(20px)
+  80%
+    transform scale(1) translateX(20px)
+  90%
+  100%
+    transform scale(0) translateX(20px)
+
+[data-whirl='scale-dots']
+  &:before
+    $create-pseudo(30px, 30px)
+    border-radius 100%
+    background red
+    animation whirl-scale-dots 2s infinite

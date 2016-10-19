@@ -1,0 +1,22 @@
+@keyframes whirl-journey-square
+  0%
+    transform translate(-20px, -20px)
+    background red
+  25%
+    transform translate(-20px, 20px)
+    background green
+  50%
+    transform translate(20px, 20px)
+    background yellow
+  75%
+    transform translate(20px, -20px)
+    background blue
+  100%
+    transform translate(-20px, -20px)
+    background red
+
+[data-whirl='journey-square']
+  &:before
+    $create-pseudo(20px, 20px)
+    border-radius    100%
+    animation whirl-journey-square 1.5s infinite

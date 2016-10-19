@@ -1,0 +1,16 @@
+@keyframes whirl-bloom
+  from
+    transform scale(0)
+  to
+    transform scale(1)
+
+[data-whirl='bloom']
+  &:before
+    $create-pseudo(40px, 40px)
+    background-color purple
+    border-radius 100%
+  &:after
+    $create-pseudo(60px, 60px)
+    border-radius 100%
+    border 10px solid #fff
+    animation whirl-bloom 1s infinite
