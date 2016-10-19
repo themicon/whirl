@@ -1,10 +1,17 @@
 /**
   * Standard whirl
 */
+@keyframes whirl
+  0%
+    transform scale(0) rotate(-45deg) translateY(0)
+  50%
+    transform scale(1.25) rotate(960deg) translateY(30px)
+  100%
+    transform scale(0) rotate(2000deg) translate(0)
 
-[data-whirl='whirl'] {
-  &:before {
-    content: '';
-    display: block;
-  }
-}
+[data-whirl='whirl']
+  &:before
+    $create-pseudo(25px, 25px)
+    border-radius 100%
+    background-color green
+    animation whirl 2s infinite linear

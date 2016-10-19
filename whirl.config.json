@@ -8,14 +8,6 @@
       "active": true,
       "requiredElements": 0
     },
-    "ring": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "multi": {
-      "active": true,
-      "requiredElements": 3
-    },
     "duo": {
       "active": true,
       "requiredElements": 0
@@ -37,6 +29,10 @@
       "requiredElements": 0
     },
     "invert": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "eight": {
       "active": true,
       "requiredElements": 0
     }

@@ -1,0 +1,18 @@
+@keyframes whirl-eight
+  0%
+    transform rotate(0deg)
+    transform-origin left bottom
+  50%
+    transform-origin left bottom
+    transform rotate(360deg)
+  51%
+    transform-origin right top
+  100%
+    transform-origin right top
+    transform rotate(0deg)
+
+[data-whirl='eight']
+  &:before
+    $create-pseudo(40px, 40px)
+    background-color purple
+    animation whirl-eight 2s infinite
