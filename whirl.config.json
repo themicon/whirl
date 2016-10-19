@@ -59,6 +59,14 @@
     "scale-dots": {
       "active": true,
       "requiredElements": 0
+    },
+    "scale-dots-offset": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "dots-fade": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

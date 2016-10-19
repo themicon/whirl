@@ -1,0 +1,31 @@
+@keyframes whirl-scale-dots-offset
+  0%
+    transform translateX(-40px) scale(0)
+    background green
+  10%
+    transform translateX(-40px) scale(1)
+  20%
+    transform translateX(-40px) scale(0)
+    background green
+  30%
+    transform translateX(0) scale(0)
+  40%
+    transform translateX(0) scale(1)
+  50%
+    background blue
+    transform translateX(0) scale(0)
+  60%
+    background-color red
+    transform translateX(40px) scale(0)
+  70%
+    transform translateX(40px) scale(1)
+  80%
+  100%
+    transform translateX(40px) scale(0)
+
+[data-whirl='scale-dots-offset']
+  &:before
+    $create-pseudo(30px, 30px)
+    border-radius 100%
+    background red
+    animation whirl-scale-dots-offset 3s infinite

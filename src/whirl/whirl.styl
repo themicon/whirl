@@ -7,18 +7,12 @@
   * @version 2.0.0
   * (c) 2016
 */
-
-// $whirls = 'whirls/pseudo/whirl.styl' 'whirls/pseudo/ring.styl';
+@import 'utils.styl'
 
 $config = json('../../whirl.config.json', {
   hash: true,
   leave-strings: true
 })
-
-@import 'utils.styl'
-
-[data-whirl]
-  position relative
 
 // Nothing happens in whirl root, we just import the things we need
 // and dynamically pull in the whirls we are compiling
