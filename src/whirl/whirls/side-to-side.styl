@@ -1,0 +1,15 @@
+@keyframes whirl-side-to-side
+  0%
+    transform translateX(-150%)
+    background-color red
+  50%
+    background-color green
+  100%
+    transform translateX(150%)
+    background-color red
+
+[data-whirl='side-to-side']
+  &:before
+    $create-pseudo(30px, 30px)
+    border-radius 100%
+    animation whirl-side-to-side .5s infinite alternate ease-in-out

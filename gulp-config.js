@@ -8,6 +8,7 @@ module.exports = {
   },
   pluginOpts: {
     browserSync: {
+      online : false,
       port   : 1987,
       server : {
         baseDir: publicPath

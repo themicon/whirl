@@ -1,0 +1,13 @@
+@keyframes whirl-pendulum
+  from
+    transform rotate(90deg) translateY(30px)
+  to
+    transform rotate(-90deg) translateY(30px)
+
+[data-whirl='pendulum']
+  &:before
+    $create-pseudo(25px, 25px)
+    border-radius 100%
+    background blue
+    transform-origin center top
+    animation whirl-pendulum 1s infinite alternate ease-in-out

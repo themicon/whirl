@@ -67,6 +67,18 @@
     "dots-fade": {
       "active": true,
       "requiredElements": 0
+    },
+    "pendulum": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "side-to-side": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "color-wheel": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }
