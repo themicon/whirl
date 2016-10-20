@@ -1,0 +1,12 @@
+@keyframes whirl-eclipse
+  from
+    box-shadow inset 50px 0 0 0 black
+  to
+    box-shadow inset -50px 0 0 0 black
+
+[data-whirl='eclipse']
+  &:before
+    $create-pseudo()
+    border-radius 100%
+    background-color yellow
+    animation whirl-eclipse 1s infinite

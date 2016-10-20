@@ -1,0 +1,20 @@
+@keyframes whirl-fidget
+  10%
+    transform skewX(60deg)
+  20%
+    transform skewX(-60deg)
+  30%
+    transform skewX(0deg)
+  40%
+    transform skewY(60deg)
+  50%
+    transform skewY(-60deg)
+  60%
+    transform skewY(0)
+
+[data-whirl='fidget']
+  &:before
+    $create-pseudo()
+    border-radius 100%
+    background-color purple
+    animation whirl-fidget 1s infinite

@@ -1,0 +1,14 @@
+@keyframes whirl-line
+  from
+    background-position -60px 0
+  to
+    background-position 60px 0
+
+[data-whirl='line']
+  &:before
+    $create-pseudo(20px, 60px)
+    background linear-gradient(90deg, green, green)
+    background-position -20px 0
+    background-size 60px 20px
+    background-repeat no-repeat
+    animation whirl-line 1.5s infinite alternate ease-in-out

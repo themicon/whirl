@@ -79,6 +79,26 @@
     "color-wheel": {
       "active": true,
       "requiredElements": 0
+    },
+    "line": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "eclipse": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "rotary": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "throw": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "fidget": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }
