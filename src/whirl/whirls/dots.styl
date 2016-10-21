@@ -1,0 +1,12 @@
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+[data-whirl='dots']
+  &:before
+    $create-pseudo(10px, 10px)
+    border-radius 100%
+    box-shadow 30px 0 0 10px purple, -30px 0 0 10px white
+    animation whirl-rotate 1s infinite

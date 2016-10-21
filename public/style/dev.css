@@ -236,6 +236,7 @@ h1{
   margin:10px;
   border-radius:10px;
   position:relative;
+  overflow:hidden;
 }
 @media (max-width:600px){
   .whirl-container{

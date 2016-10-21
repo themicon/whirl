@@ -1,0 +1,35 @@
+@keyframes whirl-cyclical
+  0%
+  100%
+    transform scale(0)
+  50%
+    transform scale(1)
+
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+[data-whirl='cyclical']
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  animation whirl-rotate 2s infinite ease-out
+
+  &:before
+  &:after
+    border-radius 100%
+    background white
+    animation whirl-cyclical 1s infinite ease-out
+
+  &:before
+    $create-pseudo(20px, 20px)
+    transform-origin -60% -80%
+
+  &:after
+    $create-pseudo(30px, 30px)
+    transform-origin 10% 80%
+    animation-delay .5s

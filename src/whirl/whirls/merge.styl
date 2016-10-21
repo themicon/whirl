@@ -1,0 +1,34 @@
+@keyframes whirl-cyclical
+  0%
+  100%
+    transform scale(0)
+  50%
+    transform scale(1)
+
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+[data-whirl='merge']
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+  animation whirl-rotate 2s infinite ease-out
+
+  &:before
+  &:after
+    $create-pseudo(30px, 30px)
+    border-radius 100%
+    background white
+    animation whirl-cyclical 2s infinite ease-out
+    opacity .5
+
+  &:before
+    transform-origin 200% 80%
+
+  &:after
+    transform-origin -200% -80%

@@ -1,0 +1,18 @@
+@keyframes whirl-rays
+  from
+    transform scale(0)
+    opacity 1
+  to
+    transform scale(1)
+    opacity 0
+
+[data-whirl='rays']
+  &:before
+    $create-pseudo(20px, 20px)
+    border-radius 100%
+    background white
+  &:after
+    $create-pseudo(60px, 60px)
+    border-radius 100%
+    border 10px solid white
+    animation whirl-rays 1s infinite

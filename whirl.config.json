@@ -123,6 +123,34 @@
     "gyro": {
       "active": true,
       "requiredElements": 0
+    },
+    "rays": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "cyclical": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "merge": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "split": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "hourglass": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "hourglass-spin": {
+      "active": true,
+      "requiredElements": 1
     }
   }
 }
