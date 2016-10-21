@@ -1,0 +1,16 @@
+@keyframes whirl-tumble
+  from
+    transform rotate(180deg) translateY(-14px)
+  to
+    transform rotate(540deg) translateY(-14px)
+
+[data-whirl='tumble']
+  &:before
+    $create-pseudo()
+    border 5px solid red
+    border-radius 100%
+  &:after
+    $create-pseudo(16px, 16px)
+    background green
+    border-radius 100%
+    animation whirl-tumble 1s infinite

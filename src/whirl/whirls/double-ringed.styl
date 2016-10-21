@@ -1,0 +1,15 @@
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+[data-whirl='double-ringed']
+  &:before
+    $create-pseudo()
+    border 5px solid white
+    border-radius 100%
+  &:after
+    $create-pseudo(16px, 16px)
+    border-radius 100%
+    box-shadow 22px 0 0 0 purple, -22px 0 0 0 purple
+    animation whirl-rotate 1s infinite linear

@@ -36,7 +36,7 @@
       "active": true,
       "requiredElements": 0
     },
-    "journey-square": {
+    "outline-square": {
       "active": true,
       "requiredElements": 0
     },
@@ -97,6 +97,18 @@
       "requiredElements": 0
     },
     "fidget": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "tumble": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ringed": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "double-ringed": {
       "active": true,
       "requiredElements": 0
     }

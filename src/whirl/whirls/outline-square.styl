@@ -1,4 +1,4 @@
-@keyframes whirl-journey-square
+@keyframes whirl-outline-square
   0%
     transform translate(-20px, -20px)
     background red
@@ -15,8 +15,8 @@
     transform translate(-20px, -20px)
     background red
 
-[data-whirl='journey-square']
+[data-whirl='outline-square']
   &:before
     $create-pseudo(20px, 20px)
     border-radius    100%
-    animation whirl-journey-square 1.5s infinite
+    animation whirl-outline-square 1.5s infinite
