@@ -151,6 +151,18 @@
     "hourglass-spin": {
       "active": true,
       "requiredElements": 1
+    },
+    "breakout": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "color-arc": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "color-bridge": {
+      "active": true,
+      "requiredElements": 1
     }
   }
 }

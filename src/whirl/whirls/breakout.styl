@@ -1,0 +1,23 @@
+@keyframes whirl-breakout
+  0%
+  40%
+    border-width 25px
+  80%
+    opacity 1
+    transform scale(1)
+    border-width 10px
+    border-color white
+  100%
+    border-color purple
+    transform scale(1.75)
+    opacity 0
+[data-whirl='breakout']
+  &:before
+    $create-pseudo()
+    border 10px solid white
+    border-radius 100%
+  &:after
+    $create-pseudo()
+    border-radius 100%
+    border 10px solid white
+    animation whirl-breakout 1.5s infinite

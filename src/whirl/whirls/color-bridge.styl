@@ -1,0 +1,22 @@
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+[data-whirl='color-bridge']
+  clip rect(0px, 50px, 25px, 0)
+  position absolute
+  height 50px
+  width 50px
+  top 50%
+  left 50%
+  transform translate(-50%, -25%)
+  overflow hidden
+  &:before
+    $create-pseudo()
+    border 10px solid white
+    border-left-color purple
+    border-right-color purple
+    border-radius 100%
+    animation whirl-rotate 1s infinite linear
