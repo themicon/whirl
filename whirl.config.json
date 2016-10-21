@@ -171,6 +171,10 @@
     "radial": {
       "active": true,
       "requiredElements": 0
+    },
+    "load-man": {
+      "active": true,
+      "requiredElements": 1
     }
   }
 }

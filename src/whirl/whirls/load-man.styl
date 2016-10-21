@@ -1,0 +1,71 @@
+$yellow       = yellow
+$white        = white
+$chomp-angle  = 45
+$chomp-speed  = .35s
+$track-height = 10px
+$track-length = 200px
+$track-speed  = 1.2s
+$load-size    = 5 * $track-height
+
+[data-whirl='load-man']
+  height     $track-height
+  position   absolute
+  top        50%
+  left       50%
+  width      $track-length
+  margin-top -5px
+  background repeating-linear-gradient(90deg, white, white 5%, transparent 5%, transparent 35%)
+  animation  whirl-load-man-travel $track-speed infinite linear
+
+  /**
+    * Our pseudo elements create the head pieces
+    *
+    * They are near identical minus subtle differences in animation and border
+    * styling
+  */
+  &:before
+  &:after
+    content ''
+    position absolute
+    left -($load-size / 2)
+    top 50%
+    border ($load-size / 2) solid $yellow
+    border-radius 100%
+    margin-top -($load-size / 2)
+  /**
+  * The top head piece
+  */
+  &:before
+    border-left-color   transparent
+    border-bottom-color transparent
+    animation           whirl-load-man-chomp $chomp-speed infinite linear
+  /**
+    * The bottom head piece
+  */
+  &:after
+    border-top-color   transparent
+    border-right-color transparent
+    animation          whirl-load-man-chomp-b $chomp-speed infinite linear
+
+
+@keyframes whirl-load-man-travel
+  from
+    background-position 0 0
+  to
+    background-position -($track-length) 0
+
+@keyframes whirl-load-man-chomp
+  0%
+    transform rotate($chomp-angle * -1deg)
+  50%
+    transform rotate(($chomp-angle * 2) * -1deg)
+  100%
+    transform rotate($chomp-angle * -1deg)
+
+@keyframes whirl-load-man-chomp-b
+  0%
+    transform rotate($chomp-angle * -1deg)
+  50%
+    transform rotate(0deg)
+  100%
+    transform rotate($chomp-angle * -1deg)
