@@ -1,0 +1,36 @@
+$numberOfSlots = 4
+genColorSet($color = purple)
+  $colors = ()
+  for $dot in (0..($numberOfSlots -1))
+    push($colors, lighten($color, (100% / $numberOfSlots) * $dot))
+  ($colors)
+
+genShadow($pos, $color)
+  $colorSet = genColorSet($color)
+  $shadows = ()
+  for $dot in (0..($numberOfSlots -1))
+    $xy          = ($dot * 10px + $dot * 5px) 30px
+    $dots        = $numberOfSlots
+    $truePos     = $dot + $pos
+    $colorIndex  = $truePos % $dots
+    $shadowProps = $xy 0 0 $colorSet[$colorIndex]
+    push($shadows, join(' ', $shadowProps))
+  (unquote(join(',', $shadows)))
+
+@keyframes whirl-color-range
+  for $per in (0..$numberOfSlots)
+    {($per * (100 / $numberOfSlots)) * 1%}
+      box-shadow genShadow($per, purple)
+
+[data-whirl='color-range']
+  &:before
+    height  20px
+    width   10px
+    margin-top -37.5px
+    margin-left -35.5px
+    background-color transparent
+    content ''
+    position absolute
+    top 50%
+    left 50%
+    animation whirl-color-range .5s infinite ease

@@ -1,0 +1,16 @@
+@keyframes whirl-rotate
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(360deg)
+
+[data-whirl='chase']
+  &:before
+  &:after
+    $create-pseudo(30px, 30px)
+    border 5px solid white
+    border-radius 100%
+    box-shadow 0 -40px 0 -5px white
+    animation whirl-rotate 1.25s infinite ease
+  &:after
+    animation-delay .75s

@@ -179,6 +179,46 @@
     "rainbow": {
       "active": true,
       "requiredElements": 1
+    },
+    "chase": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "trigger": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "dots-flow": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "color-range": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ring-of-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "palette": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "square-of-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "line-of-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "snake": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "mexican-wave": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

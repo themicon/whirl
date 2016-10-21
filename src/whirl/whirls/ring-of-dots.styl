@@ -1,0 +1,40 @@
+$scaleRadius   = 20px
+$size          = 10px
+$numberOfDots  = 7
+
+/* Set primary */
+$dotPrimary           = purple
+$dotPrimaryShadeOne   = lighten($dotPrimary, 33%)
+$dotPrimaryShadeTwo   = lighten($dotPrimary, 66%)
+$dotPrimaryShadeThree = lighten($dotPrimary, 99%)
+
+$dotColors     = $dotPrimary $dotPrimaryShadeThree $dotPrimaryShadeThree $dotPrimaryShadeThree $dotPrimaryShadeThree $dotPrimaryShadeTwo $dotPrimaryShadeOne
+
+getPosition(angle)
+  xPos = $scaleRadius * cos(angle * (PI / 180))
+  yPos = $scaleRadius * sin(angle * (PI / 180))
+  (xPos yPos)
+
+genShadow($pos, $colorSet)
+  $shadows = ()
+  for $dot in (1..$numberOfDots)
+    $angle       = (360 / $numberOfDots) * ($dot - 1)
+    $xy          = getPosition($angle)
+    $dots        = $numberOfDots
+    $truePos     = $dot + $pos
+    $colorIndex  = $truePos % $dots
+    $shadowProps = $xy 0 0 $colorSet[$colorIndex]
+    push($shadows, join(' ', $shadowProps))
+  (unquote(join(',', $shadows)))
+
+@keyframes whirl-ring-of-dots
+  for $per in (0..$numberOfDots)
+    {($per * (100 / $numberOfDots)) * 1%}
+      box-shadow genShadow($per, $dotColors)
+
+
+[data-whirl='ring-of-dots']
+  &:before
+    $create-pseudo(10px, 10px)
+    border-radius $size
+    animation     whirl-ring-of-dots 1s infinite linear reverse
