@@ -9,7 +9,7 @@ html(lang="en-us")
     link(rel='stylesheet', href='style/whirl.css')
     link(rel='stylesheet', href='style/dev.css')
   body
-    h1 whirl dev
+    h1= `whirl dev... ${Object.keys(whirls).length} whirls and counting`
     .whirls
       each val, index in whirls
         if val.active
