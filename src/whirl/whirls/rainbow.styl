@@ -1,0 +1,59 @@
+$violet        = #bf55ec
+$indigo        = #663399
+$blue          = #19b5fe
+$green         = #2ecc71
+$yellow        = #f9bf3b
+$orange        = #f89406
+$red           = #f22613
+$cloudColor    = #ffffff
+$colorSet      = $red $orange $yellow $green $blue $indigo $violet
+$bandSize      = 4px
+$cloudSize     = 16px
+
+generateRainbow()
+  $shadows = ()
+  for $color in (0..(length($colorSet) - 1))
+    $props = 0 0 0 (($color + 1) * $bandSize) $colorSet[$color] inset
+    push($shadows, join(' ', $props))
+  (unquote(join(',', $shadows)))
+
+
+[data-whirl='rainbow']
+  position absolute
+  height 100px
+  width 100px
+  border-radius 100%
+  margin-left -50px
+  margin-top -50px
+  top 50%
+  left 50%
+  clip rect(0, 100px, 50px, 0)
+  &:after
+    $create-pseudo(10px, 10px)
+    border-radius 100%
+    background transparent
+    box-shadow -40px 0px 0 0 $cloudColor,
+      -35px -5px 0 0 $cloudColor,
+      -30px -5px 0 0 $cloudColor,
+      -30px -8px 0 0 $cloudColor,
+      -25px -5px 0 0 $cloudColor,
+      -25px -8px 0 0 $cloudColor,
+      -20px -5px 0 0 $cloudColor,
+      -15px 0px 0 0 $cloudColor,
+      40px 0px 0 0 $cloudColor,
+      35px -5px 0 0 $cloudColor,
+      30px -5px 0 0 $cloudColor,
+      30px -8px 0 0 $cloudColor,
+      25px -5px 0 0 $cloudColor,
+      25px -8px 0 0 $cloudColor,
+      20px -5px 0 0 $cloudColor,
+      15px 0px 0 0 $cloudColor
+
+
+  &:before
+    $create-pseudo(80px, 80px)
+    border-radius 100%
+    box-shadow generateRainbow()
+    clip rect(0, 80px, 40px, 0 )
+    overflow hidden
+    animation whirl-rotate 1.5s infinite

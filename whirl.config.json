@@ -175,6 +175,10 @@
     "load-man": {
       "active": true,
       "requiredElements": 1
+    },
+    "rainbow": {
+      "active": true,
+      "requiredElements": 1
     }
   }
 }

@@ -2210,3 +2210,45 @@
             transform:rotate(-45deg);
   }
 }
+[data-whirl=rainbow]{
+  position:absolute;
+  height:100px;
+  width:100px;
+  border-radius:100%;
+  margin-left:-50px;
+  margin-top:-50px;
+  top:50%;
+  left:50%;
+  clip:rect(0,100px,50px,0);
+}
+[data-whirl=rainbow]:after{
+  height:10px;
+  width:10px;
+  margin-top:-5px;
+  margin-left:-5px;
+  background:transparent;
+  -webkit-box-shadow:-40px 0 0 0 #fff,-35px -5px 0 0 #fff,-30px -5px 0 0 #fff,-30px -8px 0 0 #fff,-25px -5px 0 0 #fff,-25px -8px 0 0 #fff,-20px -5px 0 0 #fff,-15px 0 0 0 #fff,40px 0 0 0 #fff,35px -5px 0 0 #fff,30px -5px 0 0 #fff,30px -8px 0 0 #fff,25px -5px 0 0 #fff,25px -8px 0 0 #fff,20px -5px 0 0 #fff,15px 0 0 0 #fff;
+          box-shadow:-40px 0 0 0 #fff,-35px -5px 0 0 #fff,-30px -5px 0 0 #fff,-30px -8px 0 0 #fff,-25px -5px 0 0 #fff,-25px -8px 0 0 #fff,-20px -5px 0 0 #fff,-15px 0 0 0 #fff,40px 0 0 0 #fff,35px -5px 0 0 #fff,30px -5px 0 0 #fff,30px -8px 0 0 #fff,25px -5px 0 0 #fff,25px -8px 0 0 #fff,20px -5px 0 0 #fff,15px 0 0 0 #fff;
+}
+[data-whirl=rainbow]:after,[data-whirl=rainbow]:before{
+  content:'';
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  z-index:1;
+  position:absolute;
+  top:50%;
+  left:50%;
+  border-radius:100%;
+}
+[data-whirl=rainbow]:before{
+  height:80px;
+  width:80px;
+  margin-top:-40px;
+  margin-left:-40px;
+  -webkit-box-shadow:0 0 0 4px #f22613 inset,0 0 0 8px #f89406 inset,0 0 0 12px #f9bf3b inset,0 0 0 16px #2ecc71 inset,0 0 0 20px #19b5fe inset,0 0 0 24px #639 inset,0 0 0 28px #bf55ec inset;
+          box-shadow:inset 0 0 0 4px #f22613,inset 0 0 0 8px #f89406,inset 0 0 0 12px #f9bf3b,inset 0 0 0 16px #2ecc71,inset 0 0 0 20px #19b5fe,inset 0 0 0 24px #639,inset 0 0 0 28px #bf55ec;
+  clip:rect(0,80px,40px,0);
+  overflow:hidden;
+  -webkit-animation:E 1.5s infinite;
+          animation:E 1.5s infinite;
+}
