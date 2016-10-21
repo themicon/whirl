@@ -163,6 +163,14 @@
     "color-bridge": {
       "active": true,
       "requiredElements": 1
+    },
+    "jump": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "radial": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

@@ -1,0 +1,22 @@
+@keyframes whirl-radial
+  0%
+    transform rotate(0deg) translateY(150%)
+  100%
+    transform rotate(1440deg) translateY(150%)
+
+@keyframes whirl-radial-2
+  0%
+    transform rotate(180deg) translateY(150%)
+  100%
+    transform rotate(1620deg) translateY(150%)
+
+
+[data-whirl='radial']
+  &:before
+    $create-pseudo(20px, 10px)
+    background-color white
+    animation whirl-radial .75s infinite linear
+  &:after
+    $create-pseudo(20px, 10px)
+    background-color purple
+    animation whirl-radial-2 .75s infinite linear
