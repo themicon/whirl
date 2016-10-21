@@ -1,11 +1,11 @@
-$create-pseudo($height=50px, $width=50px, $content='', $zIndex=1)
-  content     $content
+$create-pseudo($height=$whirl-default-size, $width=$whirl-default-size, $content='', $zIndex=1)
   box-sizing  border-box
-  z-index     $zIndex
+  content     $content
   height      $height
-  width       $width
-  margin-top  ($height / -2)
+  left        50%
   margin-left ($width / -2)
+  margin-top  ($height / -2)
   position    absolute
   top         50%
-  left        50%
+  width       $width
+  z-index     $zIndex

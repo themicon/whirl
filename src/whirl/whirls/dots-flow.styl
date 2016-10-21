@@ -1,36 +1,48 @@
+/**
+  * Dots flow
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 16px
+$no-of-dots = 3
+$margin = 10px
+$y = 2 * $size
+$x2 = $margin + $size
+$x1 = -($x2)
+$scale = $size / 4px
+
 @keyframes whirl-dots-flow
   0%
-    box-shadow -25px 30px 0px 0 white,
-        0px 30px 0 0 white,
-        25px 30px 0 0 white
+    box-shadow $x1 $y 0px 0 white,
+      0px $y 0 0 white,
+      $x2 $y 0 0 white
   25%
-    box-shadow -25px 30px 0 5px purple,
-        0px 30px 0 0 white,
-        25px 30px 0 0 white
+    box-shadow $x1 $y 0 $scale purple,
+      0px $y 0 0 white,
+      $x2 $y 0 0 white
   50%
-    box-shadow -25px 30px 0 0 white,
-        0px 30px 0 5px purple,
-        25px 30px 0 0 white
+    box-shadow $x1 $y 0 0 white,
+      0px $y 0 $scale purple,
+      $x2 $y 0 0 white
   75%
-    box-shadow -25px 30px 0px 0 white,
-        0px 30px 0 0 white,
-        25px 30px 0 5px purple
+    box-shadow $x1 $y 0px 0 white,
+      0px $y 0 0 white,
+      $x2 $y 0 $scale purple
+
 
 [data-whirl='dots-flow']
   &:before
-    height  15px
-    width   15px
-    margin-top -37.5px
-    margin-left -7.5px
-    background-color transparent
-    transition box-shadow .25s ease 0s
-    box-shadow -25px 30px 0px 0 white,
-      0px 30px 0 0 white,
-      25px 30px 0 0 white
-    content ''
-    display block
+    animation whirl-dots-flow .85s infinite ease
     border-radius 100%
+    box-shadow $x1 $y 0px 0 white,
+      0px $y 0 0 white,
+      $x2 $y 0 0 white
+    content ''
+    height  $size
+    left 50%
+    margin-left -($size / 2px)
+    margin-top -((1.5 * $size) + $margin)
     position absolute
     top 50%
-    left 50%
-    animation whirl-dots-flow .85s infinite ease
+    width $size

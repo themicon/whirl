@@ -1,36 +1,46 @@
-$numberOfSlots = 4
-genColorSet($color = purple)
+/**
+  * Color range
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$no-of-slots = 5
+$color       = $whirl-secondary
+$bar-height  = 20px
+$bar-width   = 10px
+$bar-margin  = 5px
+
+genColorSet($color)
   $colors = ()
-  for $dot in (0..($numberOfSlots -1))
-    push($colors, lighten($color, (100% / $numberOfSlots) * $dot))
+  for $dot in (0..($no-of-slots - 1))
+    push($colors, lighten($color, (100% / $no-of-slots) * $dot))
   ($colors)
 
 genShadow($pos, $color)
-  $colorSet = genColorSet($color)
+  $color-set = genColorSet($color)
   $shadows = ()
-  for $dot in (0..($numberOfSlots -1))
-    $xy          = ($dot * 10px + $dot * 5px) 30px
-    $dots        = $numberOfSlots
-    $truePos     = $dot + $pos
-    $colorIndex  = $truePos % $dots
-    $shadowProps = $xy 0 0 $colorSet[$colorIndex]
-    push($shadows, join(' ', $shadowProps))
+  for $dot in (0..($no-of-slots - 1))
+    $xy          = ($dot * 10px + $dot * $bar-margin) $bar-height + ($bar-margin * 2px)
+    $dots        = $no-of-slots
+    $true-pos     = $dot + $pos
+    $color-index  = $true-pos % $dots
+    $shadow-props = $xy 0 0 $color-set[$color-index]
+    push($shadows, join(' ', $shadow-props))
   (unquote(join(',', $shadows)))
 
 @keyframes whirl-color-range
-  for $per in (0..$numberOfSlots)
-    {($per * (100 / $numberOfSlots)) * 1%}
-      box-shadow genShadow($per, purple)
+  for $pc in (0..$no-of-slots)
+    {($pc * (100 / $no-of-slots)) * 1%}
+      box-shadow genShadow($pc, $color)
 
 [data-whirl='color-range']
   &:before
-    height  20px
-    width   10px
-    margin-top -37.5px
-    margin-left -35.5px
-    background-color transparent
+    animation whirl-color-range .5s infinite ease
     content ''
+    height  $bar-height
+    left 50%
+    margin-left ($no-of-slots * $bar-width + ($no-of-slots - 1) * $bar-margin) * -.5px
+    margin-top ($bar-height * 1.5 + $bar-margin) * -1px
     position absolute
     top 50%
-    left 50%
-    animation whirl-color-range .5s infinite ease
+    width $bar-width

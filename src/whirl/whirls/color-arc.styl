@@ -1,22 +1,27 @@
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+@import '../common/animation/rotate.styl'
+/**
+  * Color arc
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = $whirl-default-size
+$depth = $whirl-default-border-width
 
 [data-whirl='color-arc']
-  clip rect(0px, 25px, 25px, 0)
-  position absolute
-  height 50px
-  width 50px
-  top 50%
+  clip rect(0px, $size / 2px, $size / 2px, 0)
+  height $size
   left 50%
-  transform translate(-25%, -25%)
   overflow hidden
+  position absolute
+  top 50%
+  transform translate(-25%, -25%)
+  width $size
+
   &:before
     $create-pseudo()
-    border 10px solid white
-    border-left-color purple
-    border-right-color purple
-    border-radius 100%
     animation whirl-rotate 1s infinite linear
+    border $depth solid $whirl-primary
+    border-left-color $whirl-secondary
+    border-radius 100%
+    border-right-color $whirl-secondary

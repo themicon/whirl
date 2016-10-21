@@ -1,19 +1,28 @@
+/**
+  * Fly by
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 50px
+$color = $whirl-primary
+$distance = 100px
+
 @keyframes whirl-fly-by
   0%
     opacity 0
-    background-color red
-    transform translateX(-105px) scale(0)
+    transform translateX(-($distance)) scale(0)
   50%
     opacity 1
-    background-color green
     transform translateX(0) scale(1.25)
   100%
     opacity 0
-    background-color red
-    transform translateX(105px) scale(0)
+    transform translateX($distance) scale(0)
+
 
 [data-whirl='fly-by']
   &:before
-    $create-pseudo()
-    border-radius 100%
+    $create-pseudo($size, $size)
     animation whirl-fly-by 1s infinite
+    background-color $color
+    border-radius 100%

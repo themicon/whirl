@@ -1,28 +1,36 @@
+/**
+  * Hourglass - no spin
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$duration = 2s
+$size = 40px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+$glass-thickness = 4px
+
 @keyframes whirl-hourglass
   0%
     background-position 10%
   100%
     background-position 100%
 
-
-$whirl-hourglass-dur = 2s
-
 [data-whirl='hourglass']
-  &:before
-    transform translateY(-28px) rotate(-45deg)
-    $create-pseudo(40px, 40px)
-    border-radius 100% 100% 100% 0
-    border 4px solid white
-    background linear-gradient(45deg, white, white 50%, transparent 50%, transparent)
-    background-size 300% 300%
-    background-position 10%
-    animation whirl-hourglass $whirl-hourglass-dur infinite
+
   &:after
-    transform  translateY(28px) rotate(135deg)
-    $create-pseudo(40px, 40px)
+  &:before
+    $create-pseudo($size, $size)
+    animation whirl-hourglass $duration infinite
+    border $glass-thickness solid $color-one
     border-radius 100% 100% 100% 0
-    border 4px solid white
-    background linear-gradient(45deg, transparent, transparent 50%, white 50%, white)
+
+  &:after
+    background linear-gradient(45deg, transparent, transparent 50%, $color-two 50%, $color-two)
     background-size 300% 300%
-    background-position 10%
-    animation whirl-hourglass $whirl-hourglass-dur infinite
+    transform  translateY(28px) rotate(135deg)
+
+  &:before
+    background linear-gradient(45deg, $color-two, $color-two 50%, transparent 50%, transparent)
+    background-size 300% 300%
+    transform translateY(-28px) rotate(-45deg)

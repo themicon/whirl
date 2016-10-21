@@ -1,15 +1,23 @@
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+@import '../common/animation/rotate.styl'
+
+/**
+  * Color wheel
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = $whirl-default-size
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+$color-three = $whirl-primary
+$color-four = $whirl-secondary
 
 [data-whirl='color-wheel']
   &:before
-    $create-pseudo(40px, 40px)
-    border-radius 100%
-    border 20px solid green
-    border-top-color red
-    border-right-color orange
-    border-bottom-color yellow
+    $create-pseudo($size, $size)
     animation whirl-rotate .5s infinite linear
+    border ($size / 2px) solid $color-one
+    border-bottom-color $color-two
+    border-radius 100%
+    border-right-color $color-three
+    border-top-color $color-four

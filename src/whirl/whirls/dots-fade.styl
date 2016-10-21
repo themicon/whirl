@@ -1,40 +1,50 @@
+/**
+  * Dots fade
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 30px
+$margin = 10px
+$travel = $size + $margin
+
 @keyframes whirl-dots-fade
   0%
-    transform translateX(-40px)
+    background $whirl-primary
     opacity 0
-    background green
+    transform translateX(-($travel))
   10%
-    transform translateX(-40px)
     opacity 1
+    transform translateX(-($travel))
   20%
-    transform translateX(-40px)
+    background $whirl-primary
     opacity 0
-    background green
+    transform translateX(-($travel))
   30%
-    transform translateX(0)
     opacity 0
+    transform translateX(0)
   40%
-    transform translateX(0)
     opacity 1
+    transform translateX(0)
   50%
-    background blue
+    background $whirl-secondary
+    opacity 0
     transform translateX(0)
-    opacity 0
   60%
-    transform translateX(40px)
+    background-color $whirl-primary
     opacity 0
-    background-color red
+    transform translateX($travel)
   70%
-    transform translateX(40px)
     opacity 1
+    transform translateX($travel)
   80%
   100%
-    transform translateX(40px)
     opacity 0
+    transform translateX($travel)
 
 [data-whirl='dots-fade']
   &:before
-    $create-pseudo(30px, 30px)
-    border-radius 100%
-    background red
+    $create-pseudo($size, $size)
     animation whirl-dots-fade 3s infinite
+    background-color $whirl-primary
+    border-radius 100%

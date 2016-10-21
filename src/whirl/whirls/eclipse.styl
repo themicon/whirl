@@ -1,12 +1,23 @@
+/**
+  * Eclipse
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+
 @keyframes whirl-eclipse
   from
-    box-shadow inset 50px 0 0 0 black
+    box-shadow inset 50px 0 0 0 $color-one
   to
-    box-shadow inset -50px 0 0 0 black
+    box-shadow inset -50px 0 0 0 $color-one
+
+$size = 50px
+$color-one = $whirl-primary
+$color-two = $whirl-bg
 
 [data-whirl='eclipse']
   &:before
-    $create-pseudo()
-    border-radius 100%
-    background-color yellow
+    $create-pseudo($size, $size)
     animation whirl-eclipse 1s infinite
+    background-color $color-two
+    border-radius 100%

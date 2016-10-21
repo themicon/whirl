@@ -1,25 +1,41 @@
+/**
+  * Gyro
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 20px
+$radius-lg = 50px
+$radius-sm = 5px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+
 @keyframes gyro
   0%
-    transform scale(1) rotate(0deg) translateY(50px)
+    transform scale(1) rotate(0deg) translateY($radius-lg)
   50%
     transform scale(.5) rotate(1440deg) translateY(5px)
   100%
-    transform scale(1) rotate(2920deg) translateY(50px)
+    transform scale(1) rotate(2920deg) translateY($radius-lg)
+
 @keyframes gyro-2
   0%
-    transform scale(1) rotate(0deg) translateY(-50px)
+    transform scale(1) rotate(0deg) translateY(-($radius-lg))
   50%
     transform scale(.5) rotate(1440deg) translateY(-5px)
   100%
-    transform scale(1) rotate(2920deg) translateY(-50px)
+    transform scale(1) rotate(2920deg) translateY(-($radius-lg))
+
+
 [data-whirl='gyro']
-  &:before
-    $create-pseudo(20px, 20px)
-    border-radius 100%
-    background white
-    animation gyro 2s infinite linear
+
   &:after
-    $create-pseudo(20px, 20px)
-    border-radius 100%
-    background purple
+  &:before
+    $create-pseudo($size, $size)
     animation gyro-2 2s infinite linear
+    background $color-one
+    border-radius 100%
+
+  &:before
+    animation gyro 2s infinite linear
+    background $color-two

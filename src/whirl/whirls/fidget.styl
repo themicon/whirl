@@ -1,3 +1,9 @@
+/**
+  * Fidget
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
 @keyframes whirl-fidget
   10%
     transform skewX(60deg)
@@ -12,9 +18,12 @@
   60%
     transform skewY(0)
 
+$size = 50px
+$color = $whirl-primary
+
 [data-whirl='fidget']
   &:before
-    $create-pseudo()
-    border-radius 100%
-    background-color purple
+    $create-pseudo($size, $size)
     animation whirl-fidget 1s infinite
+    background-color $color
+    border-radius 100%

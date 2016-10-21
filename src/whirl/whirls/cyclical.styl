@@ -1,35 +1,32 @@
-@keyframes whirl-cyclical
-  0%
-  100%
-    transform scale(0)
-  50%
-    transform scale(1)
+@import '../common/animation/grow.styl'
+/**
+  * Cyclical
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
 
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+$size-one = 30px
+$size-two = 20px
 
 [data-whirl='cyclical']
-  position absolute
-  top 0
-  right 0
+  animation whirl-rotate 2s infinite ease-out
   bottom 0
   left 0
-  animation whirl-rotate 2s infinite ease-out
-
-  &:before
-  &:after
-    border-radius 100%
-    background white
-    animation whirl-cyclical 1s infinite ease-out
-
-  &:before
-    $create-pseudo(20px, 20px)
-    transform-origin -60% -80%
+  position absolute
+  right 0
+  top 0
 
   &:after
-    $create-pseudo(30px, 30px)
-    transform-origin 10% 80%
+    $create-pseudo($size-one, $size-one)
     animation-delay .5s
+    transform-origin 10% 80%
+
+  &:after
+  &:before
+    animation whirl-grow 1s infinite ease-out
+    background $whirl-primary
+    border-radius 100%
+
+  &:before
+    $create-pseudo($size-two, $size-two)
+    transform-origin -60% -80%

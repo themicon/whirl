@@ -1,3 +1,10 @@
+/**
+  * Eight
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+
 @keyframes whirl-eight
   0%
     transform rotate(0deg)
@@ -11,8 +18,12 @@
     transform-origin right top
     transform rotate(0deg)
 
+$color = $whirl-primary
+$size = 50px
+
+
 [data-whirl='eight']
   &:before
-    $create-pseudo(40px, 40px)
-    background-color purple
+    $create-pseudo($size, $size)
     animation whirl-eight 2s infinite
+    background-color $color

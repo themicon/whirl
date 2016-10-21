@@ -1,3 +1,18 @@
+/**
+  * Hourglass spin
+  *
+  * A little trickier to implement. Requires a little though about
+  * animation timings and when things should happen etc.
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$duration = 4s
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+$size      = 40px
+$glass-thickness = 4px
+
 @keyframes whirl-hourglass-spin
   0%
     background-position 0 90%
@@ -18,8 +33,6 @@
   100%
     background-position 0 240%
 
-
-
 @keyframes whirl-hourglass-container-spin
   0%
   40%
@@ -30,28 +43,29 @@
   100%
     transform rotate(360deg)
 
-$whirl-hourglass-dur = 4s
 
 [data-whirl='hourglass-spin']
   animation whirl-hourglass-container-spin 4s infinite
-  position absolute
-  top 0
-  right 0
   bottom 0
   left 0
-  &:before
-    transform translateY(-20px)
-    $create-pseudo(40px, 40px)
-    border-radius 100%
-    border 4px solid white
-    background linear-gradient(0deg, purple, purple 50%, transparent 50%, transparent)
-    background-size 100% 300%
-    animation whirl-hourglass-spin $whirl-hourglass-dur infinite ease-in-out
+  position absolute
+  right 0
+  top 0
+
   &:after
-    transform  translateY(20px)
-    $create-pseudo(40px, 40px)
+  &:before
+    $create-pseudo($size, $size)
     border-radius 100%
-    border 4px solid white
-    background linear-gradient(0deg, transparent, transparent 50%, purple 50%, purple)
+    border $glass-thickness solid $color-one
+
+  &:after
+    animation whirl-hourglass-spin-alternate $duration infinite ease-in-out
+    transform  translateY($size / 2)
+    background linear-gradient(0deg, transparent, transparent 50%, $color-two 50%, $color-two)
     background-size 100% 300%
-    animation whirl-hourglass-spin-alternate $whirl-hourglass-dur infinite ease-in-out
+
+  &:before
+    animation whirl-hourglass-spin $duration infinite ease-in-out
+    transform translateY(-($size / 2))
+    background linear-gradient(0deg, $color-two, $color-two 50%, transparent 50%, transparent)
+    background-size 100% 300%

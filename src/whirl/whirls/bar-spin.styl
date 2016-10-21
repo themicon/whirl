@@ -1,22 +1,16 @@
+@import '../common/animation/rotate.styl'
+
 /**
-  * Basic ringed whirl
+  * Bar spin
+  *
+  * @author jh3y - https://github.com/jh3y
 */
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+
+$height = $whirl-default-size
+$width  = 10px
 
 [data-whirl='bar-spin']
   &:before
-    box-sizing        border-box
-    content           ''
-    height            10px
-    width             50px
-    position          absolute
-    top               50%
-    left              50%
-    margin-left       -25px
-    margin-top        -5px
+    $create-pseudo($height, $width)
     animation         whirl-rotate .5s infinite
-    background        purple
+    background        $whirl-primary

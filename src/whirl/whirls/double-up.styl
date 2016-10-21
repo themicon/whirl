@@ -1,24 +1,18 @@
+@import '../common/animation/rotate.styl'
+
 /**
-  * Basic ringed whirl
+  * Double up
+  *
+  * @author jh3y - https://github.com/jh3y
 */
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+$size = 50px
+$thickness = 10px
+$color = $whirl-primary
 
 [data-whirl='double-up']
   &:before
-    box-sizing        border-box
-    content           ''
-    height            50px
-    width             50px
-    position          absolute
-    top               50%
-    left              50%
-    margin-left       -25px
-    margin-top        -25px
+    $create-pseudo($size, $size)
     animation         whirl-rotate .5s infinite linear
-    border            6px green double
+    border            $thickness $color double
     border-left-style solid
     border-radius     100%
