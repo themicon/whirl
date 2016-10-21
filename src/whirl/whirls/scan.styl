@@ -1,0 +1,18 @@
+@keyframes whirl-scan
+  0%
+    background-position -10px 0
+  50%
+    background-position 40px 0
+  100%
+    background-position 40px 50px
+
+[data-whirl='scan']
+  &:before
+    $create-pseudo()
+    border 5px solid white
+    transform rotate(45deg)
+    background linear-gradient(90deg, white 20%, transparent 20%, transparent),
+      linear-gradient(0deg, white 20%, transparent 20%, transparent)
+    background-size 50px 50px
+    background-position -10px 0
+    animation whirl-scan 1s infinite

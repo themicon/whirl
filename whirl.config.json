@@ -111,6 +111,18 @@
     "double-ringed": {
       "active": true,
       "requiredElements": 0
+    },
+    "scan": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "stop-and-go": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "gyro": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

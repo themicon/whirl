@@ -1,0 +1,16 @@
+@keyframes whirl-stop-and-go
+  0%
+    transform rotate(0deg)
+  60%
+    transform rotate(1440deg)
+  100%
+    transform rotate(1080deg)
+
+[data-whirl='stop-and-go']
+  &:before
+    $create-pseudo()
+    border-radius 100%
+    border 25px solid white
+    border-left-color purple
+    border-right-color purple
+    animation whirl-stop-and-go 1s infinite
