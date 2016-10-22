@@ -1,0 +1,165 @@
+/**
+  * Hourglass spin
+  *
+  * A little trickier to implement. Requires a little though about
+  * animation timings and when things should happen etc.
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='hourglass-spin'] {
+  animation: whirl-hourglass-container-spin 4s infinite;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+[data-whirl='hourglass-spin']:after,
+[data-whirl='hourglass-spin']:before {
+  border-radius: 100%;
+  border: 4px solid #fafafa;
+}
+[data-whirl='hourglass-spin']:after {
+  animation: whirl-hourglass-spin-alternate 4s infinite ease-in-out;
+  transform: translateY(20px);
+  background: linear-gradient(0deg, transparent, transparent 50%, #9a12b3 50%, #9a12b3);
+  background-size: 100% 300%;
+}
+[data-whirl='hourglass-spin']:before {
+  animation: whirl-hourglass-spin 4s infinite ease-in-out;
+  transform: translateY(-20px);
+  background: linear-gradient(0deg, #9a12b3, #9a12b3 50%, transparent 50%, transparent);
+  background-size: 100% 300%;
+}
+@-moz-keyframes whirl-hourglass-spin {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 10%;
+  }
+  90%, 100% {
+    background-position: 0 -70%;
+  }
+}
+@-webkit-keyframes whirl-hourglass-spin {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 10%;
+  }
+  90%, 100% {
+    background-position: 0 -70%;
+  }
+}
+@-o-keyframes whirl-hourglass-spin {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 10%;
+  }
+  90%, 100% {
+    background-position: 0 -70%;
+  }
+}
+@keyframes whirl-hourglass-spin {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 10%;
+  }
+  90%, 100% {
+    background-position: 0 -70%;
+  }
+}
+@-moz-keyframes whirl-hourglass-spin-alternate {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 170%;
+  }
+  90%, 100% {
+    background-position: 0 240%;
+  }
+}
+@-webkit-keyframes whirl-hourglass-spin-alternate {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 170%;
+  }
+  90%, 100% {
+    background-position: 0 240%;
+  }
+}
+@-o-keyframes whirl-hourglass-spin-alternate {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 170%;
+  }
+  90%, 100% {
+    background-position: 0 240%;
+  }
+}
+@keyframes whirl-hourglass-spin-alternate {
+  0% {
+    background-position: 0 90%;
+  }
+  40%, 50% {
+    background-position: 0 170%;
+  }
+  90%, 100% {
+    background-position: 0 240%;
+  }
+}
+@-moz-keyframes whirl-hourglass-container-spin {
+  0%, 40% {
+    transform: rotate(0deg);
+  }
+  50%, 90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes whirl-hourglass-container-spin {
+  0%, 40% {
+    transform: rotate(0deg);
+  }
+  50%, 90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes whirl-hourglass-container-spin {
+  0%, 40% {
+    transform: rotate(0deg);
+  }
+  50%, 90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes whirl-hourglass-container-spin {
+  0%, 40% {
+    transform: rotate(0deg);
+  }
+  50%, 90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

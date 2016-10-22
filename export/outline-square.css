@@ -1,0 +1,97 @@
+/**
+  * Outline square
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='outline-square']:before {
+  animation: whirl-outline-square 1.5s infinite;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-outline-square {
+  0% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    background: #9a12b3;
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    background: #fafafa;
+    transform: translate(100%, 100%);
+  }
+  75% {
+    background: #9a12b3;
+    transform: translate(100%, -100%);
+  }
+  100% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+}
+@-webkit-keyframes whirl-outline-square {
+  0% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    background: #9a12b3;
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    background: #fafafa;
+    transform: translate(100%, 100%);
+  }
+  75% {
+    background: #9a12b3;
+    transform: translate(100%, -100%);
+  }
+  100% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+}
+@-o-keyframes whirl-outline-square {
+  0% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    background: #9a12b3;
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    background: #fafafa;
+    transform: translate(100%, 100%);
+  }
+  75% {
+    background: #9a12b3;
+    transform: translate(100%, -100%);
+  }
+  100% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+}
+@keyframes whirl-outline-square {
+  0% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+  25% {
+    background: #9a12b3;
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    background: #fafafa;
+    transform: translate(100%, 100%);
+  }
+  75% {
+    background: #9a12b3;
+    transform: translate(100%, -100%);
+  }
+  100% {
+    background: #fafafa;
+    transform: translate(-100%, -100%);
+  }
+}

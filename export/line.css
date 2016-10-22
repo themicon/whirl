@@ -1,0 +1,44 @@
+/**
+  * Line
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='line']:before {
+  animation: whirl-line 1s infinite alternate ease-in-out;
+  background: linear-gradient(90deg, #fafafa, #fafafa);
+  background-position: -20px 0;
+  background-repeat: no-repeat;
+  background-size: 60px 20px;
+}
+@-moz-keyframes whirl-line {
+  from {
+    background-position: -60px 0;
+  }
+  to {
+    background-position: 60px 0;
+  }
+}
+@-webkit-keyframes whirl-line {
+  from {
+    background-position: -60px 0;
+  }
+  to {
+    background-position: 60px 0;
+  }
+}
+@-o-keyframes whirl-line {
+  from {
+    background-position: -60px 0;
+  }
+  to {
+    background-position: 60px 0;
+  }
+}
+@keyframes whirl-line {
+  from {
+    background-position: -60px 0;
+  }
+  to {
+    background-position: 60px 0;
+  }
+}

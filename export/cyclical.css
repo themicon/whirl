@@ -1,0 +1,58 @@
+@-moz-keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+/**
+  * Cyclical
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='cyclical'] {
+  animation: whirl-rotate 2s infinite ease-out;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+[data-whirl='cyclical']:after {
+  animation-delay: 0.5s;
+  transform-origin: 10% 80%;
+}
+[data-whirl='cyclical']:after,
+[data-whirl='cyclical']:before {
+  animation: whirl-grow 1s infinite ease-out;
+  background: #fafafa;
+  border-radius: 100%;
+}
+[data-whirl='cyclical']:before {
+  transform-origin: -60% -80%;
+}

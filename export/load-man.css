@@ -1,0 +1,167 @@
+/**
+  * Load man - gaming inspired loader
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='load-man'] {
+  animation: whirl-load-man-travel 1.2s infinite linear;
+  background: repeating-linear-gradient(90deg, #fff, #fff 5%, transparent 5%, transparent 35%);
+  height: 10px;
+  left: 50%;
+  margin-top: -5px;
+  position: absolute;
+  top: 50%;
+  width: 200px;
+/**
+    * Our pseudo elements create the head pieces
+    *
+    * They are near identical minus subtle differences in animation and border
+    * styling
+  */
+/**
+  * The top head piece
+  */
+/**
+    * The bottom head piece
+  */
+}
+[data-whirl='load-man']:before,
+[data-whirl='load-man']:after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  border: 25px solid #ff0;
+  border-radius: 100%;
+  margin-top: -25px;
+}
+[data-whirl='load-man']:before {
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  animation: whirl-load-man-chomp 0.35s infinite linear;
+}
+[data-whirl='load-man']:after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  animation: whirl-load-man-chomp-b 0.35s infinite linear;
+}
+@-moz-keyframes whirl-load-man-travel {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200px 0;
+  }
+}
+@-webkit-keyframes whirl-load-man-travel {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200px 0;
+  }
+}
+@-o-keyframes whirl-load-man-travel {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200px 0;
+  }
+}
+@keyframes whirl-load-man-travel {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200px 0;
+  }
+}
+@-moz-keyframes whirl-load-man-chomp {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes whirl-load-man-chomp {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@-o-keyframes whirl-load-man-chomp {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes whirl-load-man-chomp {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@-moz-keyframes whirl-load-man-chomp-b {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@-webkit-keyframes whirl-load-man-chomp-b {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@-o-keyframes whirl-load-man-chomp-b {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes whirl-load-man-chomp-b {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}

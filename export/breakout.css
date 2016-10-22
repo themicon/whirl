@@ -1,0 +1,77 @@
+/**
+  * Breakout
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='breakout']:after {
+  animation: whirl-breakout 1.5s infinite;
+}
+[data-whirl='breakout']:after,
+[data-whirl='breakout']:before {
+  border: 10px solid #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-breakout {
+  0%, 40% {
+    border-width: 25px;
+  }
+  80% {
+    border-color: #fafafa;
+    border-width: 10px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    border-color: #9a12b3;
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}
+@-webkit-keyframes whirl-breakout {
+  0%, 40% {
+    border-width: 25px;
+  }
+  80% {
+    border-color: #fafafa;
+    border-width: 10px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    border-color: #9a12b3;
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}
+@-o-keyframes whirl-breakout {
+  0%, 40% {
+    border-width: 25px;
+  }
+  80% {
+    border-color: #fafafa;
+    border-width: 10px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    border-color: #9a12b3;
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}
+@keyframes whirl-breakout {
+  0%, 40% {
+    border-width: 25px;
+  }
+  80% {
+    border-color: #fafafa;
+    border-width: 10px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    border-color: #9a12b3;
+    opacity: 0;
+    transform: scale(1.75);
+  }
+}

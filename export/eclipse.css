@@ -1,0 +1,42 @@
+/**
+  * Eclipse
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='eclipse']:before {
+  animation: whirl-eclipse 1s infinite;
+  background-color: #22a7f0;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-eclipse {
+  from {
+    box-shadow: inset 50px 0 0 0 $color-one;
+  }
+  to {
+    box-shadow: inset -50px 0 0 0 $color-one;
+  }
+}
+@-webkit-keyframes whirl-eclipse {
+  from {
+    box-shadow: inset 50px 0 0 0 $color-one;
+  }
+  to {
+    box-shadow: inset -50px 0 0 0 $color-one;
+  }
+}
+@-o-keyframes whirl-eclipse {
+  from {
+    box-shadow: inset 50px 0 0 0 $color-one;
+  }
+  to {
+    box-shadow: inset -50px 0 0 0 $color-one;
+  }
+}
+@keyframes whirl-eclipse {
+  from {
+    box-shadow: inset 50px 0 0 0 $color-one;
+  }
+  to {
+    box-shadow: inset -50px 0 0 0 $color-one;
+  }
+}

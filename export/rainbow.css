@@ -1,0 +1,59 @@
+@-moz-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**
+  * Rainbow
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='rainbow'] {
+  border-radius: 100%;
+  clip: rect(0, 100px, 50px, 0);
+  height: 100px;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+}
+[data-whirl='rainbow']:after {
+  border-radius: 100%;
+  box-shadow: -40px 0 0 0 #fff, -35px -6px 0 0 #fff, -30px -2px 0 0 #fff, -30px -8px 0 0 #fff, -25px -2px 0 0 #fff, -25px -8px 0 0 #fff, -20px -6px 0 0 #fff, -15px 0 0 0 #fff, 40px 0 0 0 #fff, 35px -6px 0 0 #fff, 30px -2px 0 0 #fff, 30px -8px 0 0 #fff, 25px -2px 0 0 #fff, 25px -8px 0 0 #fff, 20px -6px 0 0 #fff, 15px 0 0 0 #fff;
+}
+[data-whirl='rainbow']:before {
+  animation: whirl-rotate 1.5s infinite;
+  border-radius: 100%;
+  box-shadow: 0 0 0 4px #f22613 inset,0 0 0 8px #f89406 inset,0 0 0 12px #f9bf3b inset,0 0 0 16px #2ecc71 inset,0 0 0 20px #19b5fe inset,0 0 0 24px #639 inset,0 0 0 28px #bf55ec inset;
+  clip: rect(0, 80px, 40px, 0);
+  overflow: hidden;
+}

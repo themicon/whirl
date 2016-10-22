@@ -40,6 +40,8 @@ gulp.task('styles:watch', styles.watch);
 gulp.task('markup:compile', markup.compile);
 gulp.task('markup:watch', markup.watch);
 
+gulp.task('export', styles.export);
+
 gulp.task('deploy', ['compile'], deploy.run);
 
 gulp.task('compile', [

@@ -1,0 +1,90 @@
+/**
+  * Fidget
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='fidget']:before {
+  animation: whirl-fidget 1s infinite;
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-fidget {
+  10% {
+    transform: skewX(60deg);
+  }
+  20% {
+    transform: skewX(-60deg);
+  }
+  30% {
+    transform: skewX(0deg);
+  }
+  40% {
+    transform: skewY(60deg);
+  }
+  50% {
+    transform: skewY(-60deg);
+  }
+  60% {
+    transform: skewY(0);
+  }
+}
+@-webkit-keyframes whirl-fidget {
+  10% {
+    transform: skewX(60deg);
+  }
+  20% {
+    transform: skewX(-60deg);
+  }
+  30% {
+    transform: skewX(0deg);
+  }
+  40% {
+    transform: skewY(60deg);
+  }
+  50% {
+    transform: skewY(-60deg);
+  }
+  60% {
+    transform: skewY(0);
+  }
+}
+@-o-keyframes whirl-fidget {
+  10% {
+    transform: skewX(60deg);
+  }
+  20% {
+    transform: skewX(-60deg);
+  }
+  30% {
+    transform: skewX(0deg);
+  }
+  40% {
+    transform: skewY(60deg);
+  }
+  50% {
+    transform: skewY(-60deg);
+  }
+  60% {
+    transform: skewY(0);
+  }
+}
+@keyframes whirl-fidget {
+  10% {
+    transform: skewX(60deg);
+  }
+  20% {
+    transform: skewX(-60deg);
+  }
+  30% {
+    transform: skewX(0deg);
+  }
+  40% {
+    transform: skewY(60deg);
+  }
+  50% {
+    transform: skewY(-60deg);
+  }
+  60% {
+    transform: skewY(0);
+  }
+}

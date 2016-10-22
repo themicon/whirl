@@ -38,6 +38,11 @@ var gulp       = require('gulp'),
       .pipe(env.stat ? plugins.size(opts.gSize): plugins.gUtil.noop())
       .pipe(gulp.dest(env.dist ? dest.dist: dest.css));
   },
+  exp = function() {
+    return gulp.src('src/whirl/whirls/*.styl')
+      .pipe(plugins.stylus(opts.stylus))
+      .pipe(gulp.dest('export'));
+  },
   /* styles:watch */
   watch = function() {
     gulp.watch(src.styles.watch, ['styles:compile']);
@@ -46,5 +51,6 @@ var gulp       = require('gulp'),
 module.exports = {
   lint   : lint,
   compile: compile,
-  watch  : watch
+  watch  : watch,
+  export : exp
 };

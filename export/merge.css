@@ -1,0 +1,91 @@
+@-moz-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes whirl-grow {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+/**
+  * Merge
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='merge'] {
+  animation: whirl-rotate 2s infinite ease-out;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+[data-whirl='merge']:after,
+[data-whirl='merge']:before {
+  animation: whirl-grow 2s infinite ease-out;
+  border-radius: 100%;
+  background: #fafafa;
+  opacity: 0.5;
+}
+[data-whirl='merge']:after {
+  transform-origin: -200% -80%;
+}
+[data-whirl='merge']:before {
+  background: #9a12b3;
+  transform-origin: 200% 80%;
+}

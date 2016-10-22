@@ -1,0 +1,43 @@
+/**
+  * Pendulum
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='pendulum']:before {
+  animation: whirl-pendulum 1s infinite alternate ease-in-out;
+  background-color: #fafafa;
+  border-radius: 100%;
+  transform-origin: center top;
+}
+@-moz-keyframes whirl-pendulum {
+  from {
+    transform: rotate(90deg) translateY(30px);
+  }
+  to {
+    transform: rotate(-90deg) translateY(30px);
+  }
+}
+@-webkit-keyframes whirl-pendulum {
+  from {
+    transform: rotate(90deg) translateY(30px);
+  }
+  to {
+    transform: rotate(-90deg) translateY(30px);
+  }
+}
+@-o-keyframes whirl-pendulum {
+  from {
+    transform: rotate(90deg) translateY(30px);
+  }
+  to {
+    transform: rotate(-90deg) translateY(30px);
+  }
+}
+@keyframes whirl-pendulum {
+  from {
+    transform: rotate(90deg) translateY(30px);
+  }
+  to {
+    transform: rotate(-90deg) translateY(30px);
+  }
+}

@@ -1,0 +1,46 @@
+@-moz-keyframes whirl-scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes whirl-scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-o-keyframes whirl-scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes whirl-scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/**
+  * Bloom
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='bloom']:before {
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+[data-whirl='bloom']:after {
+  animation: whirl-scale 1s infinite;
+  border: 10px solid #22a7f0;
+  border-radius: 100%;
+}

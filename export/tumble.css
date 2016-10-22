@@ -1,0 +1,49 @@
+/**
+  * Tumble
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='tumble']:after,
+[data-whirl='tumble']:before {
+  border-radius: 100%;
+}
+[data-whirl='tumble']:after {
+  animation: whirl-tumble 1s infinite;
+  background-color: #fafafa;
+  box-shadow: 8px 6px 0 0 #9a12b3, -8px 6px 0 0 #9a12b3;
+}
+[data-whirl='tumble']:before {
+  border: 6px solid #fafafa;
+}
+@-moz-keyframes whirl-tumble {
+  0% {
+    transform: rotate(180deg) translateY(-17px);
+  }
+  100% {
+    transform: rotate(540deg) translateY(-17px);
+  }
+}
+@-webkit-keyframes whirl-tumble {
+  0% {
+    transform: rotate(180deg) translateY(-17px);
+  }
+  100% {
+    transform: rotate(540deg) translateY(-17px);
+  }
+}
+@-o-keyframes whirl-tumble {
+  0% {
+    transform: rotate(180deg) translateY(-17px);
+  }
+  100% {
+    transform: rotate(540deg) translateY(-17px);
+  }
+}
+@keyframes whirl-tumble {
+  0% {
+    transform: rotate(180deg) translateY(-17px);
+  }
+  100% {
+    transform: rotate(540deg) translateY(-17px);
+  }
+}

@@ -1,0 +1,66 @@
+/**
+  * Orbit
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='orbit']:before {
+  animation: whirl-orbit 1s infinite;
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-orbit {
+  0% {
+    transform: scale(0) translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateX(100px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes whirl-orbit {
+  0% {
+    transform: scale(0) translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateX(100px);
+    opacity: 0;
+  }
+}
+@-o-keyframes whirl-orbit {
+  0% {
+    transform: scale(0) translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateX(100px);
+    opacity: 0;
+  }
+}
+@keyframes whirl-orbit {
+  0% {
+    transform: scale(0) translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.25) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) translateX(100px);
+    opacity: 0;
+  }
+}

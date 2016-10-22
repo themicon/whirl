@@ -1,0 +1,54 @@
+/**
+  * Rays
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='rays']:after {
+  animation: whirl-rays 1s infinite;
+  border: 10px solid #fafafa;
+  border-radius: 100%;
+}
+[data-whirl='rays']:before {
+  background: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-rays {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes whirl-rays {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@-o-keyframes whirl-rays {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes whirl-rays {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

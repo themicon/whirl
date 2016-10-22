@@ -1,0 +1,41 @@
+@-moz-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**
+  * Bar spin
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='bar-spin']:before {
+  animation: whirl-rotate 0.5s infinite;
+  background: #fafafa;
+}

@@ -1,0 +1,110 @@
+/**
+  * Mexican wave
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='mexican-wave']:before {
+  animation: whirl-mexican-wave 0.75s infinite ease;
+  border-radius: 100%;
+  box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  content: '';
+  height: 10px;
+  left: 50%;
+  margin-left: -47.5px;
+  margin-top: -5px;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+}
+@-moz-keyframes whirl-mexican-wave {
+  0% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  15% {
+    box-shadow: 15px -15px 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  30% {
+    box-shadow: 15px 0 0 0 #fff, 30px -15px 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  45% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px -15px 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  60% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px -15px 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  75% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px -15px 0 0 #fff;
+  }
+  100% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+}
+@-webkit-keyframes whirl-mexican-wave {
+  0% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  15% {
+    box-shadow: 15px -15px 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  30% {
+    box-shadow: 15px 0 0 0 #fff, 30px -15px 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  45% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px -15px 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  60% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px -15px 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  75% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px -15px 0 0 #fff;
+  }
+  100% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+}
+@-o-keyframes whirl-mexican-wave {
+  0% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  15% {
+    box-shadow: 15px -15px 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  30% {
+    box-shadow: 15px 0 0 0 #fff, 30px -15px 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  45% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px -15px 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  60% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px -15px 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  75% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px -15px 0 0 #fff;
+  }
+  100% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+}
+@keyframes whirl-mexican-wave {
+  0% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  15% {
+    box-shadow: 15px -15px 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  30% {
+    box-shadow: 15px 0 0 0 #fff, 30px -15px 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  45% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px -15px 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  60% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px -15px 0 0 #fff, 75px 0 0 0 #fff;
+  }
+  75% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px -15px 0 0 #fff;
+  }
+  100% {
+    box-shadow: 15px 0 0 0 #fff, 30px 0 0 0 #fff, 45px 0 0 0 #fff, 60px 0 0 0 #fff, 75px 0 0 0 #fff;
+  }
+}

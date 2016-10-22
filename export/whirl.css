@@ -1,0 +1,54 @@
+/**
+  * Whirl
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='whirl']:before {
+  animation: whirl 2s infinite linear;
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl {
+  0% {
+    transform: scale(0) rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) rotate(960deg) translateY(100%);
+  }
+  100% {
+    transform: scale(0) rotate(2000deg) translateY(0);
+  }
+}
+@-webkit-keyframes whirl {
+  0% {
+    transform: scale(0) rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) rotate(960deg) translateY(100%);
+  }
+  100% {
+    transform: scale(0) rotate(2000deg) translateY(0);
+  }
+}
+@-o-keyframes whirl {
+  0% {
+    transform: scale(0) rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) rotate(960deg) translateY(100%);
+  }
+  100% {
+    transform: scale(0) rotate(2000deg) translateY(0);
+  }
+}
+@keyframes whirl {
+  0% {
+    transform: scale(0) rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: scale(1.25) rotate(960deg) translateY(100%);
+  }
+  100% {
+    transform: scale(0) rotate(2000deg) translateY(0);
+  }
+}

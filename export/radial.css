@@ -1,0 +1,77 @@
+/**
+  * Radial
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='radial']:after {
+  animation: whirl-radial-2 0.75s infinite linear;
+  background-color: #9a12b3;
+}
+[data-whirl='radial']:before {
+  animation: whirl-radial 0.75s infinite linear;
+  background-color: #fafafa;
+}
+@-moz-keyframes whirl-radial {
+  0% {
+    transform: rotate(0deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1440deg) translateY(150%);
+  }
+}
+@-webkit-keyframes whirl-radial {
+  0% {
+    transform: rotate(0deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1440deg) translateY(150%);
+  }
+}
+@-o-keyframes whirl-radial {
+  0% {
+    transform: rotate(0deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1440deg) translateY(150%);
+  }
+}
+@keyframes whirl-radial {
+  0% {
+    transform: rotate(0deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1440deg) translateY(150%);
+  }
+}
+@-moz-keyframes whirl-radial-2 {
+  0% {
+    transform: rotate(180deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1620deg) translateY(150%);
+  }
+}
+@-webkit-keyframes whirl-radial-2 {
+  0% {
+    transform: rotate(180deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1620deg) translateY(150%);
+  }
+}
+@-o-keyframes whirl-radial-2 {
+  0% {
+    transform: rotate(180deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1620deg) translateY(150%);
+  }
+}
+@keyframes whirl-radial-2 {
+  0% {
+    transform: rotate(180deg) translateY(150%);
+  }
+  100% {
+    transform: rotate(1620deg) translateY(150%);
+  }
+}

@@ -1,0 +1,43 @@
+@-moz-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**
+  * Basic
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='basic']:before {
+  animation: whirl-rotate 0.5s infinite linear;
+  border: 10px #fafafa solid;
+  border-left-color: #9a12b3;
+  border-radius: 100%;
+}

@@ -1,0 +1,66 @@
+/**
+  * Fly by
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='fly-by']:before {
+  animation: whirl-fly-by 1s infinite;
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-fly-by {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) scale(0);
+  }
+}
+@-webkit-keyframes whirl-fly-by {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) scale(0);
+  }
+}
+@-o-keyframes whirl-fly-by {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) scale(0);
+  }
+}
+@keyframes whirl-fly-by {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1.25);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) scale(0);
+  }
+}

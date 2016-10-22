@@ -1,0 +1,54 @@
+@-moz-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes whirl-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/**
+  * Color arc
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='color-arc'] {
+  clip: rect(0px, 25px, 25px, 0);
+  height: 50px;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translate(-25%, -25%);
+  width: 50px;
+}
+[data-whirl='color-arc']:before {
+  animation: whirl-rotate 1s infinite linear;
+  border: 10px solid #fafafa;
+  border-left-color: #9a12b3;
+  border-radius: 100%;
+  border-right-color: #9a12b3;
+}

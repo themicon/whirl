@@ -1,0 +1,66 @@
+/**
+  * Rotary
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='rotary']:before {
+  animation: whirl-rotary 1s infinite linear;
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-rotary {
+  0% {
+    transform: rotate(0deg) translateX(150%) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translateX(150%) scale(0);
+  }
+  75% {
+    transform: rotate(270deg) translateX(150%) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) scale(1);
+  }
+}
+@-webkit-keyframes whirl-rotary {
+  0% {
+    transform: rotate(0deg) translateX(150%) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translateX(150%) scale(0);
+  }
+  75% {
+    transform: rotate(270deg) translateX(150%) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) scale(1);
+  }
+}
+@-o-keyframes whirl-rotary {
+  0% {
+    transform: rotate(0deg) translateX(150%) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translateX(150%) scale(0);
+  }
+  75% {
+    transform: rotate(270deg) translateX(150%) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) scale(1);
+  }
+}
+@keyframes whirl-rotary {
+  0% {
+    transform: rotate(0deg) translateX(150%) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translateX(150%) scale(0);
+  }
+  75% {
+    transform: rotate(270deg) translateX(150%) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) translateX(150%) scale(1);
+  }
+}

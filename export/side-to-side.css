@@ -1,0 +1,61 @@
+/**
+  * Scan
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='side-to-side']:before {
+  animation: whirl-side-to-side 0.5s infinite alternate ease-in-out;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-side-to-side {
+  0% {
+    background-color: transparent;
+    transform: translateX(-150%);
+  }
+  50% {
+    background-color: #fafafa;
+  }
+  100% {
+    background-color: transparent;
+    transform: translateX(150%);
+  }
+}
+@-webkit-keyframes whirl-side-to-side {
+  0% {
+    background-color: transparent;
+    transform: translateX(-150%);
+  }
+  50% {
+    background-color: #fafafa;
+  }
+  100% {
+    background-color: transparent;
+    transform: translateX(150%);
+  }
+}
+@-o-keyframes whirl-side-to-side {
+  0% {
+    background-color: transparent;
+    transform: translateX(-150%);
+  }
+  50% {
+    background-color: #fafafa;
+  }
+  100% {
+    background-color: transparent;
+    transform: translateX(150%);
+  }
+}
+@keyframes whirl-side-to-side {
+  0% {
+    background-color: transparent;
+    transform: translateX(-150%);
+  }
+  50% {
+    background-color: #fafafa;
+  }
+  100% {
+    background-color: transparent;
+    transform: translateX(150%);
+  }
+}

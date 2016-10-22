@@ -1,0 +1,77 @@
+/**
+  * Eight
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='eight']:before {
+  animation: whirl-eight 2s infinite;
+  background-color: #fafafa;
+}
+@-moz-keyframes whirl-eight {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform-origin: left bottom;
+    transform: rotate(360deg);
+  }
+  51% {
+    transform-origin: right top;
+  }
+  100% {
+    transform-origin: right top;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes whirl-eight {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform-origin: left bottom;
+    transform: rotate(360deg);
+  }
+  51% {
+    transform-origin: right top;
+  }
+  100% {
+    transform-origin: right top;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes whirl-eight {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform-origin: left bottom;
+    transform: rotate(360deg);
+  }
+  51% {
+    transform-origin: right top;
+  }
+  100% {
+    transform-origin: right top;
+    transform: rotate(0deg);
+  }
+}
+@keyframes whirl-eight {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: left bottom;
+  }
+  50% {
+    transform-origin: left bottom;
+    transform: rotate(360deg);
+  }
+  51% {
+    transform-origin: right top;
+  }
+  100% {
+    transform-origin: right top;
+    transform: rotate(0deg);
+  }
+}

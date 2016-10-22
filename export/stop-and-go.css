@@ -1,0 +1,56 @@
+/**
+  * Stop and go
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='stop-and-go']:before {
+  animation: whirl-stop-and-go 1s infinite;
+  border: 25px solid #fafafa;
+  border-left-color: #9a12b3;
+  border-radius: 100%;
+  border-right-color: #9a12b3;
+}
+@-moz-keyframes whirl-stop-and-go {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@-webkit-keyframes whirl-stop-and-go {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@-o-keyframes whirl-stop-and-go {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+@keyframes whirl-stop-and-go {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}

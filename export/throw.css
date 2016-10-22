@@ -1,0 +1,78 @@
+/**
+  * Throw
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='throw']:before {
+  animation: whirl-throw 1s infinite alternate ease-in-out;
+  background-color: #fafafa;
+  border-radius: 100%;
+}
+@-moz-keyframes whirl-throw {
+  0% {
+    transform: scale(0.75) translateX(-250%);
+  }
+  25% {
+    transform: scale(1.5) translateX(0px);
+  }
+  50% {
+    transform: scale(0.75) translateX(250%);
+  }
+  75% {
+    transform: scale(1.5) translateX(0px);
+  }
+  100% {
+    transform: scale(0.75) translateX(-250%);
+  }
+}
+@-webkit-keyframes whirl-throw {
+  0% {
+    transform: scale(0.75) translateX(-250%);
+  }
+  25% {
+    transform: scale(1.5) translateX(0px);
+  }
+  50% {
+    transform: scale(0.75) translateX(250%);
+  }
+  75% {
+    transform: scale(1.5) translateX(0px);
+  }
+  100% {
+    transform: scale(0.75) translateX(-250%);
+  }
+}
+@-o-keyframes whirl-throw {
+  0% {
+    transform: scale(0.75) translateX(-250%);
+  }
+  25% {
+    transform: scale(1.5) translateX(0px);
+  }
+  50% {
+    transform: scale(0.75) translateX(250%);
+  }
+  75% {
+    transform: scale(1.5) translateX(0px);
+  }
+  100% {
+    transform: scale(0.75) translateX(-250%);
+  }
+}
+@keyframes whirl-throw {
+  0% {
+    transform: scale(0.75) translateX(-250%);
+  }
+  25% {
+    transform: scale(1.5) translateX(0px);
+  }
+  50% {
+    transform: scale(0.75) translateX(250%);
+  }
+  75% {
+    transform: scale(1.5) translateX(0px);
+  }
+  100% {
+    transform: scale(0.75) translateX(-250%);
+  }
+}

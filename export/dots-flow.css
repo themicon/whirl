@@ -1,0 +1,74 @@
+/**
+  * Dots flow
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='dots-flow']:before {
+  animation: whirl-dots-flow 0.85s infinite ease;
+  border-radius: 100%;
+  box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  content: '';
+  height: 16px;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -34px;
+  position: absolute;
+  top: 50%;
+  width: 16px;
+}
+@-moz-keyframes whirl-dots-flow {
+  0% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  25% {
+    box-shadow: -26px 32px 0 4px #800080, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  50% {
+    box-shadow: -26px 32px 0 0 #fff, 0px 32px 0 4px #800080, 26px 32px 0 0 #fff;
+  }
+  75% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 4px #800080;
+  }
+}
+@-webkit-keyframes whirl-dots-flow {
+  0% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  25% {
+    box-shadow: -26px 32px 0 4px #800080, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  50% {
+    box-shadow: -26px 32px 0 0 #fff, 0px 32px 0 4px #800080, 26px 32px 0 0 #fff;
+  }
+  75% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 4px #800080;
+  }
+}
+@-o-keyframes whirl-dots-flow {
+  0% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  25% {
+    box-shadow: -26px 32px 0 4px #800080, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  50% {
+    box-shadow: -26px 32px 0 0 #fff, 0px 32px 0 4px #800080, 26px 32px 0 0 #fff;
+  }
+  75% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 4px #800080;
+  }
+}
+@keyframes whirl-dots-flow {
+  0% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  25% {
+    box-shadow: -26px 32px 0 4px #800080, 0px 32px 0 0 #fff, 26px 32px 0 0 #fff;
+  }
+  50% {
+    box-shadow: -26px 32px 0 0 #fff, 0px 32px 0 4px #800080, 26px 32px 0 0 #fff;
+  }
+  75% {
+    box-shadow: -26px 32px 0px 0 #fff, 0px 32px 0 0 #fff, 26px 32px 0 4px #800080;
+  }
+}
