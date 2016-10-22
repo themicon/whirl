@@ -48,17 +48,27 @@ gulp.task('compile', [
   'scripts:compile'
 ]);
 
+
 gulp.task('watch', [
   'markup:watch',
   'styles:watch',
   'scripts:watch'
 ]);
 
-var defaultTasks = ((gutil.env.deploy) ? true: false) ? [
-  'deploy'
-]:[
-  'serve',
-  'watch'
-];
+var getDefaults = function(env) {
+  if (env.deploy)
+    return ['deploy'];
+  else if (env.dist)
+    return ['styles:compile'];
+  else
+    return ['serve', 'watch'];
+}
 
-gulp.task('default', defaultTasks);
+// var defaultTasks = ((gutil.env.deploy) ? true: false) ? [
+//   'deploy'
+// ]:[
+//   'serve',
+//   'watch'
+// ];
+
+gulp.task('default', getDefaults(gutil.env));

@@ -59,6 +59,9 @@ module.exports = {
       markup   : 'src/markup/*.pug',
       overwatch: publicPath + '**/*.{html,js,css}',
       scripts  : 'src/**/*.js',
+      dist     : {
+        styles: 'src/whirl/whirl.styl'
+      },
       styles   : {
         watch  : 'src/**/*.styl',
         compile: [

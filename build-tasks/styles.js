@@ -24,7 +24,8 @@ var gulp       = require('gulp'),
         core: false
       })
     ];
-    return gulp.src(src.styles.compile)
+    var sr = (env.dist) ? src.dist.styles : src.styles.compile;
+    return gulp.src(sr)
       .pipe(plugins.plumber())
       .pipe(plugins.stylus(opts.stylus))
       .pipe(plugins.postcss(processsors))
