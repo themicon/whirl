@@ -1,3 +1,9 @@
+/**
+  * Stop and go
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
 @keyframes whirl-stop-and-go
   0%
     transform rotate(0deg)
@@ -6,11 +12,16 @@
   100%
     transform rotate(1080deg)
 
+$size = 50px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+
 [data-whirl='stop-and-go']
+
   &:before
-    $create-pseudo()
-    border-radius 100%
-    border 25px solid white
-    border-left-color purple
-    border-right-color purple
+    $create-pseudo($size, $size)
     animation whirl-stop-and-go 1s infinite
+    border ($size / 2) solid $color-one
+    border-left-color $color-two
+    border-radius 100%
+    border-right-color $color-two

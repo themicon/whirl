@@ -1,16 +1,36 @@
+/**
+  * Tumble
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 50px
+$tumble-size = 16px
+$tumble-width = 6px
+$tumble-pos = $tumble-size / 2
+$radius = ($size - $tumble-size) / 2
+$color = $whirl-primary
+$color-two = $whirl-secondary
+
 @keyframes whirl-tumble
-  from
-    transform rotate(180deg) translateY(-14px)
-  to
-    transform rotate(540deg) translateY(-14px)
+  0%
+    transform rotate(180deg) translateY(-($radius))
+  100%
+    transform rotate(540deg) translateY(-($radius))
 
 [data-whirl='tumble']
-  &:before
-    $create-pseudo()
-    border 5px solid red
-    border-radius 100%
+
   &:after
-    $create-pseudo(16px, 16px)
-    background green
+  &:before
     border-radius 100%
+
+  &:after
+    $create-pseudo($tumble-size, $tumble-size)
     animation whirl-tumble 1s infinite
+    background-color $color
+    box-shadow $tumble-pos $tumble-width 0 0 $color-two,
+      (-($tumble-pos)) $tumble-width 0 0 $color-two
+
+  &:before
+    $create-pseudo($size, $size, , 2)
+    border $tumble-width solid $color

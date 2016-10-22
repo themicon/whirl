@@ -1,19 +1,29 @@
+/**
+  * Throw
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 20px
+$color = $whirl-primary
+$distance = 250%
+
 @keyframes whirl-throw
   0%
-    transform scale(.75) translateX(-50px)
+    transform scale(.75) translateX(-($distance))
   25%
     transform scale(1.5) translateX(0px)
   50%
-    transform scale(.75) translateX(50px)
+    transform scale(.75) translateX($distance)
   75%
     transform scale(1.5) translateX(0px)
   100%
-    transform scale(.75) translateX(-50px)
-
+    transform scale(.75) translateX(-($distance))
 
 [data-whirl='throw']
+
   &:before
-    $create-pseudo(20px, 20px)
-    border-radius 100%
-    background-color purple
+    $create-pseudo($size, $size)
     animation whirl-throw 1s infinite alternate ease-in-out
+    background-color $color
+    border-radius 100%

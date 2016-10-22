@@ -1,18 +1,27 @@
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+@import '../common/animation/rotate.styl'
+
+/**
+  * Split
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$core-size = 14px
+$outer-size = 50px
+$outer-width = 10px
+$color = $whirl-primary
 
 [data-whirl='split']
-  &:before
-    $create-pseudo(14px, 14px)
-    border-radius 100%
-    background white
+
   &:after
-    $create-pseudo()
-    border 10px solid white
+    $create-pseudo($outer-size, $outer-size)
+    animation whirl-rotate 1s infinite linear
+    border $outer-width solid $color
     border-left-color transparent
-    border-right-color transparent
     border-radius 100%
-    animation whirl-rotate 2s infinite linear
+    border-right-color transparent
+
+  &:before
+    $create-pseudo($core-size, $core-size)
+    background $color
+    border-radius 100%

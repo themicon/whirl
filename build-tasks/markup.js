@@ -7,11 +7,6 @@ var gulp      = require('gulp'),
   dest        = gConfig.paths.destinations,
   plugins     = require('gulp-load-plugins')(opts.load),
   fs          = require('fs'),
-  /* markup:lint */
-  lint = function() {
-    return gulp.src(src.markup)
-      .pipe(plugins.pugLint());
-  },
   /* markup:compile */
   compile = function() {
     if (env.deploy && opts.pug.pretty) opts.pug.pretty = false;
@@ -29,7 +24,6 @@ var gulp      = require('gulp'),
   };
 
 module.exports = {
-  lint   : lint,
   compile: compile,
   watch  : watch
 };

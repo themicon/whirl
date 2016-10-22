@@ -18,7 +18,7 @@ gulp.task('serve', ['compile'], server.start);
   from source, concatenating and uglifying content and publishing output based on env flag. For example, if we want sourcemaps we can output our individual JS files and the sourcemap for them to the desired directory by using the --map flag.
 */
 gulp.task('scripts:lint', scripts.lint);
-gulp.task('scripts:compile', ['scripts:lint'], scripts.compile);
+gulp.task('scripts:compile', scripts.compile);
 gulp.task('scripts:watch', scripts.watch);
 
 /*
@@ -28,7 +28,7 @@ gulp.task('scripts:watch', scripts.watch);
   auto prefixing content and generating output based on env flag.
 */
 gulp.task('styles:lint', styles.lint);
-gulp.task('styles:compile', ['styles:lint'], styles.compile);
+gulp.task('styles:compile', styles.compile);
 gulp.task('styles:watch', styles.watch);
 
 /*
@@ -37,7 +37,6 @@ gulp.task('styles:watch', styles.watch);
   watch for all markup file changes then compile
   page document files.
 */
-gulp.task('markup:lint', markup.lint);
 gulp.task('markup:compile', markup.compile);
 gulp.task('markup:watch', markup.watch);
 

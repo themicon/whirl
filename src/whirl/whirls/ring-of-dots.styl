@@ -1,40 +1,44 @@
-$scaleRadius   = 20px
-$size          = 10px
-$numberOfDots  = 7
+/**
+  * Ring of dots
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
 
-/* Set primary */
-$dotPrimary           = purple
-$dotPrimaryShadeOne   = lighten($dotPrimary, 33%)
-$dotPrimaryShadeTwo   = lighten($dotPrimary, 66%)
-$dotPrimaryShadeThree = lighten($dotPrimary, 99%)
+$scale-radius = 20px
+$size         = 10px
+$no-of-dots   = 7
 
-$dotColors     = $dotPrimary $dotPrimaryShadeThree $dotPrimaryShadeThree $dotPrimaryShadeThree $dotPrimaryShadeThree $dotPrimaryShadeTwo $dotPrimaryShadeOne
+$color       = $whirl-secondary
+$color-one   = lighten($color, 33%)
+$color-two   = lighten($color, 66%)
+$color-three = lighten($color, 99%)
+
+$dot-colors  = $color $color-three $color-three $color-three $color-three $color-two $color-one
 
 getPosition(angle)
-  xPos = $scaleRadius * cos(angle * (PI / 180))
-  yPos = $scaleRadius * sin(angle * (PI / 180))
+  xPos = $scale-radius * cos(angle * (PI / 180))
+  yPos = $scale-radius * sin(angle * (PI / 180))
   (xPos yPos)
 
-genShadow($pos, $colorSet)
+genShadow($pos, $color-set)
   $shadows = ()
-  for $dot in (1..$numberOfDots)
-    $angle       = (360 / $numberOfDots) * ($dot - 1)
+  for $dot in (1..$no-of-dots)
+    $angle       = (360 / $no-of-dots) * ($dot - 1)
     $xy          = getPosition($angle)
-    $dots        = $numberOfDots
-    $truePos     = $dot + $pos
-    $colorIndex  = $truePos % $dots
-    $shadowProps = $xy 0 0 $colorSet[$colorIndex]
-    push($shadows, join(' ', $shadowProps))
+    $dots        = $no-of-dots
+    $true-pos    = $dot + $pos
+    $color-idx   = $true-pos % $dots
+    $shad-props  = $xy 0 0 $color-set[$color-idx]
+    push($shadows, join(' ', $shad-props))
   (unquote(join(',', $shadows)))
 
 @keyframes whirl-ring-of-dots
-  for $per in (0..$numberOfDots)
-    {($per * (100 / $numberOfDots)) * 1%}
-      box-shadow genShadow($per, $dotColors)
-
+  for $per in (0..$no-of-dots)
+    {($per * (100 / $no-of-dots)) * 1%}
+      box-shadow genShadow($per, $dot-colors)
 
 [data-whirl='ring-of-dots']
   &:before
-    $create-pseudo(10px, 10px)
-    border-radius $size
+    $create-pseudo($size, $size)
     animation     whirl-ring-of-dots 1s infinite linear reverse
+    border-radius $size

@@ -1,22 +1,33 @@
+/**
+  * Outline square
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 30px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+
 @keyframes whirl-outline-square
   0%
-    transform translate(-20px, -20px)
-    background red
+    background $color-one
+    transform translate(-100%, -100%)
   25%
-    transform translate(-20px, 20px)
-    background green
+    background $color-two
+    transform translate(-100%, 100%)
   50%
-    transform translate(20px, 20px)
-    background yellow
+    background $color-one
+    transform translate(100%, 100%)
   75%
-    transform translate(20px, -20px)
-    background blue
+    background $color-two
+    transform translate(100%, -100%)
   100%
-    transform translate(-20px, -20px)
-    background red
+    background $color-one
+    transform translate(-100%, -100%)
 
 [data-whirl='outline-square']
+
   &:before
-    $create-pseudo(20px, 20px)
-    border-radius    100%
+    $create-pseudo($size, $size)
     animation whirl-outline-square 1.5s infinite
+    border-radius 100%

@@ -1,3 +1,15 @@
+/**
+  * Radial
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$height = 20px
+$width  = 10px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+$duration = .75s
+
 @keyframes whirl-radial
   0%
     transform rotate(0deg) translateY(150%)
@@ -10,13 +22,14 @@
   100%
     transform rotate(1620deg) translateY(150%)
 
-
 [data-whirl='radial']
-  &:before
-    $create-pseudo(20px, 10px)
-    background-color white
-    animation whirl-radial .75s infinite linear
+
   &:after
-    $create-pseudo(20px, 10px)
-    background-color purple
-    animation whirl-radial-2 .75s infinite linear
+    $create-pseudo($height, $width)
+    animation whirl-radial-2 $duration infinite linear
+    background-color $color-two
+
+  &:before
+    $create-pseudo($height, $width)
+    animation whirl-radial $duration infinite linear
+    background-color $color-one

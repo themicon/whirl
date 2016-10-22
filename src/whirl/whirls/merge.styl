@@ -1,34 +1,36 @@
-@keyframes whirl-cyclical
-  0%
-  100%
-    transform scale(0)
-  50%
-    transform scale(1)
+@import '../common/animation/rotate.styl'
+@import '../common/animation/grow.styl'
 
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+/**
+  * Merge
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 30px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
+$duration = 2s
 
 [data-whirl='merge']
-  position absolute
-  top 0
-  right 0
+  animation whirl-rotate $duration infinite ease-out
   bottom 0
   left 0
-  animation whirl-rotate 2s infinite ease-out
+  position absolute
+  right 0
+  top 0
 
-  &:before
   &:after
-    $create-pseudo(30px, 30px)
-    border-radius 100%
-    background white
-    animation whirl-cyclical 2s infinite ease-out
-    opacity .5
-
   &:before
-    transform-origin 200% 80%
+    $create-pseudo($size, $size)
+    animation whirl-grow $duration infinite ease-out
+    border-radius 100%
+    background $color-one
+    opacity .5
 
   &:after
     transform-origin -200% -80%
+
+  &:before
+    background $color-two
+    transform-origin 200% 80%

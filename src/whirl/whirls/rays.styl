@@ -1,18 +1,31 @@
+/**
+  * Rays
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 20px
+$ray-size = $size * 3
+$ray-thickness = 10px
+$color = $whirl-primary
+
 @keyframes whirl-rays
   from
-    transform scale(0)
     opacity 1
+    transform scale(0)
   to
-    transform scale(1)
     opacity 0
+    transform scale(1)
 
 [data-whirl='rays']
-  &:before
-    $create-pseudo(20px, 20px)
-    border-radius 100%
-    background white
+
   &:after
-    $create-pseudo(60px, 60px)
-    border-radius 100%
-    border 10px solid white
+    $create-pseudo($ray-size, $ray-size)
     animation whirl-rays 1s infinite
+    border $ray-thickness solid $color
+    border-radius 100%
+
+  &:before
+    $create-pseudo($size, $size)
+    background $color
+    border-radius 100%

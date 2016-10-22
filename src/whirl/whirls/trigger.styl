@@ -1,68 +1,81 @@
-$whirl-off-white = rgba(255, 255, 255, .5)
-$whirl-white     = white
+/**
+  * Trigger
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$color   = $whirl-primary
+$dormant = transparentify($color, 50%)
+
+$height = 20px
+$width  = 10px
+$margin = 5px
+
+$no-of-bars = 5
+
+$y = $height + (2 * $margin)
+
+$x1 = (2 * $width) + (2 * $margin)
+$x2 = $width + $margin
 
 @keyframes whirl-trigger
   0%
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-        -15px 30px 0px 0 $whirl-off-white,
-        0px 30px 0 0 $whirl-off-white,
-        15px 30px 0 0 $whirl-off-white,
-        30px 30px 0 0 $whirl-off-white
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 0 $dormant
   30%
-    box-shadow -30px 30px 0 5px $whirl-white,
-        -15px 30px 0px 0 $whirl-off-white,
-        0px 30px 0 0 $whirl-off-white,
-        15px 30px 0 0 $whirl-off-white,
-        30px 30px 0 0 $whirl-off-white
+    box-shadow (-($x1)) $y 0 5px $color,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 0 $dormant
   40%
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-        -15px 30px 0 5px $whirl-white,
-        0px 30px 0 0 $whirl-off-white,
-        15px 30px 0 0 $whirl-off-white,
-        30px 30px 0 0 $whirl-off-white
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 5px $color,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 0 $dormant
   50%
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-        -15px 30px 0 0 $whirl-off-white,
-        0px 30px 0 5px $whirl-white,
-        15px 30px 0 0 $whirl-off-white,
-        30px 30px 0 0 $whirl-off-white
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 5px $color,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 0 $dormant
   60%
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-        -15px 30px 0 0 $whirl-off-white,
-        0px 30px 0 0 $whirl-off-white,
-        15px 30px 0 5px $whirl-white,
-        30px 30px 0 0 $whirl-off-white
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 5px $color,
+      $x1 $y 0 0 $dormant
   70%
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-        -15px 30px 0 0 $whirl-off-white,
-        0px 30px 0 0 $whirl-off-white,
-        15px 30px 0 0 $whirl-off-white,
-        30px 30px 0 5px $whirl-white
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 5px $color
   80%
-    40%
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-        -15px 30px 0 0 $whirl-off-white,
-        0px 30px 0 0 $whirl-off-white,
-        15px 30px 0 0 $whirl-off-white,
-        30px 30px 0 0 $whirl-off-white
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 0 $dormant
 
 [data-whirl='trigger']
-  &:before
-    height  20px
-    width   10px
-    margin-top -37.5px
-    margin-left -5px
-    background-color transparent
-    transition box-shadow .25s ease 0s
-    box-shadow -30px 30px 0 0 $whirl-off-white,
-      -15px 30px 0 0 $whirl-off-white,
-      0px 30px 0 0 $whirl-off-white,
-      15px 30px 0 0 $whirl-off-white,
-      30px 30px 0 0 $whirl-off-white
 
+  &:before
+    animation whirl-trigger 1s infinite ease
+    box-shadow (-($x1)) $y 0 0 $dormant,
+      (-($x2)) $y 0 0 $dormant,
+      0 $y 0 0 $dormant,
+      $x2 $y 0 0 $dormant,
+      $x1 $y 0 0 $dormant
     content ''
-    display block
+    height  $height
+    left 50%
+    margin-left -($width / 2)
+    margin-top -((1.5 * $height) + (2 * $margin))
     position absolute
     top 50%
-    left 50%
-    animation whirl-trigger 1s infinite ease
+    width $width

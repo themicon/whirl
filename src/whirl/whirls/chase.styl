@@ -11,8 +11,6 @@ $radius = -40px
 $thickness = 5px
 
 [data-whirl='chase']
-  &:after
-    animation-delay .75s
 
   &:after
   &:before
@@ -21,3 +19,6 @@ $thickness = 5px
     border $thickness solid $whirl-primary
     border-radius 100%
     box-shadow 0 $radius 0 -5px $whirl-primary
+
+  &:after
+    animation-delay .75s

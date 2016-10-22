@@ -1,13 +1,23 @@
+/**
+  * Pendulum
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 30px
+$color = $whirl-primary
+
 @keyframes whirl-pendulum
   from
-    transform rotate(90deg) translateY(30px)
+    transform rotate(90deg) translateY($size)
   to
-    transform rotate(-90deg) translateY(30px)
+    transform rotate(-90deg) translateY($size)
 
 [data-whirl='pendulum']
+
   &:before
-    $create-pseudo(25px, 25px)
-    border-radius 100%
-    background blue
-    transform-origin center top
+    $create-pseudo($size, $size)
     animation whirl-pendulum 1s infinite alternate ease-in-out
+    background-color $color
+    border-radius 100%
+    transform-origin center top

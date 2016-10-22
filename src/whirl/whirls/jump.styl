@@ -1,17 +1,28 @@
+/**
+  * Jump
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$distance = 400%
+$size = 20px
+$color = $whirl-primary
+
 @keyframes whirl-jump
   0%
   100%
-    transform translateY(200%) scaleY(.5)
+    transform translateY($distance / 2) scaleY(.5)
   20%
   80%
-    transform translateY(200%) scaleY(1)
+    transform translateY($distance / 2) scaleY(1)
   50%
-    transform translateY(-200%) scaleY(1)
+    transform translateY(-($distance / 2)) scaleY(1)
 
 [data-whirl='jump']
+
   &:before
-    $create-pseudo(20px, 20px)
-    border-radius 100%
-    background white
+    $create-pseudo($size, $size)
     animation whirl-jump 1s infinite
+    background $color
+    border-radius 100%
     transform-origin bottom center

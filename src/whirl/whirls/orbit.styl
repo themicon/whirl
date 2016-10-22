@@ -1,19 +1,27 @@
+/**
+  * Orbit
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$color = $whirl-primary
+$size  = 50px
+$distance = 100px
+
 @keyframes whirl-orbit
   0%
+    transform scale(0) translateX(-($distance))
     opacity 0
-    background-color red
-    transform scale(0) translateX(-105px)
   50%
-    opacity 1
-    background-color green
     transform scale(1.25) translateX(0)
+    opacity 1
   100%
+    transform scale(0) translateX($distance)
     opacity 0
-    background-color red
-    transform scale(0) translateX(105px)
 
 [data-whirl='orbit']
+
   &:before
-    $create-pseudo()
-    border-radius 100%
+    $create-pseudo($size, $size)
     animation whirl-orbit 1s infinite
+    background-color $color
+    border-radius 100%

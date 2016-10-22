@@ -1,15 +1,27 @@
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+@import '../common/animation/rotate.styl'
+
+/**
+  * Ringed
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$band-size = 50px
+$band-thickness = 6px
+$band-color = $whirl-primary
+$color = $whirl-secondary
+$size = 16px
+$pos = -(($band-size / 2) - ($band-thickness / 2))
+
 [data-whirl='ringed']
-  &:before
-    $create-pseudo()
-    border 5px solid white
-    border-radius 100%
+
   &:after
-    $create-pseudo(16px, 16px)
-    border-radius 100%
-    box-shadow 0 -22px 0 0 purple
+    $create-pseudo($size, $size)
     animation whirl-rotate 1s infinite
+    border-radius 100%
+    box-shadow 0 $pos 0 0 $color
+
+  &:before
+    $create-pseudo($band-size, $band-size)
+    border $band-thickness solid $band-color
+    border-radius 100%

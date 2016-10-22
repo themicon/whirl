@@ -1,15 +1,25 @@
+/**
+  * Scan
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$color = $whirl-primary
+$size = 30px
+
 @keyframes whirl-side-to-side
   0%
+    background-color transparent
     transform translateX(-150%)
-    background-color red
   50%
-    background-color green
+    background-color $color
   100%
+    background-color transparent
     transform translateX(150%)
-    background-color red
 
 [data-whirl='side-to-side']
+
   &:before
-    $create-pseudo(30px, 30px)
-    border-radius 100%
+    $create-pseudo($size, $size)
     animation whirl-side-to-side .5s infinite alternate ease-in-out
+    border-radius 100%

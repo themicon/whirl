@@ -1,14 +1,25 @@
+/**
+  * Line
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$height = 20px
+$width = 60px
+$color = $whirl-primary
+
 @keyframes whirl-line
   from
-    background-position -60px 0
+    background-position -($width) 0
   to
-    background-position 60px 0
+    background-position $width 0
 
 [data-whirl='line']
+
   &:before
-    $create-pseudo(20px, 60px)
-    background linear-gradient(90deg, green, green)
-    background-position -20px 0
-    background-size 60px 20px
+    $create-pseudo($height, $width)
+    animation whirl-line 1s infinite alternate ease-in-out
+    background linear-gradient(90deg, $color, $color)
+    background-position -($height) 0
     background-repeat no-repeat
-    animation whirl-line 1.5s infinite alternate ease-in-out
+    background-size $width $height

@@ -1,5 +1,11 @@
-$yellow       = yellow
-$white        = white
+/**
+  * Load man - gaming inspired loader
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$head-color   = yellow
+$dot-color    = white
 $chomp-angle  = 45
 $chomp-speed  = .35s
 $track-height = 10px
@@ -8,14 +14,14 @@ $track-speed  = 1.2s
 $load-size    = 5 * $track-height
 
 [data-whirl='load-man']
+  animation  whirl-load-man-travel $track-speed infinite linear
+  background repeating-linear-gradient(90deg, $dot-color, $dot-color 5%, transparent 5%, transparent 35%)
   height     $track-height
+  left       50%
+  margin-top -($track-height / 2)
   position   absolute
   top        50%
-  left       50%
   width      $track-length
-  margin-top -5px
-  background repeating-linear-gradient(90deg, white, white 5%, transparent 5%, transparent 35%)
-  animation  whirl-load-man-travel $track-speed infinite linear
 
   /**
     * Our pseudo elements create the head pieces
@@ -29,7 +35,7 @@ $load-size    = 5 * $track-height
     position absolute
     left -($load-size / 2)
     top 50%
-    border ($load-size / 2) solid $yellow
+    border ($load-size / 2) solid $head-color
     border-radius 100%
     margin-top -($load-size / 2)
   /**

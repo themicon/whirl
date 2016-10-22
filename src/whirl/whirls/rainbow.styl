@@ -1,3 +1,11 @@
+@import '../common/animation/rotate.styl'
+
+/**
+  * Rainbow
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
 $violet        = #bf55ec
 $indigo        = #663399
 $blue          = #19b5fe
@@ -5,55 +13,70 @@ $green         = #2ecc71
 $yellow        = #f9bf3b
 $orange        = #f89406
 $red           = #f22613
-$cloudColor    = #ffffff
-$colorSet      = $red $orange $yellow $green $blue $indigo $violet
-$bandSize      = 4px
-$cloudSize     = 16px
+$cloud         = #ffffff
+$color-set     = $red $orange $yellow $green $blue $indigo $violet
+$band-size     = 4px
 
 generateRainbow()
   $shadows = ()
-  for $color in (0..(length($colorSet) - 1))
-    $props = 0 0 0 (($color + 1) * $bandSize) $colorSet[$color] inset
+  for $color in (0..(length($color-set) - 1))
+    $props = 0 0 0 (($color + 1) * $band-size) $color-set[$color] inset
     push($shadows, join(' ', $props))
   (unquote(join(',', $shadows)))
 
+$rainbow-size = 80px
+$cloud-segment-size = 10px
+// Cloud shadow Y positions
+$y1 = 0
+$y2 = -($cloud-segment-size * .2px)
+$y3 = -($cloud-segment-size * .6px)
+$y4 = -($cloud-segment-size * .8px)
+// Cloud shadow X positions
+$x0 = $rainbow-size / 2
+$x1 = $x0 - ($cloud-segment-size / 2)
+$x2 = $x1 - ($cloud-segment-size / 2)
+$x3 = $x2 - ($cloud-segment-size / 2)
+$x4 = $x3 - ($cloud-segment-size / 2)
+$x5 = $x4 - ($cloud-segment-size / 2)
+
+$size = 100px
 
 [data-whirl='rainbow']
-  position absolute
-  height 100px
-  width 100px
   border-radius 100%
-  margin-left -50px
-  margin-top -50px
-  top 50%
+  clip rect(0, $size, $size / 2, 0)
+  height $size
   left 50%
-  clip rect(0, 100px, 50px, 0)
+  margin-left -($size / 2)
+  margin-top -($size / 2)
+  position absolute
+  top 50%
+  width $size
+
   &:after
-    $create-pseudo(10px, 10px)
+    $create-pseudo($cloud-segment-size, $cloud-segment-size)
     border-radius 100%
-    background transparent
-    box-shadow -40px 0px 0 0 $cloudColor,
-      -35px -5px 0 0 $cloudColor,
-      -30px -5px 0 0 $cloudColor,
-      -30px -8px 0 0 $cloudColor,
-      -25px -5px 0 0 $cloudColor,
-      -25px -8px 0 0 $cloudColor,
-      -20px -5px 0 0 $cloudColor,
-      -15px 0px 0 0 $cloudColor,
-      40px 0px 0 0 $cloudColor,
-      35px -5px 0 0 $cloudColor,
-      30px -5px 0 0 $cloudColor,
-      30px -8px 0 0 $cloudColor,
-      25px -5px 0 0 $cloudColor,
-      25px -8px 0 0 $cloudColor,
-      20px -5px 0 0 $cloudColor,
-      15px 0px 0 0 $cloudColor
+    box-shadow -($x0) $y1 0 0 $cloud,
+      -($x1) $y3 0 0 $cloud,
+      -($x2) $y2 0 0 $cloud,
+      -($x2) $y4 0 0 $cloud,
+      -($x3) $y2 0 0 $cloud,
+      -($x3) $y4 0 0 $cloud,
+      -($x4) $y3 0 0 $cloud,
+      -($x5) $y1 0 0 $cloud,
+      $x0 $y1 0 0 $cloud,
+      $x1 $y3 0 0 $cloud,
+      $x2 $y2 0 0 $cloud,
+      $x2 $y4 0 0 $cloud,
+      $x3 $y2 0 0 $cloud,
+      $x3 $y4 0 0 $cloud,
+      $x4 $y3 0 0 $cloud,
+      $x5 $y1 0 0 $cloud
 
 
   &:before
-    $create-pseudo(80px, 80px)
+    $create-pseudo($rainbow-size, $rainbow-size)
+    animation whirl-rotate 1.5s infinite
     border-radius 100%
     box-shadow generateRainbow()
-    clip rect(0, 80px, 40px, 0 )
+    clip rect(0, $rainbow-size, $rainbow-size / 2, 0 )
     overflow hidden
-    animation whirl-rotate 1.5s infinite

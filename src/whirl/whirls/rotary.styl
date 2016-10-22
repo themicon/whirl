@@ -1,3 +1,9 @@
+/**
+  * Rotary
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
 @keyframes whirl-rotary
   0%
     transform rotate(0deg) translateX(150%) scale(1)
@@ -8,9 +14,12 @@
   100%
     transform rotate(360deg) translateX(150%) scale(1)
 
+$size = 25px
+$color = $whirl-primary
+
 [data-whirl='rotary']
   &:before
-    $create-pseudo(25px, 25px)
-    background-color blue
-    border-radius 100%
+    $create-pseudo($size, $size)
     animation whirl-rotary 1s infinite linear
+    background-color $color
+    border-radius 100%

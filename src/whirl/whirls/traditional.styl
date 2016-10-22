@@ -1,27 +1,25 @@
+@import '../common/animation/rotate.styl'
+
 /**
-  * Basic ringed whirl
+  * Traditional
+  *
+  * @author jh3y - https://github.com/jh3y
 */
-@keyframes whirl-rotate
-  from
-    transform rotate(0deg)
-  to
-    transform rotate(360deg)
+
+$size = 50px
+$mask-size = 40px
+$bg-color = $whirl-bg
+$color = $whirl-primary
 
 [data-whirl='traditional']
-  &:before
-    box-sizing        border-box
-    content           ''
-    height            50px
-    width             50px
-    position          absolute
-    top               50%
-    left              50%
-    margin-left       -25px
-    margin-top        -25px
-    animation         whirl-rotate .5s infinite linear
-    box-shadow        5px -25px 50px 0 purple inset
-    border-radius     100%
+
   &:after
-    $create-pseudo(40px, 40px)
-    background #6bb9f0
+    $create-pseudo($mask-size, $mask-size)
+    background $bg-color
     border-radius 100%
+
+  &:before
+    $create-pseudo($size, $size)
+    animation     whirl-rotate .5s infinite linear
+    border-radius 100%
+    box-shadow    ($size / 10) ($size / -2) $size 0 $color inset
