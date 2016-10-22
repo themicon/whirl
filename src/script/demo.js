@@ -1,8 +1,10 @@
 const $selector = document.querySelector('.whirl-selector');
 const $container = document.querySelector('.whirl-container');
+const $button = document.querySelector('button');
 
-const update = (e) => {
-  const $selected = $selector.options[$selector.selectedIndex];
+const changeWhirl = (idx) => {
+  const $selected = $selector.options[idx];
+  $selector.selectedIndex = idx;
   const requiredEl = parseInt($selected.getAttribute('data-required-el'), 10);
   $container.innerHTML = '';
   if (requiredEl === 0) {
@@ -23,4 +25,16 @@ const update = (e) => {
   }
 }
 
+const update = (e) => {
+  changeWhirl($selector.selectedIndex);
+}
+
 $selector.addEventListener('change', update);
+
+const randomWhirl = () => {
+  changeWhirl(Math.floor(Math.random() * ($selector.length - 1 + 1) + 1));
+};
+
+randomWhirl();
+
+$button.addEventListener('click', randomWhirl);
