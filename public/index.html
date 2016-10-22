@@ -3,79 +3,82 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
-    <title></title>
+    <title>whirl | pure CSS loading animations with minimal effort!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1.0"/>
     <meta name="description" content="pure CSS loading animations with minimal effort!"/>
     <link rel="stylesheet" href="style/demo.css"/>
     <link rel="stylesheet" href="style/whirl.css"/>
   </head>
   <body>
+    <div class="whirl-container" data-whirl="duo"></div>
     <h1>whirl</h1>
-    <h2>55 whirls and counting...</h2>
-    <div class="whirl-container"></div>
-    <select>
-      <optgroup label="--- Pseudo element ---">
-        <option value="basic" data-required-el="0">Basic</option>
-        <option value="whirl" data-required-el="0">Whirl</option>
-        <option value="duo" data-required-el="0">Duo</option>
-        <option value="arc" data-required-el="0">Arc</option>
-        <option value="double-up" data-required-el="0">Double up</option>
-        <option value="traditional" data-required-el="0">Traditional</option>
-        <option value="bar-spin" data-required-el="0">Bar spin</option>
-        <option value="invert" data-required-el="0">Invert</option>
-        <option value="eight" data-required-el="0">Eight</option>
-        <option value="outline-square" data-required-el="0">Outline square</option>
-        <option value="bloom" data-required-el="0">Bloom</option>
-        <option value="swap" data-required-el="0">Swap</option>
-        <option value="orbit" data-required-el="0">Orbit</option>
-        <option value="fly-by" data-required-el="0">Fly by</option>
-        <option value="scale-dots" data-required-el="0">Scale dots</option>
-        <option value="scale-dots-offset" data-required-el="0">Scale dots offset</option>
-        <option value="dots-fade" data-required-el="0">Dots fade</option>
-        <option value="pendulum" data-required-el="0">Pendulum</option>
-        <option value="side-to-side" data-required-el="0">Side to side</option>
-        <option value="color-wheel" data-required-el="0">Color wheel</option>
-        <option value="line" data-required-el="0">Line</option>
-        <option value="eclipse" data-required-el="0">Eclipse</option>
-        <option value="rotary" data-required-el="0">Rotary</option>
-        <option value="throw" data-required-el="0">Throw</option>
-        <option value="fidget" data-required-el="0">Fidget</option>
-        <option value="tumble" data-required-el="0">Tumble</option>
-        <option value="ringed" data-required-el="0">Ringed</option>
-        <option value="double-ringed" data-required-el="0">Double ringed</option>
-        <option value="scan" data-required-el="0">Scan</option>
-        <option value="stop-and-go" data-required-el="0">Stop and go</option>
-        <option value="gyro" data-required-el="0">Gyro</option>
-        <option value="rays" data-required-el="0">Rays</option>
-        <option value="dots" data-required-el="0">Dots</option>
-        <option value="split" data-required-el="0">Split</option>
-        <option value="hourglass" data-required-el="0">Hourglass</option>
-        <option value="breakout" data-required-el="0">Breakout</option>
-        <option value="jump" data-required-el="0">Jump</option>
-        <option value="radial" data-required-el="0">Radial</option>
-        <option value="chase" data-required-el="0">Chase</option>
-        <option value="trigger" data-required-el="0">Trigger</option>
-        <option value="dots-flow" data-required-el="0">Dots flow</option>
-        <option value="color-range" data-required-el="0">Color range</option>
-        <option value="ring-of-dots" data-required-el="0">Ring of dots</option>
-        <option value="palette" data-required-el="0">Palette</option>
-        <option value="square-of-dots" data-required-el="0">Square of dots</option>
-        <option value="line-of-dots" data-required-el="0">Line of dots</option>
-        <option value="snake" data-required-el="0">Snake</option>
-        <option value="mexican-wave" data-required-el="0">Mexican wave</option>
-      </optgroup>
-      <optgroup label="--- Single element ---">
-        <option value="cyclical" data-required-el="1">Cyclical</option>
-        <option value="merge" data-required-el="1">Merge</option>
-        <option value="hourglass-spin" data-required-el="1">Hourglass spin</option>
-        <option value="color-arc" data-required-el="1">Color arc</option>
-        <option value="color-bridge" data-required-el="1">Color bridge</option>
-        <option value="load-man" data-required-el="1">Load man</option>
-        <option value="rainbow" data-required-el="1">Rainbow</option>
-      </optgroup>
-      <optgroup label="--- Multi element ---">
-      </optgroup>
-    </select>
+    <h2>pure CSS loading animations with minimal effort!</h2>
+    <div class="whirl-selector__container">
+      <select class="whirl-selector">
+        <optgroup label="--- Pseudo element ---">
+          <option value="arc" data-required-el="0">Arc</option>
+          <option value="bar-spin" data-required-el="0">Bar spin</option>
+          <option value="basic" data-required-el="0">Basic</option>
+          <option value="bloom" data-required-el="0">Bloom</option>
+          <option value="breakout" data-required-el="0">Breakout</option>
+          <option value="chase" data-required-el="0">Chase</option>
+          <option value="color-range" data-required-el="0">Color range</option>
+          <option value="color-wheel" data-required-el="0">Color wheel</option>
+          <option value="dots" data-required-el="0">Dots</option>
+          <option value="dots-fade" data-required-el="0">Dots fade</option>
+          <option value="dots-flow" data-required-el="0">Dots flow</option>
+          <option value="double-ringed" data-required-el="0">Double ringed</option>
+          <option value="double-up" data-required-el="0">Double up</option>
+          <option value="duo" data-required-el="0">Duo</option>
+          <option value="eclipse" data-required-el="0">Eclipse</option>
+          <option value="eight" data-required-el="0">Eight</option>
+          <option value="fidget" data-required-el="0">Fidget</option>
+          <option value="fly-by" data-required-el="0">Fly by</option>
+          <option value="gyro" data-required-el="0">Gyro</option>
+          <option value="hourglass" data-required-el="0">Hourglass</option>
+          <option value="invert" data-required-el="0">Invert</option>
+          <option value="jump" data-required-el="0">Jump</option>
+          <option value="line" data-required-el="0">Line</option>
+          <option value="line-of-dots" data-required-el="0">Line of dots</option>
+          <option value="mexican-wave" data-required-el="0">Mexican wave</option>
+          <option value="orbit" data-required-el="0">Orbit</option>
+          <option value="outline-square" data-required-el="0">Outline square</option>
+          <option value="palette" data-required-el="0">Palette</option>
+          <option value="pendulum" data-required-el="0">Pendulum</option>
+          <option value="radial" data-required-el="0">Radial</option>
+          <option value="rays" data-required-el="0">Rays</option>
+          <option value="ring-of-dots" data-required-el="0">Ring of dots</option>
+          <option value="ringed" data-required-el="0">Ringed</option>
+          <option value="rotary" data-required-el="0">Rotary</option>
+          <option value="scale-dots" data-required-el="0">Scale dots</option>
+          <option value="scale-dots-offset" data-required-el="0">Scale dots offset</option>
+          <option value="scan" data-required-el="0">Scan</option>
+          <option value="side-to-side" data-required-el="0">Side to side</option>
+          <option value="snake" data-required-el="0">Snake</option>
+          <option value="split" data-required-el="0">Split</option>
+          <option value="square-of-dots" data-required-el="0">Square of dots</option>
+          <option value="stop-and-go" data-required-el="0">Stop and go</option>
+          <option value="swap" data-required-el="0">Swap</option>
+          <option value="throw" data-required-el="0">Throw</option>
+          <option value="traditional" data-required-el="0">Traditional</option>
+          <option value="trigger" data-required-el="0">Trigger</option>
+          <option value="tumble" data-required-el="0">Tumble</option>
+          <option value="whirl" data-required-el="0">Whirl</option>
+        </optgroup>
+        <optgroup label="--- Single element ---">
+          <option value="color-arc" data-required-el="1">Color arc</option>
+          <option value="color-bridge" data-required-el="1">Color bridge</option>
+          <option value="cyclical" data-required-el="1">Cyclical</option>
+          <option value="hourglass-spin" data-required-el="1">Hourglass spin</option>
+          <option value="load-man" data-required-el="1">Load man</option>
+          <option value="merge" data-required-el="1">Merge</option>
+          <option value="rainbow" data-required-el="1">Rainbow</option>
+        </optgroup>
+        <optgroup label="--- Multi element ---">
+        </optgroup>
+      </select>
+    </div>
+    <p>55 whirls and counting...</p>
     <script src="script/demo.js"></script>
   </body>
 </html>

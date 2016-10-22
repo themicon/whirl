@@ -24,6 +24,7 @@ module.exports = {
       pretty: true,
       data  : {
         name       : pkg.name,
+        title      : pkg.name + ' | ' + pkg.description,
         description: pkg.description
       }
     },

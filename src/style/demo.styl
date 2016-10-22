@@ -1,0 +1,65 @@
+/**
+  * NOTE: Font imports etc. always need to go before included CSS in order
+  * to work
+*/
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import '../../node_modules/normalize.css/normalize.css'
+@import '../whirl/vars.styl'
+/**
+  * Simple styles to aid with development
+*/
+*
+  box-sizing border-box
+
+body
+  background $whirl-bg
+  text-align center
+
+h1
+  font-family 'Lato', sans-serif
+  text-align center
+  color $whirl-primary
+  font-size 70px
+  margin 0
+
+h2
+  font-size 20px
+  color $whirl-primary
+  text-align center
+  margin 10px auto
+
+p
+  color $whirl-primary
+
+.whirl-container
+  border-radius 10px
+  height  200px
+  margin  0 auto
+  overflow hidden
+  position relative
+  width   200px
+
+  @media(max-width: 600px)
+    width 100%
+
+
+.whirl-selector
+  appearance none
+  padding 15px
+  border 2px solid $whirl-secondary
+  border-radius 6px
+
+  &__container
+    display inline-block
+    position relative
+    &:before
+      height 0
+      width 0
+      border 8px solid transparent
+      border-top-color $whirl-secondary
+      content ''
+      position absolute
+      z-index 2
+      right 8px
+      top 50%
+      margin-top -4px

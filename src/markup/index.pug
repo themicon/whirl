@@ -8,23 +8,28 @@ html(lang="en-us")
     link(rel='stylesheet', href=`style/demo${(deploy) ? '.min' : ''}.css`)
     link(rel='stylesheet', href=`style/whirl${(deploy) ? '.min' : ''}.css`)
   body
-    h1 whirl
-    h2= `${Object.keys(whirls).length} whirls and counting...`
-    .whirl-container
-    select
-      optgroup(label='--- Pseudo element ---')
-        each val, index in whirls
-          if val.requiredElements == 0
-            - var label = index.replace(new RegExp('-', 'g'), ' ')
-            option(value= index, data-required-el= val.requiredElements)= `${label.charAt(0).toUpperCase() + label.slice(1)}`
-      optgroup(label='--- Single element ---')
-        each val, index in whirls
-          if val.requiredElements == 1
-            - var label = index.replace(new RegExp('-', 'g'), ' ')
-            option(value= index, data-required-el= val.requiredElements)= `${label.charAt(0).toUpperCase() + label.slice(1)}`
-      optgroup(label='--- Multi element ---')
-        each val, index in whirls
-          if val.requiredElements > 1
-            - var label = index.replace(new RegExp('-', 'g'), ' ')
-            option(value= index, data-required-el= val.requiredElements)= `${label.charAt(0).toUpperCase() + label.slice(1)}`
+    .whirl-container(data-whirl='duo')
+    h1= name
+    h2= description
+    - var whirlsLookup = Object.keys(whirls).sort()
+    .whirl-selector__container
+      select.whirl-selector
+        optgroup(label='--- Pseudo element ---')
+          each val, index in whirlsLookup
+            - var whirl = whirls[val]
+            if whirl.requiredElements == 0
+              - var label = val.replace(new RegExp('-', 'g'), ' ')
+              option(value= val, data-required-el= whirl.requiredElements)= `${label.charAt(0).toUpperCase() + label.slice(1)}`
+        optgroup(label='--- Single element ---')
+          each val, index in whirlsLookup
+            - var whirl = whirls[val]
+            if whirl.requiredElements == 1
+              - var label = val.replace(new RegExp('-', 'g'), ' ')
+              option(value= val, data-required-el= whirl.requiredElements)= `${label.charAt(0).toUpperCase() + label.slice(1)}`
+        optgroup(label='--- Multi element ---')
+          each val, index in whirls
+            if val.requiredElements > 1
+              - var label = index.replace(new RegExp('-', 'g'), ' ')
+              option(value= index, data-required-el= val.requiredElements)= `${label.charAt(0).toUpperCase() + label.slice(1)}`
+    p= `${Object.keys(whirls).length} whirls and counting...`
     script(src=`script/demo${(deploy) ? '.min' : ''}.js`)
