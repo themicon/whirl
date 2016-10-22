@@ -208,7 +208,7 @@ canvas{
           box-sizing:border-box;
 }
 body{
-  background:#6bb9f0;
+  background:#22a7f0;
   text-align:center;
 }
 h1{
@@ -218,22 +218,22 @@ h1{
 }
 h1,h2{
   text-align:center;
-  color:#fff;
+  color:#fafafa;
 }
 h2{
   font-size:20px;
   margin:10px auto;
 }
 p{
-  color:#fff;
+  color:#fafafa;
 }
 .whirl-container{
   border-radius:10px;
-  height:200px;
+  height:250px;
   margin:0 auto;
   overflow:hidden;
   position:relative;
-  width:200px;
+  width:250px;
 }
 @media (max-width:600px){
   .whirl-container{
@@ -245,7 +245,7 @@ p{
      -moz-appearance:none;
           appearance:none;
   padding:15px;
-  border:2px solid purple;
+  border:2px solid #9a12b3;
   border-radius:6px;
 }
 .whirl-selector__container{
@@ -256,7 +256,7 @@ p{
   height:0;
   width:0;
   border:8px solid transparent;
-  border-top-color:purple;
+  border-top-color:#9a12b3;
   content:'';
   position:absolute;
   z-index:1;
