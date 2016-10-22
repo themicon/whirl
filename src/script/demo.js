@@ -32,7 +32,8 @@ const update = (e) => {
 $selector.addEventListener('change', update);
 
 const randomWhirl = () => {
-  changeWhirl(Math.floor(Math.random() * ($selector.length - 1 + 1) + 1));
+  const rand = Math.floor(Math.random() * ($selector.length - 1));
+  changeWhirl(rand);
 };
 
 randomWhirl();
