@@ -1,0 +1,38 @@
+@import '../vars.styl'
+/**
+  * Spinning dots - scaled
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size         = 10px
+$no-of-dots   = 7
+$color        = $whirl-primary
+$radi         = 20px 20px 20px 20px 20px 20px 20px
+$scales       = -4px -4px -3px -2px -1px 1px 4px
+
+getPosition(angle, idx)
+  $radius = $radi[idx - 1]
+  xPos = $radius * cos(angle * (PI / 180))
+  yPos = $radius * sin(angle * (PI / 180))
+  (xPos yPos)
+
+genShadow()
+  $shadows = ()
+  for $dot in (1..$no-of-dots)
+    $angle       = (360 / $no-of-dots) * ($dot - 1)
+    $xy          = getPosition($angle, $dot)
+    $dots        = $no-of-dots
+    $true-pos    = $dot + $pos
+    $scale       = $scales[$dot - 1]
+    $shad-props  = $xy 0 ($scale) $color
+    push($shadows, join(' ', $shad-props))
+  (unquote(join(',', $shadows)))
+
+
+
+[data-whirl='spinning-dots-scaled']
+  &:before
+    $create-pseudo($size, $size)
+    animation     whirl-rotate 1.5s infinite linear
+    border-radius $size
+    box-shadow genShadow()

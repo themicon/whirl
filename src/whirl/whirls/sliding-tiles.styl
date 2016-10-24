@@ -1,0 +1,43 @@
+@import '../vars.styl'
+/**
+  * Sliding tiles
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+@keyframes whirl-sliding-tile
+  0%
+    transform translate(-50%, -50%)
+  25%
+    transform translate(50%, -50%)
+  50%
+    transform translate(50%, 50%)
+  75%
+    transform translate(-50%, 50%)
+  100%
+    transform translate(-50%, -50%)
+
+@keyframes whirl-sliding-tile-2
+  0%
+    transform translate(50%, 50%)
+  25%
+    transform translate(-50%, 50%)
+  50%
+    transform translate(-50%, -50%)
+  75%
+    transform translate(50%, -50%)
+  100%
+    transform translate(50%, 50%)
+
+$size = 20px
+
+[data-whirl='sliding-tiles']
+
+  &:after
+  &:before
+    $create-pseudo($size, $size)
+    animation whirl-sliding-tile 2s infinite linear
+    background-color $whirl-primary
+
+  &:after
+    animation whirl-sliding-tile-2 2s infinite linear

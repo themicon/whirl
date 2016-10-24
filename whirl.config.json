@@ -219,6 +219,22 @@
     "mexican-wave": {
       "active": true,
       "requiredElements": 0
+    },
+    "spinning-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "spinning-dots-scaled": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "sliding-tiles": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "sliding-tiles-bordered": {
+      "active": true,
+      "requiredElements": 1
     }
   }
 }

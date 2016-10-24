@@ -1,0 +1,35 @@
+@import '../vars.styl'
+/**
+  * Spinning dots
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$radius       = 25px
+$size         = 10px
+$no-of-dots   = 7
+$color        = $whirl-primary
+
+getPosition(angle)
+  xPos = $radius * cos(angle * (PI / 180))
+  yPos = $radius * sin(angle * (PI / 180))
+  (xPos yPos)
+
+genShadow()
+  $shadows = ()
+  for $dot in (1..$no-of-dots)
+    $angle       = (360 / $no-of-dots) * ($dot - 1)
+    $xy          = getPosition($angle)
+    $dots        = $no-of-dots
+    $true-pos    = $dot + $pos
+    $shad-props  = $xy 0 0 $color
+    push($shadows, join(' ', $shad-props))
+  (unquote(join(',', $shadows)))
+
+
+
+[data-whirl='spinning-dots']
+  &:before
+    $create-pseudo($size, $size)
+    animation     whirl-rotate 1.5s infinite linear
+    border-radius $size
+    box-shadow genShadow()
