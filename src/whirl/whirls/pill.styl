@@ -34,7 +34,7 @@ $border = 6px
   &:before
     $create-pseudo($size, $size / 2)
     animation whirl-pill 3s infinite
-    background linear-gradient(0deg, purple, purple 50%, transparent 50%, transparent)
+    background linear-gradient(0deg, $whirl-secondary, $whirl-secondary 50%, transparent 50%, transparent)
     background-size 100% 200%
-    border $border solid white
+    border $border solid $whirl-primary
     border-radius $border * 2.5

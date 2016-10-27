@@ -247,6 +247,10 @@
     "pill": {
       "active": true,
       "requiredElements": 0
+    },
+    "rings": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

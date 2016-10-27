@@ -1,0 +1,45 @@
+@import '../vars.styl'
+/**
+  * Rings
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 30px
+$color = $whirl-primary
+$color-two = transparentify($color, 50%)
+$duration = 1s
+$offset = 2px
+
+@keyframes whirl-rings
+  0%
+    transform rotate(0deg)
+  50%
+  100%
+    transform rotate(360deg)
+
+
+[data-whirl='rings']
+
+  &:after
+  &:before
+    box-sizing  border-box
+    border      6px solid $color-two
+    border-radius 100%
+    content     ''
+    height      $size
+    left        50%
+    margin-top  ($size / -2)
+    position    absolute
+    top         50%
+    width       $size
+
+  &:after
+    animation whirl-rings $duration infinite
+    border-left-color $color
+    margin-left -($offset)
+
+  &:before
+    animation whirl-rings $duration infinite reverse
+    border-right-color $color
+    margin-left -($size - $offset)
