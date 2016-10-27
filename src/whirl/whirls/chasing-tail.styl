@@ -1,0 +1,34 @@
+@import '../vars.styl'
+@import '../common/animation/rotate.styl'
+/**
+  * Clipped
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size = 50px
+$border = 10px
+
+[data-whirl='chasing-tail']
+  animation whirl-rotate 3s infinite linear
+  height $size
+  left 50%
+  margin-left -($size / 2)
+  margin-top -($size / 2)
+  position absolute
+  top 50%
+  width  $size
+
+  &:after
+  &:before
+    $create-pseudo($size, $size)
+    border $border solid $whirl-primary
+    border-radius 100%
+
+  &:after
+    animation whirl-rotate 2s 1.5s infinite
+    border-bottom-color transparent
+    border-right-color transparent
+  &:before
+    animation whirl-rotate 2s infinite
+    border-top-color transparent
+    border-left-color transparent

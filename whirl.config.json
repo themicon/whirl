@@ -235,6 +235,18 @@
     "sliding-tiles-bordered": {
       "active": true,
       "requiredElements": 1
+    },
+    "chasing-tail": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "flip-square": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "pill": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }

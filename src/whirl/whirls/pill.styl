@@ -1,0 +1,40 @@
+@import '../vars.styl'
+/**
+  * Pill
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size = 60px
+$border = 6px
+
+@keyframes whirl-pill
+  0%
+    background-position 0 0
+    transform rotate(0deg)
+   // will be 1/2 rotated by 25%
+  25%
+  30%
+    background-position 0 0
+    transform rotate(360deg)
+  40%
+  50%
+    background-position 0 100%
+    transform rotate(360deg)
+  // will be rotated by 75%
+  75%
+  80%
+    background-position 0 100%
+    transform rotate(720deg)
+  90%
+  100%
+    background-position 0 0
+    transform rotate(720deg)
+
+[data-whirl='pill']
+  &:before
+    $create-pseudo($size, $size / 2)
+    animation whirl-pill 3s infinite
+    background linear-gradient(0deg, purple, purple 50%, transparent 50%, transparent)
+    background-size 100% 200%
+    border $border solid white
+    border-radius $border * 2.5

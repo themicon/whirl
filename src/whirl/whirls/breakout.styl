@@ -25,10 +25,10 @@ $thickness = 10px
 [data-whirl='breakout']
 
   &:after
-    animation whirl-breakout 1.5s infinite
+    animation whirl-breakout 2s infinite
 
   &:after
   &:before
-    $create-pseudo()
+    $create-pseudo($size, $size)
     border $thickness solid $whirl-primary
     border-radius 100%

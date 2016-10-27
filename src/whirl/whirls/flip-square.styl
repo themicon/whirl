@@ -1,0 +1,22 @@
+@import '../vars.styl'
+/**
+  * Flip square
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 50px
+
+[data-whirl='flip-square']
+  &:before
+    $create-pseudo($size, $size)
+    animation whirl-flip-square 1s infinite
+    background-color $whirl-primary
+
+@keyframes whirl-flip-square
+  0%
+    transform perspective($size) rotate(45deg) rotateX(0deg) rotateY(0deg)
+  50%
+    transform perspective($size) rotate(45deg) rotateX(-180deg) rotateY(0deg)
+  100%
+    transform perspective($size) rotate(45deg) rotateX(-180deg) rotateY(-180deg)
