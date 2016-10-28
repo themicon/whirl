@@ -263,6 +263,14 @@
     "waterfall": {
       "active": true,
       "requiredElements": 6
+    },
+    "cascade": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "slide-in": {
+      "active": true,
+      "requiredElements": 4
     }
   }
 }

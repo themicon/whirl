@@ -1,7 +1,7 @@
 @import '../vars.styl'
 
 /**
-  * Waterfall
+  * Cascade
   *
   * @author jh3y - https://github.com/jh3y
 */
@@ -9,10 +9,12 @@
 $no-of-el = 5
 $size = 20px
 $margin = 5px
+$diff = $size + $margin
+$start = -((math($no-of-el / 2, 'floor')) * $diff + ($size / 2))
 $offset = .25s
 $color = $whirl-primary
 
-@keyframes whirl-waterfall
+@keyframes whirl-cascade
   0%
     opacity 0
     transform translateY(-250%)
@@ -26,7 +28,7 @@ $color = $whirl-primary
 
 
 
-[data-whirl='waterfall']
+[data-whirl='cascade']
   bottom 0
   left 0
   position absolute
@@ -34,7 +36,7 @@ $color = $whirl-primary
   top 0
 
   div
-    animation whirl-waterfall 1.5s infinite
+    animation whirl-cascade 2s infinite
     background-color $color
     height $size
     left 50%
@@ -46,13 +48,5 @@ $color = $whirl-primary
 
   for $el in 1..$no-of-el
     div:nth-of-type({$el})
-      $marg = 0
-      if $el == 1
-        $marg = -($size / 2)
-      if $el > 1
-        $multiplier = $el
-        if ($el % 2) > 0
-          $multiplier = -($el - 1)
-        $marg = ((($multiplier / 2) - 1) * $size) + (($multiplier / 2) * $margin) + ($size / 2)
       animation-delay $el * $offset
-      margin-left $marg
+      margin-left $start + (($el - 1) * $diff)
