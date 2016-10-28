@@ -1,0 +1,56 @@
+@import '../vars.styl'
+
+/**
+  * Cascade
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$no-of-el = 5
+$size = 20px
+$margin = 5px
+$offset = .25s
+
+@keyframes whirl-waterfall
+  0%
+    transform translateY(-250%)
+    opacity 0
+  40%
+  60%
+    transform translateY(0)
+    opacity 1
+  100%
+    transform translateY(250%)
+    opacity 0
+
+
+
+[data-whirl='waterfall']
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+  div
+    height $size
+    width $size
+    background-color white
+    position absolute
+    top 50%
+    margin-top -($size / 2)
+    left 50%
+    animation whirl-waterfall 1.5s infinite
+
+  for $el in 1..$no-of-el
+    div:nth-of-type({$el})
+      $marg = 0
+      if $el == 1
+        $marg = -($size / 2)
+      if $el > 1
+        $multiplier = $el
+        if ($el % 2) > 0
+          $multiplier = -($el - 1)
+        $marg = ((($multiplier / 2) - 1) * $size) + (($multiplier / 2) * $margin) + ($size / 2)
+      animation-delay $el * $offset
+      margin-left $marg

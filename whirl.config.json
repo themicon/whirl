@@ -259,6 +259,10 @@
     "meetup": {
       "active": true,
       "requiredElements": 1
+    },
+    "waterfall": {
+      "active": true,
+      "requiredElements": 6
     }
   }
 }
