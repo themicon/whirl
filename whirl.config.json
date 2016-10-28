@@ -251,6 +251,14 @@
     "rings": {
       "active": true,
       "requiredElements": 0
+    },
+    "siblings": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "meetup": {
+      "active": true,
+      "requiredElements": 1
     }
   }
 }

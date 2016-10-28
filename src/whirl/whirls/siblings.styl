@@ -1,0 +1,28 @@
+@import '../common/animation/rotate.styl'
+@import '../vars.styl'
+
+$size = 50px
+$color = $whirl-primary
+$border = 6px
+
+/**
+  * Siblings
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+[data-whirl='siblings']
+
+  &:after
+  &:before
+    border $border solid $color
+    border-radius 100%
+
+  &:after
+    $create-pseudo($size, $size)
+    animation whirl-rotate 1.5s infinite linear
+    border-right-color transparent
+
+  &:before
+    $create-pseudo($size / 2, $size / 2)
+    animation whirl-rotate 1s infinite linear reverse
+    border-left-color transparent

@@ -1,0 +1,38 @@
+@import '../vars.styl'
+@import '../common/animation/rotate.styl'
+/**
+  * Meetup
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$dot-scale = 5px
+$radius    = 25px
+
+@keyframes meetup
+  0%
+  100%
+    box-shadow (-($dot-scale)) 0 0 $dot-scale white,
+      0 (-($dot-scale)) 0 $dot-scale white,
+      $dot-scale 0 0 $dot-scale white,
+      0 $dot-scale 0 $dot-scale white
+  50%
+    box-shadow (-($radius)) 0 0 $dot-scale white,
+      0 (-($radius)) 0 $dot-scale white,
+      $radius 0 0 $dot-scale white,
+      0 $radius 0 $dot-scale white
+
+[data-whirl='meetup']
+  animation whirl-rotate 2s infinite linear
+  height $radius
+  left 50%
+  margin-left -($radius / 2)
+  margin-top -($radius / 2)
+  position absolute
+  top 50%
+  width  $radius
+
+  &:before
+    $create-pseudo(2px, 2px)
+    animation meetup 1.25s infinite
+    border-radius 100%
