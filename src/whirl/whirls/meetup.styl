@@ -8,19 +8,20 @@
 
 $dot-scale = 5px
 $radius    = 25px
+$color     = $whirl-primary
 
 @keyframes meetup
   0%
   100%
-    box-shadow (-($dot-scale)) 0 0 $dot-scale white,
-      0 (-($dot-scale)) 0 $dot-scale white,
-      $dot-scale 0 0 $dot-scale white,
-      0 $dot-scale 0 $dot-scale white
+    box-shadow (-($dot-scale)) 0 0 $dot-scale $color,
+      0 (-($dot-scale)) 0 $dot-scale $color,
+      $dot-scale 0 0 $dot-scale $color,
+      0 $dot-scale 0 $dot-scale $color
   50%
-    box-shadow (-($radius)) 0 0 $dot-scale white,
-      0 (-($radius)) 0 $dot-scale white,
-      $radius 0 0 $dot-scale white,
-      0 $radius 0 $dot-scale white
+    box-shadow (-($radius)) 0 0 $dot-scale $color,
+      0 (-($radius)) 0 $dot-scale $color,
+      $radius 0 0 $dot-scale $color,
+      0 $radius 0 $dot-scale $color
 
 [data-whirl='meetup']
   animation whirl-rotate 2s infinite linear
