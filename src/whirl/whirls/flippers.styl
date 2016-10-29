@@ -1,0 +1,44 @@
+@import '../vars.styl'
+
+/**
+  * Flippers
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$no-of-el = 5
+$size = 20px
+$margin = 5px
+$diff = $size + $margin
+$start = -((math($no-of-el / 2, 'floor')) * $diff + ($size / 2))
+$offset = .25s
+$color = $whirl-primary
+$perspective = 2 * $size
+
+@keyframes whirl-flippers
+  0%
+    transform perspective($perspective) rotateY(-180deg)
+  50%
+    transform perspective($perspective) rotateY(0deg)
+
+[data-whirl='flippers']
+  bottom 0
+  left 0
+  position absolute
+  right 0
+  top 0
+
+  div
+    animation whirl-flippers 1.5s infinite
+    background-color $color
+    height $size
+    left 50%
+    margin-top -($size / 2)
+    position absolute
+    top 50%
+    width $size
+
+  for $el in 1..$no-of-el
+    div:nth-of-type({$el})
+      animation-delay $el * $offset
+      margin-left $start + (($el - 1) * $diff)

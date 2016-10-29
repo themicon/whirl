@@ -271,6 +271,118 @@
     "slide-in": {
       "active": true,
       "requiredElements": 4
+    },
+    "flippers": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "roll-by": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "blades": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "swap-corners": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "trailing-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "slime": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "feeder": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "half-ring": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "book": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "dominoes": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "flickering-pentagon": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "flip-to-square": {
+      "active": true,
+      "requiredElements": 10
+    },
+    "random-equalizer": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "tri-wing": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "rotating-dots": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "honeycomb": {
+      "active": true,
+      "requiredElements": 8
+    },
+    "staggered-honeycomb": {
+      "active": true,
+      "requiredElements": 8
+    },
+    "rotating-flipping-hexagon": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ring-of-stars": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "shapes": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "cube": {
+      "active": true,
+      "requiredElements": 8
+    },
+    "sunshine": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "combining-shapes": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "building-blocks": {
+      "active": true,
+      "requiredElements": 9
+    },
+    "lights": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "swing-and-knock": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "spinning-coin": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "border-square": {
+      "active": true,
+      "requiredElements": 0
     }
   }
 }
