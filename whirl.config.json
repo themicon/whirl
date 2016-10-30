@@ -1,26 +1,6 @@
 {
   "whirls": {
-    "basic": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "whirl": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "duo": {
-      "active": true,
-      "requiredElements": 0
-    },
     "arc": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "double-up": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "traditional": {
       "active": true,
       "requiredElements": 0
     },
@@ -28,7 +8,115 @@
       "active": true,
       "requiredElements": 0
     },
-    "invert": {
+    "basic": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "blades": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "bloom": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "book": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "border-square": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "borders": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "breakout": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "building-blocks": {
+      "active": true,
+      "requiredElements": 9
+    },
+    "cascade": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "chase": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "chasing-tail": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "coffee": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "color-arc": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "color-bridge": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "color-range": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "color-wheel": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "combining-shapes": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "cube": {
+      "active": true,
+      "requiredElements": 8
+    },
+    "cyclical": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "different-directions": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "dominoes": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "dots-fade": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "dots-flow": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "double-ringed": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "double-up": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "duo": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "eclipse": {
       "active": true,
       "requiredElements": 0
     },
@@ -36,15 +124,91 @@
       "active": true,
       "requiredElements": 0
     },
-    "outline-square": {
+    "feeder": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "fidget": {
       "active": true,
       "requiredElements": 0
     },
-    "bloom": {
+    "flickering-pentagon": {
       "active": true,
       "requiredElements": 0
     },
-    "swap": {
+    "flip-square": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "flip-to-square": {
+      "active": true,
+      "requiredElements": 10
+    },
+    "flippers": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "fly-by": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "follow-the-leader": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "gyro": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "half-ring": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "honeycomb": {
+      "active": true,
+      "requiredElements": 8
+    },
+    "hourglass": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "hourglass-spin": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "invert": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "jump": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "lights": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "line": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "line-of-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "load-man": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "meetup": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "merge": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "mexican-wave": {
       "active": true,
       "requiredElements": 0
     },
@@ -52,7 +216,67 @@
       "active": true,
       "requiredElements": 0
     },
-    "fly-by": {
+    "outline-square": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "palette": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "pendulum": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "pill": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "radial": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "rainbow": {
+      "active": true,
+      "requiredElements": 1
+    },
+    "random-equalizer": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "rays": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ring-of-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ring-of-stars": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "ringed": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "rings": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "roll-by": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "rotary": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "rotating-dots": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "rotating-flipping-hexagon": {
       "active": true,
       "requiredElements": 0
     },
@@ -64,51 +288,7 @@
       "active": true,
       "requiredElements": 0
     },
-    "dots-fade": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "pendulum": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "side-to-side": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "color-wheel": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "line": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "eclipse": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "rotary": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "throw": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "fidget": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "tumble": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "ringed": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "double-ringed": {
+    "scaling-ring": {
       "active": true,
       "requiredElements": 0
     },
@@ -116,99 +296,31 @@
       "active": true,
       "requiredElements": 0
     },
-    "stop-and-go": {
+    "shapes": {
       "active": true,
       "requiredElements": 0
     },
-    "gyro": {
+    "siblings": {
       "active": true,
       "requiredElements": 0
     },
-    "rays": {
+    "side-to-side": {
       "active": true,
       "requiredElements": 0
     },
-    "cyclical": {
+    "slide-in": {
+      "active": true,
+      "requiredElements": 4
+    },
+    "sliding-tiles": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "sliding-tiles-bordered": {
       "active": true,
       "requiredElements": 1
     },
-    "merge": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "dots": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "split": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "hourglass": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "hourglass-spin": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "breakout": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "color-arc": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "color-bridge": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "jump": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "radial": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "load-man": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "rainbow": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "chase": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "trigger": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "dots-flow": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "color-range": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "ring-of-dots": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "palette": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "square-of-dots": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "line-of-dots": {
+    "slime": {
       "active": true,
       "requiredElements": 0
     },
@@ -216,7 +328,7 @@
       "active": true,
       "requiredElements": 0
     },
-    "mexican-wave": {
+    "spinning-coin": {
       "active": true,
       "requiredElements": 0
     },
@@ -228,159 +340,67 @@
       "active": true,
       "requiredElements": 0
     },
-    "sliding-tiles": {
+    "split": {
       "active": true,
       "requiredElements": 0
     },
-    "sliding-tiles-bordered": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "chasing-tail": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "flip-square": {
+    "square-of-dots": {
       "active": true,
       "requiredElements": 0
-    },
-    "pill": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "rings": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "siblings": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "meetup": {
-      "active": true,
-      "requiredElements": 1
-    },
-    "waterfall": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "cascade": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "slide-in": {
-      "active": true,
-      "requiredElements": 4
-    },
-    "flippers": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "roll-by": {
-      "active": true,
-      "requiredElements": 4
-    },
-    "blades": {
-      "active": true,
-      "requiredElements": 4
-    },
-    "swap-corners": {
-      "active": true,
-      "requiredElements": 4
-    },
-    "trailing-dots": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "slime": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "feeder": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "half-ring": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "book": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "dominoes": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "flickering-pentagon": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "flip-to-square": {
-      "active": true,
-      "requiredElements": 10
-    },
-    "random-equalizer": {
-      "active": true,
-      "requiredElements": 6
-    },
-    "tri-wing": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "rotating-dots": {
-      "active": true,
-      "requiredElements": 4
-    },
-    "honeycomb": {
-      "active": true,
-      "requiredElements": 8
     },
     "staggered-honeycomb": {
       "active": true,
       "requiredElements": 8
     },
-    "rotating-flipping-hexagon": {
+    "stop-and-go": {
       "active": true,
       "requiredElements": 0
-    },
-    "ring-of-stars": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "shapes": {
-      "active": true,
-      "requiredElements": 0
-    },
-    "cube": {
-      "active": true,
-      "requiredElements": 8
     },
     "sunshine": {
       "active": true,
       "requiredElements": 0
     },
-    "combining-shapes": {
+    "swap": {
       "active": true,
       "requiredElements": 0
     },
-    "building-blocks": {
+    "swap-corners": {
       "active": true,
-      "requiredElements": 9
-    },
-    "lights": {
-      "active": true,
-      "requiredElements": 0
+      "requiredElements": 4
     },
     "swing-and-knock": {
       "active": true,
       "requiredElements": 4
     },
-    "spinning-coin": {
+    "throw": {
       "active": true,
       "requiredElements": 0
     },
-    "border-square": {
+    "traditional": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "trailing-dots": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "tri-wing": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "trigger": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "tumble": {
+      "active": true,
+      "requiredElements": 0
+    },
+    "waterfall": {
+      "active": true,
+      "requiredElements": 6
+    },
+    "whirl": {
       "active": true,
       "requiredElements": 0
     }
