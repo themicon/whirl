@@ -1,0 +1,32 @@
+@import '../vars.styl'
+@import '../common/animation/rotate.styl'
+/**
+  * Tornado
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$color = $whirl-primary
+$no-of-el = 5
+
+@keyframes whirl-tornado
+  50%
+  100%
+    transform rotate(360deg)
+
+[data-whirl='tornado']
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%) rotate(-45deg)
+
+  div
+    border 6px solid $color
+    border-radius 100%
+    position absolute
+    top 50%
+    left 50%
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      height $el * 15px
+      width $el * 15px

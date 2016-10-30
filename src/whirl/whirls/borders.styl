@@ -1,6 +1,40 @@
 @import '../vars.styl'
+@import '../common/animation/rotate.styl'
 /**
-  * borders
+  * Borders
   *
   * @author jh3y - https://github.com/jh3y
 */
+
+$color = $whirl-primary
+$border = 6px
+
+$size-one = 50px
+$size-two = 30px
+
+
+@keyframes whirl-borders
+  50%
+  100%
+    transform rotate(360deg)
+
+[data-whirl='borders']
+  left 50%
+  position absolute
+  top 50%
+  animation whirl-rotate 5s infinite linear reverse
+
+  &:after
+  &:before
+    border $border solid $color
+    border-bottom-color transparent
+    border-left-color transparent
+    border-radius 100%
+
+  &:after
+    $create-pseudo($size-one, $size-one)
+    animation whirl-borders 1.5s .5s infinite
+
+  &:before
+    $create-pseudo($size-two, $size-two)
+    animation whirl-borders 1.5s infinite

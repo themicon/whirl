@@ -1,0 +1,45 @@
+@import '../vars.styl'
+@import '../common/animation/rotate.styl'
+/**
+  * Sonar
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$color = $whirl-primary
+$no-of-el = 5
+$border = 5px
+
+@keyframes whirl-sonar
+  50%
+  100%
+    transform rotate(360deg)
+
+[data-whirl='sonar']
+  animation whirl-rotate 5s infinite linear
+  left 50%
+  position absolute
+  top 50%
+
+  div
+    animation whirl-rotate 1.5s infinite linear
+    border $border solid $color
+    border-radius 100%
+    left 50%
+    position absolute
+    top 50%
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      $size = $el * 15px
+      height $size
+      margin-left -($size / 2)
+      margin-top -($size / 2)
+      width $size
+
+      if $el % 2 > 0
+        animation-direction reverse
+        border-bottom-color transparent
+        border-right-color transparent
+      else
+        border-left-color transparent
+        border-top-color transparent

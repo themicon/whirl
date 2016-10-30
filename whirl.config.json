@@ -22,7 +22,7 @@
       "requiredElements": 0
     },
     "borders": {
-      "requiredElements": 6
+      "requiredElements": 1
     },
     "breakout": {
       "requiredElements": 0
@@ -249,6 +249,9 @@
     "snake": {
       "requiredElements": 0
     },
+    "sonar": {
+      "requiredElements": 6
+    },
     "spinning-coin": {
       "requiredElements": 0
     },
@@ -284,6 +287,9 @@
     },
     "throw": {
       "requiredElements": 0
+    },
+    "tornado": {
+      "requiredElements": 6
     },
     "traditional": {
       "requiredElements": 0
