@@ -10,7 +10,7 @@
       "requiredElements": 0
     },
     "blades": {
-      "requiredElements": 4
+      "requiredElements": 6
     },
     "bloom": {
       "requiredElements": 0
@@ -167,6 +167,9 @@
     },
     "palette": {
       "requiredElements": 0
+    },
+    "paper-plane": {
+      "requiredElements": 2
     },
     "pendulum": {
       "requiredElements": 0

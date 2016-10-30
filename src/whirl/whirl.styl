@@ -19,5 +19,4 @@ $config = json('../../whirl.config.json', {
 // and dynamically pull in the whirls we are compiling
 for $whirl, $value in $config.whirls
   $path = 'whirls/' + $whirl + '.styl'
-  if $value.active
-    @import $path
+  @import $path

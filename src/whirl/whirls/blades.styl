@@ -1,0 +1,39 @@
+@import '../vars.styl'
+@import '../common/animation/rotate.styl'
+/**
+  * Blades
+  *
+  * @author jh3y - https://github.com/jh3y
+  *
+*/
+
+$size = 20px
+$border = 4px
+$color = $whirl-primary
+$no-of-el = 5
+
+[data-whirl='blades']
+  animation whirl-rotate 1s infinite linear
+  height 20px
+  left 50%
+  margin-left -10px
+  margin-top -10px
+  position absolute
+  top 50%
+  width  20px
+
+  div
+    border $border solid $color
+    border-bottom-color transparent
+    border-right-color transparent
+    border-top-color transparent
+    height $size
+    left 50%
+    position absolute
+    transform-origin top left
+    top 50%
+    width  $size
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      transform rotate(((360 / $no-of-el) * $el) * 1deg) translateY(5px)
