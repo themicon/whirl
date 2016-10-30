@@ -12,5 +12,4 @@ html(lang="en-us")
     h1= `whirl dev... ${Object.keys(whirls).length} whirls and counting`
     .whirls
       each val, index in whirls
-        if val.active
-          +whirl(index, val.requiredElements, true)
+        +whirl(index, val.requiredElements, true)

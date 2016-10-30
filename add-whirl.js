@@ -27,7 +27,6 @@ const args = getArgs(process.argv);
 const addToConfig = (name, required = 0) => {
   if (config.whirls[name]) throw Error('A whirl with that name already exists');
   config.whirls[name] = {};
-  config.whirls[name].active = true;
   config.whirls[name].requiredElements = required;
 };
 
