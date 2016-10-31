@@ -1,0 +1,57 @@
+@import '../vars.styl'
+/**
+  * Combine
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size = 30px
+$radius = $radius
+$duration = 1.5s
+$color = $whirl-primary
+
+@keyframes whirl-combine-t
+  25%
+    transform translateY(-($radius))
+  75%
+    transform translateY(50%)
+
+@keyframes whirl-combine-r
+  25%
+    transform translateX($radius)
+  75%
+    transform translateX(-50%)
+
+@keyframes whirl-combine-b
+  25%
+    transform translateY($radius)
+  75%
+    transform translateY(-50%)
+
+@keyframes whirl-combine-l
+  25%
+    transform translateX(-($radius))
+  75%
+    transform translateX(50%)
+
+[data-whirl='combine']
+  left 50%
+  position absolute
+  top 50%
+  transform rotate(45deg) translate(-($size / 2), -($size / 2))
+
+  div
+    border ($size / 2) solid transparent
+    position absolute
+
+  div:nth-child(1)
+    animation whirl-combine-t $duration infinite
+    border-top-color $color
+  div:nth-child(2)
+    animation whirl-combine-r $duration infinite
+    border-right-color $color
+  div:nth-child(3)
+    animation whirl-combine-b $duration infinite
+    border-bottom-color $color
+  div:nth-child(4)
+    animation whirl-combine-l $duration infinite
+    border-left-color $color

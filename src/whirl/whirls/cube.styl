@@ -1,0 +1,70 @@
+@import '../vars.styl'
+
+/**
+  * Cube
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 40px
+$color-one = red
+$color-two = orange
+$color-three = yellow
+$color-four = green
+$color-five = blue
+$color-six = indigo
+
+@keyframes whirl-cube
+  0%
+    transform rotate(45deg) rotateX(-25deg) rotateY(25deg)
+  50%
+    transform rotate(45deg) rotateX(-385deg) rotateY(25deg)
+  100%
+    transform rotate(45deg) rotateX(-385deg) rotateY(385deg)
+
+
+[data-whirl='cube']
+  animation whirl-cube 2s infinite
+  height $size
+  left 50%
+  margin-left -($size / 2)
+  margin-top -($size / 2)
+  position absolute
+  top 50%
+  transform-style preserve-3d
+  width  $size
+
+  div
+    opacity .5
+    height 100%
+    overflow hidden
+    position absolute
+    width  100%
+
+  div:nth-of-type(1)
+    background-color $color-one
+    transform translateZ(-($size / 2)) rotateY(180deg)
+
+  div:nth-of-type(2)
+    background-color $color-two
+    transform rotateY(-270deg) translateX($size / 2)
+    transform-origin top right
+
+  div:nth-of-type(3)
+    background-color $color-three
+    transform rotateY(270deg) translateX(-($size / 2))
+    transform-origin center left
+
+  div:nth-of-type(4)
+    background-color $color-four
+    transform rotateX(90deg) translateY(-($size / 2))
+    transform-origin top center
+
+  div:nth-of-type(5)
+    background-color $color-five
+    transform rotateX(-90deg) translateY($size / 2)
+    transform-origin bottom center
+
+  div:nth-of-type(6)
+    background-color $color-six
+    transform translateZ($size / 2)

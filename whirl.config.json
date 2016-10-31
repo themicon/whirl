@@ -51,11 +51,14 @@
     "color-wheel": {
       "requiredElements": 0
     },
-    "combining-shapes": {
-      "requiredElements": 0
+    "combine": {
+      "requiredElements": 5
+    },
+    "combine-two": {
+      "requiredElements": 5
     },
     "cube": {
-      "requiredElements": 8
+      "requiredElements": 7
     },
     "cyclical": {
       "requiredElements": 1
@@ -305,6 +308,9 @@
     },
     "tumble": {
       "requiredElements": 0
+    },
+    "unpack": {
+      "requiredElements": 1
     },
     "waterfall": {
       "requiredElements": 6
