@@ -1,0 +1,64 @@
+@import '../vars.styl'
+/**
+  * Building blocks
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size = 20px
+$margin = 4px
+$no-of-el = 7
+$delays = 1.75s 1.5s 1.25s 1s .75s .5s .25s
+
+@keyframes whirl-building-blocks
+  0%
+  20%
+    opacity 0
+    transform translateY(-300%)
+  30%
+  70%
+    opacity 1
+    transform translateY(0)
+  100%
+    opacity 0
+    transform translateY(300%)
+
+
+[data-whirl='building-blocks']
+  position absolute
+  top 0
+  right 0
+  bottom 0
+  left 0
+
+  div
+    background white
+    position absolute
+    top 50%
+    left 50%
+    opacity 0
+    height $size
+    width $size
+    margin-left -($size / 2)
+    margin-top -($size / 2)
+    animation whirl-building-blocks 4s infinite
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      $top = ($size * 1.5) + ($margin)
+      if ($el % 2) > 0
+        if $el < ($no-of-el / 2)
+          margin-top $top * -1px
+        else
+          margin-top $top - $size
+        if ($el % 5) > 1
+          margin-left ($margin / 2px)
+        else
+          margin-left (-($size + ($margin / 2px)))
+      else // middle row
+        $mod = (($el / 2))
+        if ($mod % 2 != 0)
+          $left = (($size / 2px) + $margin)
+          margin-left $left
+          if $el < ($no-of-el / 2)
+            margin-left (-($left + $size))
+      animation-delay $delays[$el]

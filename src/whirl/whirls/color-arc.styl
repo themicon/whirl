@@ -7,7 +7,7 @@
 */
 
 $size = 50px
-$depth = 10px
+$depth = 6px
 
 [data-whirl='color-arc']
   clip rect(0px, $size / 2px, $size / 2px, 0)
@@ -21,7 +21,7 @@ $depth = 10px
 
   &:before
     $create-pseudo()
-    animation whirl-rotate 1s infinite linear
+    animation whirl-rotate 1.25s infinite linear
     border $depth solid $whirl-primary
     border-left-color $whirl-secondary
     border-radius 100%

@@ -1,0 +1,31 @@
+@import '../vars.styl'
+/**
+  * Spinning coin fall
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+
+$size = 40px
+$perspective = $size
+$color = $whirl-primary
+
+@keyframes whirl-spinning-coin-fall
+  0%
+    transform perspective($perspective) rotateY(0deg) rotateX(0deg)
+  10%
+    opacity 1
+    transform perspective($perspective) rotateY(-65deg) rotateX(0deg)
+  90%
+  100%
+    transform perspective($perspective) rotateY(2880deg) rotateX(90deg)
+    opacity 1
+
+[data-whirl='spinning-coin-fall']
+  &:before
+    $create-pseudo($size, $size)
+    animation whirl-spinning-coin-fall 3s infinite
+    background-color $color
+    border-radius 100%
+    opacity 0
+    transform-origin center

@@ -1,0 +1,42 @@
+@import '../vars.styl'
+
+/**
+  * Book
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+
+$size = 30px
+$color = $whirl-primary
+$no-of-el = 5
+
+@keyframes whirl-book
+  0%
+    transform perspective($size * 2) rotateY(0deg)
+  50%
+  80%
+    transform perspective($size * 2) rotateY(-180deg)
+  90%
+  100%
+    transform perspective($size * 2) rotateY(-180deg)
+    opacity 0
+
+[data-whirl='book']
+  position absolute
+  top 50%
+  left 50%
+
+  div
+    animation whirl-book 1.75s infinite
+    background $color
+    height $size
+    margin-left 0
+    margin-top -($size / 2)
+    position absolute
+    transform-origin left
+    width $size
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      animation-delay $el * .15s

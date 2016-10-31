@@ -7,12 +7,14 @@
   * @author jh3y - https://github.com/jh3y
 */
 
-$thickness = $whirl-default-border-width
+$thickness = 6px
+$color-one = $whirl-primary
+$color-two = $whirl-secondary
 
 [data-whirl='basic']
   &:before
     $create-pseudo()
-    animation         whirl-rotate .5s infinite linear
-    border            $thickness $whirl-primary solid
-    border-left-color $whirl-secondary
+    animation         whirl-rotate 1s infinite linear
+    border            $thickness $color-one solid
+    border-left-color $color-two
     border-radius     100%

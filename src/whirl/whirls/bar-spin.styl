@@ -7,11 +7,12 @@
   * @author jh3y - https://github.com/jh3y
 */
 
-$height = $whirl-default-size
+$height = 50px
 $width  = 10px
+$color  = $whirl-primary
 
 [data-whirl='bar-spin']
   &:before
     $create-pseudo($height, $width)
     animation         whirl-rotate .5s infinite
-    background        $whirl-primary
+    background        $color

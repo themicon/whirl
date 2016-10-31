@@ -8,10 +8,12 @@
 */
 
 $thickness = 6px
+$color     = $whirl-primary
+$size      = 50px
 
 [data-whirl='arc']
   &:before
-    $create-pseudo()
+    $create-pseudo($size, $size)
     animation whirl-rotate .5s infinite linear
     border-radius 100%
-    border-top $thickness solid $whirl-primary
+    border-top $thickness solid $color

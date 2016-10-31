@@ -1,6 +1,57 @@
 @import '../vars.styl'
 /**
-  * coffee
+  * Coffee
   *
   * @author jh3y - https://github.com/jh3y
 */
+
+$size = 40px
+$color = $whirl-primary
+$no-of-fume = 3
+
+@keyframes whirl-coffee
+  100%
+    transform translateY(-200%)
+    opacity 0
+
+[data-whirl='coffee']
+  position absolute
+  top 50%
+  left 50%
+  height $size
+  width $size
+  background $color
+  margin-top -($size / 2)
+  margin-left -($size / 2)
+  border-radius ($size * .1)
+
+  &:before
+    box-sizing border-box
+    content ''
+    height ($size * .65)
+    width  ($size / 2)
+    border ($size * .1) solid $color
+    position absolute
+    top 50%
+    margin-top -(($size * .65) / 2)
+    margin-left -($size / 4)
+    left 100%
+    border-radius ($size * .1)
+
+  div
+    position absolute
+    height ($size / 2)
+    width  ($size / 5)
+    background transparentify($color, 70%)
+    position absolute
+    top 0
+    left 50%
+    animation whirl-coffee 2s infinite
+    z-index -1
+
+  for $fume in (1..$no-of-fume)
+    $margin = 2px
+    $left = ($size / 10) + $margin
+    div:nth-child({$fume})
+      animation-delay (math(0, 'random') * 2) * 1s
+      margin-left ($left - (($fume - 1) * (($size / 5) + $margin)))

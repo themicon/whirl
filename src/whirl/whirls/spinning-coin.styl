@@ -1,0 +1,26 @@
+@import '../vars.styl'
+/**
+  * Spinning coin
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+
+$size = 40px
+$perspective = $size * 1.5
+
+@keyframes whirl-spinning-coin
+  0%
+    transform perspective($perspective) rotateY(0deg)
+  10%
+    transform perspective($perspective) rotateY(-65deg)
+  90%
+  100%
+    transform perspective($perspective) rotateY(2880deg)
+
+[data-whirl='spinning-coin']
+  &:before
+    $create-pseudo($size, $size)
+    border-radius 100%
+    background-color white
+    animation whirl-spinning-coin 3s infinite
+    transform-origin center

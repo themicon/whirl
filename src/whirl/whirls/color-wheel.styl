@@ -6,7 +6,7 @@
   * @author jh3y - https://github.com/jh3y
 */
 
-$size = $whirl-default-size
+$size = 50px
 $color-one = $whirl-primary
 $color-two = $whirl-secondary
 $color-three = $whirl-primary
@@ -15,7 +15,7 @@ $color-four = $whirl-secondary
 [data-whirl='color-wheel']
   &:before
     $create-pseudo($size, $size)
-    animation whirl-rotate .5s infinite linear
+    animation whirl-rotate 1s infinite linear
     border ($size / 2px) solid $color-one
     border-bottom-color $color-two
     border-radius 100%
