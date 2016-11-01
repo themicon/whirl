@@ -1,18 +1,17 @@
 @import '../vars.styl'
 /**
-  * Flip to square
+  * Flip to square (Random)
   *
   * @author jh3y - https://github.com/jh3y
 */
 
 $size = 20px
 $color = $whirl-primary
-$delays = .1s .2s .3s .4s .5s .6s .7s .8s .9s
 
-@keyframes whirl-flip-to-square
+@keyframes whirl-flip-to-square-random
   0%
     transform rotateX(-90deg)
-  20%
+  50%
   75%
     transform rotateX(0)
   100%
@@ -20,7 +19,7 @@ $delays = .1s .2s .3s .4s .5s .6s .7s .8s .9s
     transform rotateX(0)
 
 
-[data-whirl='flip-to-square']
+[data-whirl='flip-to-square-random']
   position absolute
   top 50%
   left 50%
@@ -32,7 +31,7 @@ $delays = .1s .2s .3s .4s .5s .6s .7s .8s .9s
     position absolute
     top 50%
     left 50%
-    animation whirl-flip-to-square 1.5s infinite
+    animation whirl-flip-to-square-random 1.5s infinite
 
   div:nth-child(1)
   div:nth-child(4)
@@ -66,4 +65,4 @@ $delays = .1s .2s .3s .4s .5s .6s .7s .8s .9s
 
   for $el in (1..9)
     div:nth-child({$el})
-      animation-delay $delays[$el - 1]
+      animation-delay math(0, 'random') * 1s
