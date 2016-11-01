@@ -1,0 +1,45 @@
+@import '../vars.styl'
+/**
+  * Dominoes
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$height   = 40px
+$color    = $whirl-primary
+$width    = 10px
+$margin   = 20px
+$no-of-el = 5
+
+@keyframes whirl-dominoes
+  0%
+    opacity 0
+  20%
+    opacity 1
+    transform rotate(0deg)
+  60%
+    transform rotate(60deg)
+  100%
+    opacity 0
+    transform rotate(60deg)
+
+[data-whirl='dominoes']
+  left 50%
+  margin-left -(($width * ($no-of-el / 2)) + ($margin * math($no-of-el / 2, 'floor')))
+  margin-top -($height / 2)
+  position absolute
+  top 50%
+
+  div
+    animation whirl-dominoes 1.5s infinite
+    background-color $color
+    height $height
+    opacity 0
+    position absolute
+    transform-origin bottom right
+    top 0
+    width  $width
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      animation-delay $el * .25s
+      left ((($el - 1) * $width) + (($el - 1) * $margin))

@@ -20,7 +20,6 @@ genShadow()
     $angle       = (360 / $no-of-dots) * ($dot - 1)
     $xy          = getPosition($angle)
     $dots        = $no-of-dots
-    $true-pos    = $dot + $pos
     $shad-props  = $xy 0 0 $color
     push($shadows, join(' ', $shad-props))
   (unquote(join(',', $shadows)))

@@ -1,6 +1,44 @@
 @import '../vars.styl'
+@import '../common/animation/rotate.styl'
 /**
-  * different-directions
+  * Different directions
   *
   * @author jh3y - https://github.com/jh3y
 */
+
+$radius-one = 20px
+$radius-two = 30px
+$size       = 6px
+$no-of-dots = 7
+$duration   = 1s
+
+$color       = $whirl-primary
+
+getPosition($angle, $radius)
+  $xPos = $radius * cos($angle * (PI / 180))
+  $yPos = $radius * sin($angle * (PI / 180))
+  ($xPos $yPos)
+
+genShadow($radius)
+  $shadows = ()
+  for $dot in (1..$no-of-dots)
+    $angle       = (360 / $no-of-dots) * ($dot - 1)
+    $xy          = getPosition($angle, $radius)
+    $dots        = $no-of-dots
+    $shad-props  = $xy 0 0 $color
+    push($shadows, join(' ', $shad-props))
+  (unquote(join(',', $shadows)))
+
+[data-whirl='different-directions']
+
+  &:after
+    $create-pseudo($size, $size)
+    animation     whirl-rotate $duration infinite linear
+    border-radius 100%
+    box-shadow    genShadow($radius-two)
+
+  &:before
+    $create-pseudo($size, $size)
+    animation     whirl-rotate $duration infinite linear reverse
+    border-radius 100%
+    box-shadow    genShadow($radius-one)
