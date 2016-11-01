@@ -1,0 +1,58 @@
+@import '../vars.styl'
+/**
+  * Honeycomb
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$size         = 24px
+$color        = $whirl-primary
+$no-of-el     = 7
+$margin       = 4px
+
+$xPos = (-(($size * 1) + (1 * $margin))) (-(($size * .5) + (.5 * $margin))) (($size * .5) + (.5 * $margin)) (($size * 1) + (1 * $margin)) (($size * .5) + (.5 * $margin)) (-(($size * .5) + (.5 * $margin))) 0
+$yPos = 0 ($margin + ($size / 2) + ($size / 4)) ($margin + ($size / 2) + ($size / 4)) 0 (-($margin + ($size / 2) + ($size / 4))) (-($margin + ($size / 2) + ($size / 4))) 0
+
+genHexagon()
+  height ($size / 2)
+  width  $size
+  background $color
+  position absolute
+
+  &:after
+    content ''
+    position absolute
+    top -($size / 4)
+    left 0
+    right 0
+    border-left ($size / 2) solid transparent
+    border-right ($size / 2) solid transparent
+    border-bottom ($size / 4) solid $color
+
+
+  &:before
+    content ''
+    position absolute
+    bottom -($size / 4)
+    left 0
+    right 0
+    border-left ($size / 2) solid transparent
+    border-right ($size / 2) solid transparent
+    border-top ($size / 4) solid $color
+
+
+[data-whirl='honeycomb']
+  position absolute
+  top 50%
+  left 50%
+  margin-left -($size / 2)
+  margin-top -($size / 4)
+
+  div
+    genHexagon()
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      $x = $xPos[$el - 1]
+      $y = $yPos[$el - 1]
+      left $x
+      top $y
