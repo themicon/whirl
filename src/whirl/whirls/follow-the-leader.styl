@@ -4,3 +4,37 @@
   *
   * @author jh3y - https://github.com/jh3y
 */
+
+$size = 14px
+$no-of-el = 5
+$color = $whirl-primary
+$duration = 2s
+$radius = -250%
+
+
+@keyframes whirl-follow-the-leader
+  0%
+    transform rotate(0deg) translateY($radius)
+  60%
+  100%
+    transform rotate(360deg) translateY($radius)
+
+[data-whirl='follow-the-leader']
+  position absolute
+  top 50%
+  left 50%
+  margin-left -($size / 2)
+  margin-top -($size / 2)
+
+  div
+    height $size
+    width $size
+    background-color $color
+    position absolute
+    border-radius 100%
+    animation whirl-follow-the-leader $duration infinite
+
+  for $el in (1..$no-of-el)
+    div:nth-child({$el})
+      animation-delay $el * .15s
+      background-color transparentify($color, ($no-of-el - ($el / 2)) * 20%)

@@ -1,0 +1,36 @@
+@import '../vars.styl'
+@import '../common/animation/rotate.styl'
+/**
+  * Half ring
+  *
+  * @author jh3y - https://github.com/jh3y
+*/
+$radius       = 25px
+$size         = 10px
+$no-of-dots   = 5
+$color        = $whirl-primary
+
+getPosition(angle)
+  xPos = $radius * cos(angle * (PI / 180))
+  yPos = $radius * sin(angle * (PI / 180))
+  (xPos yPos)
+
+genShadow()
+  $shadows = ()
+  for $dot in (1..$no-of-dots)
+    $angle       = (180 / $no-of-dots) * ($dot - 1)
+    $xy          = getPosition($angle)
+    $dots        = $no-of-dots
+    $dot-color   = transparentify($color, $dot * 20%)
+    $shad-props  = $xy 0 0 $dot-color
+    push($shadows, join(' ', $shad-props))
+  (unquote(join(',', $shadows)))
+
+
+
+[data-whirl='half-ring']
+  &:before
+    $create-pseudo($size, $size)
+    animation     whirl-rotate 1s infinite linear
+    border-radius $size
+    box-shadow genShadow()

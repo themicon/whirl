@@ -4,3 +4,40 @@
   *
   * @author jh3y - https://github.com/jh3y
 */
+
+$size = 10px
+$color = $whirl-primary
+$color-two = $whirl-secondary
+$no-of-dots = 10
+$radius = 30px
+$scale = 5px
+
+getPosition(angle)
+  xPos = $radius * cos(angle * (PI / 180))
+  yPos = $radius * sin(angle * (PI / 180))
+  (xPos yPos)
+
+genShadow($pos, $color)
+  $shadows = ()
+  for $dot in (1..$no-of-dots)
+    $dot-color = $color
+    $dot-scale = 0
+    $angle       = (360 / $no-of-dots) * ($dot - 1)
+    $xy          = getPosition($angle)
+    if ($dot == $pos)
+      $dot-color = $whirl-secondary
+      $dot-scale = $scale
+    $shad-props  = $xy 0 $dot-scale $dot-color
+    push($shadows, join(' ', $shad-props))
+  (unquote(join(',', $shadows)))
+
+@keyframes whirl-circle-path
+  for $per in (0..$no-of-dots)
+    {($per * (100 / $no-of-dots)) * 1%}
+      box-shadow genShadow($per, $color)
+
+[data-whirl='circle-path']
+  &:before
+    $create-pseudo($size, $size)
+    animation whirl-circle-path 1s infinite linear
+    border-radius 100%

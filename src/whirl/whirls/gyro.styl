@@ -8,6 +8,7 @@
 $size = 20px
 $radius-lg = 50px
 $radius-sm = 5px
+$duration  = 2s
 $color-one = $whirl-primary
 $color-two = $whirl-secondary
 
@@ -15,6 +16,7 @@ $color-two = $whirl-secondary
   0%
     transform scale(1) rotate(0deg) translateY($radius-lg)
   50%
+  55%
     transform scale(.5) rotate(1440deg) translateY(5px)
   100%
     transform scale(1) rotate(2920deg) translateY($radius-lg)
@@ -23,6 +25,7 @@ $color-two = $whirl-secondary
   0%
     transform scale(1) rotate(0deg) translateY(-($radius-lg))
   50%
+  55%
     transform scale(.5) rotate(1440deg) translateY(-5px)
   100%
     transform scale(1) rotate(2920deg) translateY(-($radius-lg))
@@ -33,10 +36,10 @@ $color-two = $whirl-secondary
   &:after
   &:before
     $create-pseudo($size, $size)
-    animation gyro-2 2s infinite linear
+    animation gyro-2 $duration infinite linear
     background $color-one
     border-radius 100%
 
   &:before
-    animation gyro 2s infinite linear
+    animation gyro $duration infinite linear
     background $color-two
