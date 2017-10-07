@@ -27,8 +27,6 @@ const args = getArgs(process.argv);
 const addToConfig = (name, required = 0) => {
   if (config.whirls[name]) throw Error('A whirl with that name already exists');
   config.whirls[name] = {};
-  config.whirls[name].active = true;
-  config.whirls[name].public = true;
   config.whirls[name].requiredElements = required;
 };
 
@@ -38,7 +36,6 @@ const orderAndWrite = () => {
   const ordered = Object.keys(config.whirls).sort();
 
   for (let i = 0; i < ordered.length; i++) {
-    config.whirls[ordered[i]].public = true;
     newConfig.whirls[ordered[i]] = config.whirls[ordered[i]];
   }
 
