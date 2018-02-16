@@ -97,7 +97,7 @@ gulp.task('release:build', ["less:build", "release"]);
 /*BUILD LESS*/
 gulp.task('less:build', function(event) {
     processSrc = [sources.coreLess];
-    gatherSrc(config.spins, undefined, 'less');
+    gatherSrc(config.whirls, undefined, 'less');
     return gulp.src(processSrc)
         .pipe(plumber())
         .pipe(concat(pkg.name + '.less'))
@@ -112,7 +112,7 @@ gulp.task('less:build', function(event) {
 });
 gulp.task('scss:build', function(event) {
     processSrc = [sources.coreScss];
-    gatherSrc(config.spins, undefined, 'scss');
+    gatherSrc(config.whirls, undefined, 'scss');
     return gulp.src(processSrc)
         .pipe(plumber())
         .pipe(concat(pkg.name + '.scss'))
